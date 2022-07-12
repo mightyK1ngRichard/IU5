@@ -1,5 +1,0 @@
-﻿  lab_3.cpp
-C:\Users\dimap\source\repos\lab_3\lab_3\lab_3.cpp(82,63): warning C4305: инициализация: усечение из "double" в "float"
-C:\Users\dimap\source\repos\lab_3\lab_3\lab_3.cpp(49,20): warning C4101: n1: неиспользованная локальная переменная
-C:\Users\dimap\source\repos\lab_3\lab_3\lab_3.cpp(49,17): warning C4101: n: неиспользованная локальная переменная
-  lab_3.vcxproj -> C:\Users\dimap\source\repos\lab_3\Debug\lab_3.exe
