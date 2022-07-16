@@ -16,5 +16,5 @@ Cbeer
 - insert
 - push-back
 - pop-back
-- swap
+- swap <br>
 PS. Итераторы не работают с STL. 
