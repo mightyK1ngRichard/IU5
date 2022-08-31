@@ -1,7 +1,6 @@
 # IU5
 ![GitHub](https://img.shields.io/github/license/DimaPermyakov/IU5?color=brightgreen)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/DimaPermyakov/IU5?color=blueviolet)
-![GitHub watchers](https://img.shields.io/github/watchers/DimaPermyakov/IU5?style=social)
 
 #### 1 курс:
 - 2021 осень - [1 семестр](https://github.com/DimaPermyakov/IU5/tree/main/Term-1)<br>
