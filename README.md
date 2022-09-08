@@ -11,4 +11,4 @@
 
  <br>
  
-[![IU5memes](https://img.shields.io/badge/-Follow_IU5-090909?style=flat-square&logo=vk&logoColor=1E90FF)](https://vk.com/iu5memes) <br>
+[![IU5memes](https://img.shields.io/badge/-CHILL_ZONE-090909?style=flat-square&logo=vk&logoColor=1E90FF)](https://vk.com/iu5memes) <br>
