@@ -2,7 +2,7 @@ import sys
 import math
 
 
-def get_coef(index, prompt):
+def get_coef(index, prompt) -> float:
     '''
     Читаем коэффициент из командной строки или вводим с клавиатуры
 
@@ -18,14 +18,18 @@ def get_coef(index, prompt):
         coef_str = sys.argv[index]
     except:
         # Вводим с клавиатуры
-        print(prompt)
-        coef_str = input()
-    # Переводим строку в действительное число
-    coef = float(coef_str)
-    return coef
+        while True:
+            try:
+                print(prompt)
+                coef_str = input()
+                coef = float(coef_str)
+                return coef
+            except ValueError:
+                # Если неверный формат, повторяем ввод.
+                pass
 
 
-def get_roots(a, b, c):
+def get_roots(a, b, c) -> list:
     '''
     Вычисление корней квадратного уравнения
 
@@ -68,7 +72,6 @@ def main():
         if el > 0 or el == 1:
             finally_roots.append(math.sqrt(el))
             finally_roots.append(-1 * math.sqrt(el))
-
         elif el == 0:
             finally_roots.append(el)
 
@@ -87,4 +90,6 @@ def main():
 
 
 if __name__ == "__main__":
+    print('\n============ LAB-01 ============\n')
     main()
+    print('\n================================\n')
