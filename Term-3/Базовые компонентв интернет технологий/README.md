@@ -2,7 +2,7 @@
 
 #TODO
 ## Лабораторные работы.
-1. [Лабораторная работа №1.](https://github.com/DimaPermyakov/IU5/tree/main/Term-3/Базовые%20компонентв%20интернет%20технологий/Lab-1)
+1. [Лабораторная работа №1.](https://github.com/DimaPermyakov/IU5/tree/main/Term-3/Базовые%20компонентв%20интернет%20технологий/Lab-01)
 
 ## Рубежный котроль.
 1. [Рубежный котроль №1.](https://github.com/DimaPermyakov/IU5/tree/main/Term-3/Базовые%20компонентв%20интернет%20технологий/Module_Test-1)
