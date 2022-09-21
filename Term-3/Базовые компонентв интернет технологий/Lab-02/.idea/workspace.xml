@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58274c55-0f5b-48ab-978f-62a6cbd4586b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../lab-03/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab-03/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab-03/.idea/lab-03.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab-03/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab-03/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab-03/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab-03/lab_python_fp/field.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab-03/lab_python_fp/gen_random.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab-03/lab_python_fp/unique.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
