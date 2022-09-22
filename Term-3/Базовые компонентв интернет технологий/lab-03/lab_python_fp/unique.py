@@ -4,8 +4,8 @@
 # Итератор для удаления дубликатов
 class Unique(object):
     def __init__(self, items, ignore_case=False, **kwargs):
-        items = {items}  # Убираем повторы засчёт set.
-        self._items = items
+        items = set(items)  # Убираем повторы засчёт set.
+        self._items = list(items)
         self._dict = kwargs
         self._ignore_case = ignore_case
         self.__counter = 0

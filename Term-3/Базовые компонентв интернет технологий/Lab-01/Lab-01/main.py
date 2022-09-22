@@ -15,7 +15,13 @@ def get_coef(index, prompt) -> float:
     '''
     try:
         # Пробуем прочитать коэффициент из командной строки
-        coef_str = sys.argv[index]
+        try:
+            coef_str = sys.argv[index]
+            coef = float(coef_str)
+            return coef
+        except ValueError:
+            # Если неверный формат, повторяем ввод.
+            pass
     except:
         # Вводим с клавиатуры
         while True:
