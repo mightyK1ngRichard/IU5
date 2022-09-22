@@ -33,7 +33,6 @@ def get_coef(index, prompt) -> float:
             except ValueError:
                 # Если неверный формат, повторяем ввод.
                 pass
-    return float(coef_str)
 
 
 def get_roots(a, b, c) -> list:

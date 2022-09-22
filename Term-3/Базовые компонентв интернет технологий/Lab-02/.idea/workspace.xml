@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58274c55-0f5b-48ab-978f-62a6cbd4586b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab-01/Report-01.pages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab-01/.idea/Lab-01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-01/.idea/Lab-01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab-01/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-01/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab-01/Lab-01/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-01/Lab-01/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab-01/Report-01.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-03/lab_python_fp/get_random.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-03/lab_python_fp/get_random.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-03/lab_python_fp/unique.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-03/lab_python_fp/unique.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-03/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-03/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,15 +24,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/dmitriy/IU5/Term-3/Базовые компонентв интернет технологий/Lab-02",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dmitriy/IU5/Term-3/Базовые компонентв интернет технологий/Lab-02&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Lab-02" />
