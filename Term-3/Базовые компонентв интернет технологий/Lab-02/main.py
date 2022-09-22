@@ -5,15 +5,15 @@ import pandas as pd
 
 
 def main():
+    print('\n ---- LAB-01 ----\n')
     r = Rectangle("синего", 11, 11)
     c = Circle("зеленого", 11)
     s = Square("красного", 11)
-    print(r)
-    print(c)
-    print(s)
+    print(r, c, s, sep='\n')
 
     # пример выполнения импортированной библеотеки.
-    table = pd.DataFrame({'Dima': ['Boss', 2, 3], 'Permyakov': [777, 777, 777]}, )
+    print('\n ---- Module Pandas ----\n')
+    table = pd.DataFrame({'Dima': ['Boss', 2, 'BKIT'], 'Permyakov': [777, 'informathion', 777]}, )
     print(table)
 
 
