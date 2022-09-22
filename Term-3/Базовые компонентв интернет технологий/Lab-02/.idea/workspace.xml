@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58274c55-0f5b-48ab-978f-62a6cbd4586b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab-03/lab_python_fp/get_random.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab-01/Lab-01/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab-01/Lab-01/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-03/lab_python_fp/field.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-03/lab_python_fp/field.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-03/lab_python_fp/gen_random.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-03/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-03/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +17,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2F4bVftAXdQfR9Ogrkf145qoXpt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/dmitriy/IU5/Term-3/Базовые компонентв интернет технологий/Lab-02&quot;,
@@ -78,5 +77,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
