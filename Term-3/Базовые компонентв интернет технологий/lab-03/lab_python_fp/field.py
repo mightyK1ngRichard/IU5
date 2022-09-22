@@ -31,7 +31,6 @@ def field(items, *args):
 
 
 # TODO: Возможно стоит сделать return.
-
 def main():
     goods = [
         {'title': 'Ковер', 'price': 2000, 'color': 'green'},
