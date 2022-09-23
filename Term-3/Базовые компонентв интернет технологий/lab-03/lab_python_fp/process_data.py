@@ -6,12 +6,13 @@ import json
 import sys
 
 # Необходимо в переменную path сохранить путь к файлу, который был передан при запуске сценария
-try:
-    path = sys.argv[0]
-except:
-    # TODO: узнать, как открыть
-    path = '../file.json'
+# try:
+#     path = sys.argv[0]
+# except:
+#     # TODO: узнать, как открыть
+#     path = '../file.json'
 
+path = '../file.json'
 with open(path) as f:
     data = json.load(f)
 
@@ -21,31 +22,29 @@ with open(path) as f:
 # В реализации функции f4 может быть до 3 строк
 
 @print_result
-def f1(arg):
+def f1(arg) -> list:
     """
     Выводит отсортированный список профессий без повторений (строки в разном регистре считать равными).
     Сортировка должна игнорировать регистр.
     :param arg: список
     :return: отсортированный список
     """
-    print(type(arg))
-    # u = Unique(arg, ignore_case=True)
-    # raise NotImplemented
+    just_copy = arg
+    return list()
 
-
-@print_result
-def f2(arg):
-    raise NotImplemented
-
-
-@print_result
-def f3(arg):
-    raise NotImplemented
-
-
-@print_result
-def f4(arg):
-    raise NotImplemented
+# @print_result
+# def f2(arg):
+#     raise NotImplemented
+#
+#
+# @print_result
+# def f3(arg):
+#     raise NotImplemented
+#
+#
+# @print_result
+# def f4(arg):
+#     raise NotImplemented
 
 
 if __name__ == '__main__':
