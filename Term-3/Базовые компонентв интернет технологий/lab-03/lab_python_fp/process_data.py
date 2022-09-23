@@ -17,10 +17,6 @@ with open(path) as f:
     data = json.load(f)
 
 
-# Далее необходимо реализовать все функции по заданию, заменив `raise NotImplemented`
-# Предполагается, что функции f1, f2, f3 будут реализованы в одну строку
-# В реализации функции f4 может быть до 3 строк
-
 @print_result
 def f1(arg) -> list:
     """
@@ -29,22 +25,22 @@ def f1(arg) -> list:
     :param arg: список
     :return: отсортированный список
     """
-    just_copy = arg
-    return list()
+    return arg
 
-# @print_result
-# def f2(arg):
-#     raise NotImplemented
-#
-#
-# @print_result
-# def f3(arg):
-#     raise NotImplemented
-#
-#
-# @print_result
-# def f4(arg):
-#     raise NotImplemented
+
+@print_result
+def f2(arg):
+    raise NotImplemented
+
+
+@print_result
+def f3(arg):
+    raise NotImplemented
+
+
+@print_result
+def f4(arg):
+    raise NotImplemented
 
 
 if __name__ == '__main__':
