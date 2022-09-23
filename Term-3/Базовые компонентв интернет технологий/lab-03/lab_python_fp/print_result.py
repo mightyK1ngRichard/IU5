@@ -16,7 +16,7 @@ def print_result(func):
                 print(f'{key} = {el}')
 
         elif type(result) is list:
-            print('\n'.join(list(map(str, result))))
+            print('\n'.join(map(str, result)))
 
         else:
             print(result)
@@ -42,8 +42,8 @@ def test_3():
 
 
 @print_result
-def test_4(lst):
-    return lst
+def test_4():
+    return [1, 2]
 
 
 def main5():
@@ -51,7 +51,7 @@ def main5():
     test_1()
     test_2()
     test_3()
-    test_4(lst=[2, 3, 5, '34', {1: 8}])
+    test_4()
 
 
 if __name__ == '__main__':
