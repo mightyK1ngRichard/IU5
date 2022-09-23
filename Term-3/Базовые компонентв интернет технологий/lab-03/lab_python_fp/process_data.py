@@ -9,7 +9,7 @@ import sys
 try:
     path = sys.argv[0]
 except:
-    #TODO: узнать, как открыть
+    # TODO: узнать, как открыть
     path = '../file.json'
 
 with open(path) as f:
