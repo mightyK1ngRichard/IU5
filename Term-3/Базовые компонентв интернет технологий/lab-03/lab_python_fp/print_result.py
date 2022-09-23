@@ -1,4 +1,5 @@
 # Copyright 2022 Dmitriy <dimapermyakov55@gmail.com>
+""" Task #5 """
 
 
 def print_result(func):
@@ -41,9 +42,13 @@ def test_4():
     return [1, 2]
 
 
-if __name__ == '__main__':
+def main5():
     print('!!!!!!!!')
     test_1()
     test_2()
     test_3()
     test_4()
+
+
+if __name__ == '__main__':
+    main5()
