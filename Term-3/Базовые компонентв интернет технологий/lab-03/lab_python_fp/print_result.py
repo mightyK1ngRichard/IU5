@@ -3,21 +3,25 @@
 
 
 def print_result(func):
-    def wrapper(*args, **kwargs):
-        result = func(*args, **kwargs)
+    def wrapper(lst=[], *args, **kwargs):
         print(func.__name__)
+
+        if len(lst) == 0:
+            result = func(*args, **kwargs)
+        else:
+            result = func(lst, *args, **kwargs)
+
         if type(result) is dict:
             for key, el in result.items():
                 print(f'{key} = {el}')
 
         elif type(result) is list:
-            for el in result:
-                print(el)
+            print('\n'.join(list(map(str, result))))
 
         else:
             print(result)
 
-        return func()
+        return result
 
     return wrapper
 
@@ -38,8 +42,8 @@ def test_3():
 
 
 @print_result
-def test_4():
-    return [1, 2]
+def test_4(lst):
+    return lst
 
 
 def main5():
@@ -47,7 +51,7 @@ def main5():
     test_1()
     test_2()
     test_3()
-    test_4()
+    test_4(lst=[2, 3, 5, '34', {1: 8}])
 
 
 if __name__ == '__main__':

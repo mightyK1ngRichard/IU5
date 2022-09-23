@@ -6,31 +6,26 @@ import json
 import sys
 
 # Необходимо в переменную path сохранить путь к файлу, который был передан при запуске сценария
-try:
-    path = sys.argv[0]
-except:
-    # TODO: узнать, как открыть
-    path = '../file.json'
+# try:
+#     path = sys.argv[0]
+# except:
+#     # TODO: узнать, как открыть
+#     path = '../file.json'
 
+path = '../file.json'
 with open(path) as f:
     data = json.load(f)
 
 
-# Далее необходимо реализовать все функции по заданию, заменив `raise NotImplemented`
-# Предполагается, что функции f1, f2, f3 будут реализованы в одну строку
-# В реализации функции f4 может быть до 3 строк
-
 @print_result
-def f1(arg):
+def f1(arg) -> list:
     """
     Выводит отсортированный список профессий без повторений (строки в разном регистре считать равными).
     Сортировка должна игнорировать регистр.
     :param arg: список
     :return: отсортированный список
     """
-    print(type(arg))
-    # u = Unique(arg, ignore_case=True)
-    # raise NotImplemented
+    return arg
 
 
 @print_result
