@@ -11,7 +11,6 @@ try:
 except:
     path = '../file.json'
 
-# path = '../file.json'
 with open(path) as f:
     data = json.load(f)
 
