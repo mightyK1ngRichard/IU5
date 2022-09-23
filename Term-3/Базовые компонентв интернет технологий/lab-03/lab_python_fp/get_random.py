@@ -1,7 +1,5 @@
 # Copyright 2022 Dmitriy <dimapermyakov55@gmail.com>
-"""
-Task #2.
-"""
+""" Task #2. """
 from random import randint
 
 
@@ -15,10 +13,14 @@ def get_random(num_count, begin, end):
     """
     return (randint(begin, end) for _ in range(num_count))
 
-#
-# def main():
-#     get_random(5, 1, 3)
-#
-#
-# if __name__ == '__main__':
-#     main()
+
+def main2():
+    print('\n---#2---')
+    numbers = get_random(4, 0, 5)
+    for el in numbers:
+        print(el, end=' ')
+    print()
+
+
+if __name__ == '__main__':
+    main2()
