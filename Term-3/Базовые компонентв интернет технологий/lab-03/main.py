@@ -1,19 +1,19 @@
 # Copyright 2022 Dmitriy <dimapermyakov55@gmail.com>
-from lab_python_fp.get_random import get_random
+from lab_python_fp.field import main1
+from lab_python_fp.get_random import main2
+from lab_python_fp.unique import main3
+from lab_python_fp.sort import main4
+from lab_python_fp.print_result import main5
+from lab_python_fp.cm_timer import main6
 
 
 def main():
-    numbers = get_random(4, 0, 5)
-    for el in numbers:
-        print(el, end=' ')
-    print()
-    m = iter([2, 3, 4])
-    print(m.__next__())
-
-    ls = [1, 2, 1, 1, 1]
-    ls = set(ls)
-    ls = list(ls)
-    print(type(ls))
+    main1()
+    main2()
+    main3()
+    main4()
+    main5()
+    main6()
 
 
 if __name__ == '__main__':
