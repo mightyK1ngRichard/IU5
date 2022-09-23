@@ -3,8 +3,8 @@
 
 
 def print_result(func):
-    def wrapper():
-        result = func()
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
         print(func.__name__)
         if type(result) is dict:
             for key, el in result.items():
