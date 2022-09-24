@@ -1,0 +1,305 @@
+*COPYRIGHT OF BURR-BROWN
+*
+OPA622X1 - WIDE-BANDWIDTH OPERATIONAL AMPLIFIER MACROMODEL SIMPLIFIED VERSION
+*
+* CREATED 8/92 KL
+* EDITTED 7/9/93 BCB : CLARIFICATION OF NODE SET INSTRUCTIONS
+*
+*  ------------------------------------------------------------------------ 
+* |  NOTICE: THE INFORMATION PROVIDED HEREIN IS BELIEVED TO BE RELIABLE;   |
+* |  HOWEVER; BURR-BROWN ASSUMES NO RESPONSIBILITY FOR INACCURACIES OR     |
+* |  OMISSIONS.  BURR-BROWN ASSUMES NO RESPONSIBILITY FOR THE USE OF THIS  |
+* |  INFORMATION, AND ALL USE OF SUCH INFORMATION SHALL BE ENTIRELY AT     |
+* |  THE USER'S OWN RISK.  NO PATENT RIGHTS OR LICENSES TO ANY OF THE      |
+* |  CIRCUITS DESCRIBED HEREIN ARE IMPLIED OR GRANTED TO ANY THIRD PARTY.  |
+* |  BURR-BROWN DOES NOT AUTHORIZE OR WARRANT ANY BURR-BROWN PRODUCT FOR   |
+* |  USE IN LIFE-SUPPORT DEVICES AND/OR SYSTEMS.                           |
+*  ------------------------------------------------------------------------ 
+* |-------------------------------------------------------------|
+* |  This macro model is being supplied as an aid to            |
+* |  circuit designs.  While it reflects reasonably close       |
+* |  similarity to the actual device in terms of performance,   |
+* |  it is not suggested as a replacement for breadboarding.    |
+* |  Simulation should be used as a forerunner or a supplement  |
+* |  to traditional lab testing.                                |
+* |-------------------------------------------------------------|
+*
+* NOTE : FOR QUICKER CONVERSION PLACE THE NODESET 
+*        V(Xyour.X1.131)=+4.2798 AND
+*        V(Xyour.X1.141)=-4.2808 IN THE ROOT SIMULATION FILE.
+*        ("Xyour" IS DEVICE NAME CALLED OUT IN THE ROOT FILE.)
+*
+*
+* CONNECTIONS:    Iq ADJUST
+*                 | INVERTING INPUT
+*                 | | NON-INVERTING INPUT
+*                 | | | NEGATIVE POWER SUPPLY
+*                 | | | | NEGATIVE OUTPUT POWER SUPPLY
+*                 | | | | | BUFFER -
+*                 | | | | | | VOLTAGE OUT
+*                 | | | | | | | OTA
+*                 | | | | | | | |  POSITIVE OUTPUT POWER SUPPLY
+*                 | | | | | | | |  |  POSITIVE POWER SUPPLY
+*                 | | | | | | | |  |  |  BUFFER +
+*                 | | | | | | | |  |  |  |
+.SUBCKT OPA622X1  2 3 4 5 6 8 9 10 11 12 13
+** 
+X1  2 5 12 131 141                BC ; Biasing Circuit BC
+X2  4 5 10 12 13 111 121 131 141  DT ; Diamond Transistor DT
+X3  6 9 11 111 121                CB ; Current-Buffer CB
+X4  3 5 8 12 131 141              DB ; Diamond-Buffer DB
+**
+C202    2  0   2E-12
+C208    8  0   2E-12
+C209    9  0   2E-12
+C210   10  0   2E-12
+C213   13  0   2E-12
+**
+.ENDS OPA622X1
+
+**Diamond Buffer DB
+**
+.SUBCKT DB 3 5 8 12 131 141
+**
+R63  63 3  40
+**
+C61  61 0  0.02E-12
+C62  62 0  0.02E-12
+C63  63 0  2E-12
+**
+Q61  61 131 12 12  PI
+Q62  62 141  5  5  NI
+Q63   5 63  61 12  PI
+Q64  12 63  62  5  NI
+Q65  12 61   8  5  NI 6
+Q66   5 62   8 12  PI 6
+**
+.ENDS DB
+
+**Diamond Transistor DT
+**
+.SUBCKT DT 4 5 10 12 13 111 121 131 141
+**
+R23  23 4  40
+**
+C10  10 0  2.0E-12
+C21  21 0  0.02E-12
+C22  22 0  0.02E-12
+C23  23 0  2E-12
+C27  27 0  14E-12
+C28  28 0  14E-12
+**
+Q21  21  131 12 12  PI
+Q22  22  141  5  5  NI
+Q23   5  23  21 12  PI
+Q24  12  23  22  5  NI
+Q25  27  21  13  5  NI 6
+Q26  28  22  13 12  PI 6
+Q27  27  27  12 12  PIM
+Q28  28  28   5  5  NIM
+Q29  111 27  12 12  PIM
+Q30  121 28   5  5  NIM
+Q31  111 111 33  5  NI
+Q32  121 121 34 12  PI
+Q33  33  33  10  5  NI
+Q34  34  34  10 12  PI
+**
+.ENDS DT
+
+**Current Buffer CB
+**
+.SUBCKT CB 6 9 11 111 121
+**
+Q35  11 111 37  6  NI
+Q36   6 121 38 11  PI
+Q37  37 37  39  6  NI
+Q38  38 38  39 11  PI
+Q39  11 37   9  6  NI 2.2
+Q40   6 38   9 11  PI 2.2
+**
+.ENDS CB
+
+**Biasing Circuit BC
+**
+.SUBCKT BC 2 5 12 131 141
+**
+R122  122  5  100k
+R123  122  2  200
+**
+Q121  131 131  12 12  PI
+Q122  131 141 122  5  NI 10
+Q123  141 131  12 12  PI
+Q124  141 141   5  5  NI
+**
+.ENDS BC
+
+.MODEL NI NPN
+.MODEL PI PNP
+.MODEL NIM NPN (VAF=18)
+.MODEL PIM PNP (VAF=18)OPA622X2 WIDE-BANDWIDTH OPERATIONAL AMPLIFIER MACROMODEL COMPLEX VERSION
+*
+* CREATED 8/92 BY KL
+* EDITTED 7/9/93 BCB : CLARIFICATION OF NODE SET INSTRUCTIONS
+*
+*  ------------------------------------------------------------------------ 
+* |  NOTICE: THE INFORMATION PROVIDED HEREIN IS BELIEVED TO BE RELIABLE;   |
+* |  HOWEVER; BURR-BROWN ASSUMES NO RESPONSIBILITY FOR INACCURACIES OR     |
+* |  OMISSIONS.  BURR-BROWN ASSUMES NO RESPONSIBILITY FOR THE USE OF THIS  |
+* |  INFORMATION, AND ALL USE OF SUCH INFORMATION SHALL BE ENTIRELY AT     |
+* |  THE USER'S OWN RISK.  NO PATENT RIGHTS OR LICENSES TO ANY OF THE      |
+* |  CIRCUITS DESCRIBED HEREIN ARE IMPLIED OR GRANTED TO ANY THIRD PARTY.  |
+* |  BURR-BROWN DOES NOT AUTHORIZE OR WARRANT ANY BURR-BROWN PRODUCT FOR   |
+* |  USE IN LIFE-SUPPORT DEVICES AND/OR SYSTEMS.                           |
+*  ------------------------------------------------------------------------ 
+* |-------------------------------------------------------------|
+* |  This macro model is being supplied as an aid to            |
+* |  circuit designs.  While it reflects reasonably close       |
+* |  similarity to the actual device in terms of performance,   |
+* |  it is not suggested as a replacement for breadboarding.    |
+* |  Simulation should be used as a forerunner or a supplement  |
+* |  to traditional lab testing.                                |
+* |-------------------------------------------------------------|
+*
+*  NOTE : FOR QUICKER CONVERSIONS PLACE THE NODESET 
+*         V(Xyour.X1.121)=+4.2833 AND
+*         V(Xyour.X1.124)=-4.2838 INTO THE ROOT SIMULATION FILE.
+*         ("Xyour" IS THE DEVICE NAME CALLED OUT IN THE ROOT FILE.)
+*
+*
+* CONNECTIONS :   Iq ADJUST
+*                 | INVERTING INPUT
+*                 | | NON-INVERTING INPUT
+*                 | | | NEGATIVE POWER SUPPLY
+*                 | | | | NEGATIVE OUTPUT POWER SUPPLY
+*                 | | | | | BUFFER -
+*                 | | | | | | VOLTAGE OUT
+*                 | | | | | | |  OTA
+*                 | | | | | | |  |  POSITIVE OUTPUT POWER SUPPLY
+*                 | | | | | | |  |  |  POSITIVE POWER SUPPLY
+*                 | | | | | | |  |  |  |  BUFFER +
+*                 | | | | | | |  |  |  |  |
+.SUBCKT OPA622X2  2 3 4 5 6 8 9 10 11 12 13
+** 
+X1  2 5 12 131 141                BC ; Biasing Circuit BC
+X2  4 5 10 12 13 111 125 131 141  DT ; Diamond Transistor DT
+X3  6 9 11 111 125                CB ; Current-Buffer CB
+X4  3 5 8 12 131 141              DB ; Diamond-Buffer DB
+**
+C202    2  0   2E-12
+C203    3  0   2E-12
+C204    4  0   2E-12
+C208    8  0   2E-12
+C209    9  0   2E-12
+C210   10  0   2E-12
+C213   13  0   2E-12
+**
+.ENDS OPA622X2
+
+**Diamond Buffer DB
+**
+.SUBCKT DB 3 5 8 12 131 141
+**
+Q61  64 131 12 12  PI
+Q62  63 141  5  5  NI
+Q63  63 63  12 12  PIJ 10
+Q64  64 64   5  5  NIJ 10
+Q65  69 63  12 12  PIJ 10
+Q66  70 64   5  5  NIJ 10
+Q67  64  3  69 12  PIJ
+Q68  63  3  70  5  NIJ
+Q69  69 69  68  5  NIJ
+Q70  70 70  68 12  PIJ
+Q71  73 69   8  5  NIJ 6
+Q72  74 70   8 12  PIJ 6
+Q73  73 73  12 12  PIJ 4
+Q74  74 74   5  5  NIJ 4
+**
+.ENDS DB
+
+**Diamond Transistor DT
+**
+.SUBCKT DT 4 5 10 12 13 111 125 131 141
+**
+Q21  24 131 12 12  PI
+Q22  23 141  5  5  NI
+Q23  23 23  12 12  PIJ 10
+Q24  24 24   5  5  NIJ 10
+Q25  29 23  12 12  PIJ 10
+Q26  30 24   5  5  NIJ 10
+Q27  24  4  29 12  PIJ
+Q28  23  4  30  5  NIJ
+Q29  29 29  28  5  NIJ
+Q30  30 30  28 12  PIJ
+Q31  33 29  13  5  NIJ 6
+Q32  34 30  13 12  PIJ 6
+Q33  33 33  12 12  PIJ 8
+Q34  34 34   5  5  NIJ 8
+Q35  111 33 12 12  PIJ 8
+Q36  125 34  5  5  NIJ 8
+Q37  111 37 10  5  NIJ 5
+Q38  10 38 125  5  NIJ 5
+Q39  10 37 111 12  PIJ 5
+Q40  125 38 10 12  PIJ 5
+**
+.ENDS DT
+
+**Current Buffer CB
+**
+.SUBCKT CB 6 9 11 111 125
+**
+Q43  11 111 45  6  NIJ 4
+Q44   6 125 46 11  PIJ 4
+Q45  45 45  47  6  NIJ 12
+Q46  46 46  47 11  PIJ 12
+Q47  11 45   9  6  NIJ 48
+Q48   6 46   9 11  PIJ 48
+**
+.ENDS CB
+
+**Biasing Circuit BC
+**
+.SUBCKT BC 2 5 12 131 141
+**
+E13  131 0  121 0  1
+E14  141 0  124 0  1
+**
+I121  121 124  0.1E-6
+**
+R122  122  5  100E3
+R123  122  2  200
+**
+C121  121  12 10E-12
+C124  124   5 10E-12
+**
+Q121  121 121  12 12  PI
+Q122  121 124 122  5  NI 6
+Q123  124 121  12 12  PI
+Q124  124 124   5  5  NI
+Q125   5  131  12 12  PI 11
+**
+.ENDS BC
+
+.MODEL NIJ NPN (BF  = 110 IS  = 0.1567E-16
++CJC = 0.029E-12 AF  = 1.000    NE  = 1.366    XTB = 2.452    BR  = 12.89
++CJE = 0.017E-12 EG  = 1.183    NF  = 1.000    XTF = 9.000    IKF = 2.272E-3
++CJS = 0.050E-12 FC  = 0.900    NR  = 1.000    XTI = 2.000    IKR = 16.67E-3
++RB  = 228.0     IRB = 0.000    PTF = 0.000                   ISC = 5.248E-20
++RC  = 48.83     KF  = 0.000    VAR = 1.771                   ISE = 8.040E-18
++RE  = 5.065     MJC = 0.190    VJC = 0.526                   ITF = 6.683E-3
++TF  = 29.80E-12 MJE = 0.493    VJE = 0.816                   RBM = 60.00
++TR  = 65.00E-12 MJS = 0.348    VJS = 0.596                   XCJC= 0.0732
++VAF = 39.00     NC  = 1.634    VTF = 2.680)
+
+.MODEL PIJ PNP (BF  = 110 IS  = 0.1567E-16
++CJC = 0.029E-12 AF  = 1.000    NE  = 1.366    XTB = 2.452    BR  = 12.89
++CJE = 0.017E-12 EG  = 1.183    NF  = 1.000    XTF = 9.000    IKF = 2.272E-3
++CJS = 0.050E-12 FC  = 0.900    NR  = 1.000    XTI = 2.000    IKR = 16.67E-3
++RB  = 228.0     IRB = 0.000    PTF = 0.000                   ISC = 5.248E-20
++RC  = 48.83     KF  = 0.000    VAR = 1.771                   ISE = 8.040E-18
++RE  = 5.065     MJC = 0.190    VJC = 0.526                   ITF = 6.683E-3
++TF  = 29.80E-12 MJE = 0.493    VJE = 0.816                   RBM = 60.00
++TR  = 65.00E-12 MJS = 0.348    VJS = 0.596                   XCJC= 0.0732
++VAF = 39.00     NC  = 1.634    VTF = 2.680)
+
+.MODEL NI NPN
+.MODEL PI PNPOPA623X1 WIDE BANDWIDTH, CURRENT FEEDBACK, SIMPLIFIED VERSION MACROMODEL

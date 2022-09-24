@@ -1,9 +1,0 @@
-Products|ProductID
-Count of Products|Int32|8|ProductID|Int32|8|ProductName|String|8
-      21|       1|   Apple
-      60|       2| samsung
-      12|       3|  xiaomi
-      50|       4|  huawei
-      80|       5|    sony
-      89|       6|   nokia
-      78|       7| OnePlus

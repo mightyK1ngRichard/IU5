@@ -1,19 +1,22 @@
 # 4 семестр
 ### Предметы:
-- Системное программирование.
-- Схемотехника дискретных устройств.
-- Базы данных.
-- Дискретная математика.
-- Электроника.
+- [Системное программирование.](https://github.com/IU5-IT/IU5-IT/tree/master/Term-4/System%20programming)
+- [Программирование сетевых приложений.](https://github.com/IU5-IT/IU5-IT/tree/master/Term-4/Programming%20network%20applications)
+- [Схемотехника дискретных устройств.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-4/Circuitry%20of%20discrete%20devices)
+- [Базы данных.](https://github.com/IU5-IT/IU5-IT/tree/master/Term-4/Data%20Base)
+- [Электроника.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-4/Electronics)
+- [Политология.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-4/Political%20science)
+- [Дискретная математика.](https://github.com/mightyK1ngRichard/IU5/wiki/DiscreteMathematics)
 - Иностранный язык.
-- Политология.
+- XML-технологии.
+- Баскетбол.
 
 ### Экзамены:
 - Дискретная математика.
-- Системное программирование.
+- Базы данных.
 - Схемотехника дискретных устройств.
 - Электроника.
 
 ### Курсовая: 
-- Системное программирование.
-- Базы данных.
+- [Системное программирование.](https://github.com/IU5-IT/IU5-IT/tree/master/Term-4/System%20programming/Course%20work)
+- [Базы данных.](https://github.com/mightyK1ngRichard/WoodGrowthCourseWorkSwiftUI)

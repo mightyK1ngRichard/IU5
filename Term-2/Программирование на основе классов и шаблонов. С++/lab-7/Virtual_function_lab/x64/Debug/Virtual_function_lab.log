@@ -1,3 +1,0 @@
-﻿  Virtual_function_lab.cpp
-C:\Users\dimap\source\repos\Virtual_function_lab\Virtual_function_lab\Virtual_function_lab.cpp(54,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Virtual_function_lab.vcxproj -> C:\Users\dimap\source\repos\Virtual_function_lab\x64\Debug\Virtual_function_lab.exe

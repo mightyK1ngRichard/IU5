@@ -1,0 +1,38 @@
+.SUBCKT irg4bc20u
+.ENDS
+.SUBCKT irg4pc30u
+.ENDS
+.SUBCKT irgbc20f
+.ENDS
+.SUBCKT irgbc20k
+.ENDS
+.SUBCKT irgbc20s
+.ENDS
+.SUBCKT irgbc20u
+.ENDS
+.SUBCKT irgbc30f
+.ENDS
+.SUBCKT irgbc30k
+.ENDS
+.SUBCKT irgbc30ud2
+.ENDS
+.SUBCKT irglc60kd1
+.ENDS
+.SUBCKT irgpc20f
+.ENDS
+.SUBCKT irgpc20u
+.ENDS
+.SUBCKT irgpc40k
+.ENDS
+.SUBCKT irgpc40ud2
+.ENDS
+.SUBCKT irgpc50k
+.ENDS
+.SUBCKT irgpc50m
+.ENDS
+.SUBCKT irgph40k
+.ENDS
+.SUBCKT irgph50k
+.ENDS
+.SUBCKT irgph50m
+.ENDS

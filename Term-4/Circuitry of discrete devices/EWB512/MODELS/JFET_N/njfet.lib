@@ -1,0 +1,51 @@
+
+.MODEL 2N5457 NJF (
++   VTO =  -3.25
++   BETA =  0.000284
++   LAMBDA =  0.0124
++   RD =  9.03
++   RS =  8.13
++   IS =  1.89e-15
++   CGD =  5.4e-12
++   CGS =  2.25e-12
++   PB =  1
++   B =  1
++   KF =  0
++   AF =  1
++   FC =  0.5
++   TNOM =  27
+)
+
+.MODEL 2N5458 NJF (
++   VTO =  -4
++   BETA =  0.000375
++   LAMBDA =  0.0124
++   RD =  6.39
++   RS =  5.75
++   IS =  3.79e-15
++   CGD =  5.4e-12
++   CGS =  2.25e-12
++   PB =  1
++   B =  1
++   KF =  0
++   AF =  1
++   FC =  0.5
++   TNOM =  27
+)
+
+.MODEL MMBF4416 NJF (
++   VTO =  -6
++   BETA =  2.78e-07
++   LAMBDA =  0.0103
++   RD =  156
++   RS =  140
++   IS =  5.267e-18
++   CGD =  2.88e-12
++   CGS =  2e-12
++   PB =  1
++   B =  1
++   KF =  0
++   AF =  1
++   FC =  0.5
++   TNOM =  27
+)

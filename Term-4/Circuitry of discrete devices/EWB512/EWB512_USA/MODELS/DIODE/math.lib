@@ -1,0 +1,18 @@
+
+.MODEL EXP D (
++   IS =  1
++   RS =  0
++   CJO =  0
++   VJ =  1
++   TT =  0
++   M =  0.333
++   BV =  1e+30
++   N =  1
++   EG =  1.11
++   XTI =  3
++   KF =  0
++   AF =  1
++   FC =  0.5
++   IBV =  0.001
++   TNOM =  27
+)
