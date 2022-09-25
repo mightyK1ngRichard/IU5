@@ -1,3 +1,0 @@
-﻿  main.cpp
-C:\Users\dimap\source\repos\StaticMath\test\main.cpp(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-  test.vcxproj -> C:\Users\dimap\source\repos\StaticMath\x64\Debug\test.exe
