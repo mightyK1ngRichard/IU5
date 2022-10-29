@@ -4,7 +4,7 @@
 2. Хватова Мария Алексеевна - семинарист.<br>
 
 ## План.
-1. [Лекции.](https://github.com/mightyK1ngRichard/IU5/blob/main/Term-3/%D0%9F%D1%80%D0%B0%D0%B2%D0%BE%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%B0%D0%B2%D0%BE%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5.docx)
+1. Лекции: [MacOS](https://github.com/mightyK1ngRichard/IU5/blob/main/Term-3/Правоведение/Правоведение.pages) | [Windows](https://github.com/mightyK1ngRichard/IU5/blob/main/Term-3/Правоведение/Правоведение.docx)
 2. Семинары.
 3. КР.
 
