@@ -8,6 +8,7 @@
 - 2022 осень - [3 семестр](https://github.com/mightyK1ngRichard/IU5/tree/main/Term-3)
 - 2023 весна - [4 семестр](https://github.com/mightyK1ngRichard/IU5/tree/main/Term-4)
 - 2023 осень - [5 семестр](https://github.com/mightyK1ngRichard/IU5/tree/main/Term-5)
+ - 2024 весна - [6 семестр](https://github.com/mightyK1ngRichard/IU5/tree/main/Term-6)
  
 # 🌬 Contribute
 [Правила](https://github.com/mightyK1ngRichard/IU5/wiki/Contribute) оформления pull request
