@@ -1,7 +1,7 @@
 # 2 семестр
 ### Предметы:
 - [Физика.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-2/Physics)
-- [Программирование на основе классов и шаблонов C++.](https://github.com/IU5-IT/IU5-IT/tree/master/Term-2)
+- [Программирование на основе классов и шаблонов C++.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-2/PBCT)
 - [Инженерная графика.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-2/Computer%20graphics)
 - Линейная алгебра и ФНП.
 - [Интегралы и дифференциальные уравнения.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-2/Integrals%20and%20differential%20equations)
