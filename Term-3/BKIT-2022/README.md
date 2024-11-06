@@ -7,8 +7,8 @@ Professor: [Yuri Evgenievich Gapanyuk](https://github.com/ugapanyuk/BKIT_2022)
 1. [03-lab-01-DimaPermyakov](https://github.com/IU5-IT/IU5-IT/tree/main/Term-3/BKIT-2022/03-lab-01-DimaPermyakov)
 2. [03-lab-02-DimaPermyakov](https://github.com/IU5-IT/IU5-IT/tree/main/Term-3/BKIT-2022/03-lab-02-DimaPermyakov)
 3. [03-lab-03-DimaPermyakov](https://github.com/IU5-IT/IU5-IT/tree/main/Term-3/BKIT-2022/03-lab-03-DimaPermyakov)
-4.  [03-lab-04-DimaPermyakov](https://github.com/IU5-IT/IU5-IT/tree/main/Term-3/BKIT-2022/03-lab-03-DimaPermyakov)
-5.  [03-lab-05-DimaPermyakov](https://github.com/IU5-IT/IU5-IT/tree/master/Term-3/BKIT-2022/03-lab-05-DimaPermyakov)
+4. [03-lab-04-DimaPermyakov](https://github.com/IU5-IT/IU5-IT/tree/main/Term-3/BKIT-2022/03-lab-03-DimaPermyakov)
+5. [03-lab-05-DimaPermyakov](https://github.com/IU5-IT/IU5-IT/tree/master/Term-3/BKIT-2022/03-lab-05-DimaPermyakov)
 6. [03-lab-06-DimaPermyakov](https://github.com/IU5-IT/IU5-IT/tree/master/Term-3/BKIT-2022/03-lab-06-DimaPermyakov)
 
 ## Module tests:

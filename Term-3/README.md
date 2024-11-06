@@ -1,6 +1,6 @@
 # 3 семестр
 ### Предметы:
-- [Базовые компоненты интернет-технологий.](https://github.com/IU5-IT/IU5-IT/tree/main/Term-3)
+- [Базовые компоненты интернет-технологий.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-3/BKIT-2022)
 - [Модели данных.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-3/Model%20data)
 - [Электротехника.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-3/Electrical%20engineering)
 - [Физика.](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-3/Physics)
