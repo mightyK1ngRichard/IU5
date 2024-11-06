@@ -1,0 +1,82 @@
+body {
+    /*background-image: url(images/picture.jpeg);*/
+    background: linear-gradient(to left, #4d21de 0%, #cb6fbd 100%);
+
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#vk-link:hover {
+    box-shadow: 0 0 20px 2px yellow;
+    border-radius: 20%;
+}
+
+.title-page {
+    background-image: linear-gradient(to left, #ed0af3 0%, #0cfff7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#accordionExample {
+    display: flex;
+    width: 160px;
+    margin-left: 1520px;
+}
+
+.accordion-body {
+    position: absolute;
+    z-index: 9999;
+}
+
+#sort-buttons-1 {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+#sort-buttons-2  {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+#sort-buttons-up-id {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+#sort-buttons-down-id {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+#product-page {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#back-button-wrapper {
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    margin-left: 850px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-image: linear-gradient(to left, #ed0af3 0%, #30bad2 100%);
+}
+
+.vk-logo {
+    float: right;
+    margin-right: 50px;
+    margin-top: 5px;
+
+}
