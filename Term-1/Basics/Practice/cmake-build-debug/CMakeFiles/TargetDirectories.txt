@@ -1,0 +1,3 @@
+/Users/dmitriy/IT/IU5-IT/Term-1/Basics/Practice/cmake-build-debug/CMakeFiles/Practice.dir
+/Users/dmitriy/IT/IU5-IT/Term-1/Basics/Practice/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/dmitriy/IT/IU5-IT/Term-1/Basics/Practice/cmake-build-debug/CMakeFiles/rebuild_cache.dir

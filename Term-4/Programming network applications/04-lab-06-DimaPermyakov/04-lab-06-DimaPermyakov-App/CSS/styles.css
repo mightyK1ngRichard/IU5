@@ -1,0 +1,143 @@
+body {
+    /*background-image: url(images/picture.jpeg);*/
+    /*background: linear-gradient(to left, #1c1c21 0%, #251c22 100%);*/
+    background: rgba(0, 0, 0, 0.96);
+}
+
+#root {
+    width: 100vw;
+    /*height: 100vh;*/
+    /*margin: 0 auto;*/
+    margin-left: 20px;
+}
+
+#vk-link {
+    margin-top: 10px;
+    width: 50px;
+    margin-right: 20px;
+    box-shadow: 0 0 5px 1px #ffffff;
+    border-radius: 20%;
+}
+
+#vk-link:hover {
+    box-shadow: 0 0 5px 2px blue;
+    border-radius: 20%;
+}
+
+.title-page {
+    margin-top: 15px;
+    background-image: linear-gradient(to left, #ffffff 0%, rgba(255, 255, 255, 0.83) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#accordionExample {
+    display: flex;
+    width: 160px;
+    margin-left: 1520px;
+}
+
+.button_plus {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    cursor: pointer;
+    border: 2px solid rgba(22, 12, 155, 0.69);
+    /*left: 21px;*/
+    /*top: 21px;*/
+    margin-left: 20px;
+    margin-top: 15px;
+    border-radius: 20%;
+}
+
+.button_plus:after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 4px;
+    width: 50%;
+    background: rgba(87, 21, 110, 0.82);
+    top: 50%;
+    left: 50%;
+}
+
+.button_plus:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #095776;
+    height: 50%;
+    width: 4px;
+}
+
+.button_plus:hover:before,
+.button_plus:hover:after {
+    background: #fff;
+    transition: 0.2s;
+}
+
+.button_plus:hover {
+    background-color: rgba(17, 36, 206, 0.31);
+    transition: 0.2s;
+}
+
+.accordion-body {
+    position: absolute;
+    z-index: 9999;
+}
+
+#sort-buttons-1 {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+#sort-buttons-2  {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+#sort-buttons-up-id {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+#sort-buttons-down-id {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+#product-page {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#back-button-wrapper {
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    margin-left: 850px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-image: linear-gradient(to left, #282528 0%, #050404 100%);
+}
+
+.vk-logo {
+    float: right;
+    margin-right: 50px;
+    margin-top: 5px;
+
+}
+
+#title-site-id {
+    font-size: 4em;
+}

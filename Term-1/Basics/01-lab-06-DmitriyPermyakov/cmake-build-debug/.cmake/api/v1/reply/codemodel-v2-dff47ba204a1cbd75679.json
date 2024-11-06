@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "01_lab_06_DmitriyPermyakov",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "01_lab_06_DmitriyPermyakov::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-01_lab_06_DmitriyPermyakov-Debug-9c400b706838f99c400a.json",
+					"name" : "01_lab_06_DmitriyPermyakov",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/dmitriy/IT/IU5-IT/Term-1/Basics/01-lab-06-DmitriyPermyakov/cmake-build-debug",
+		"source" : "/Users/dmitriy/IT/IU5-IT/Term-1/Basics/01-lab-06-DmitriyPermyakov"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

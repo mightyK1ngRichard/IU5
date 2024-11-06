@@ -1,0 +1,15 @@
+apple - яблоко
+autumn - осень
+book - книга
+bread - хлеб
+cafe - кафе
+coffee - кофе
+cow - корова
+cup - кружка
+duck - утка
+fight - бой
+game - игра
+genius - гений
+notebook - ноутбук
+pen - ручка
+phone - телефон

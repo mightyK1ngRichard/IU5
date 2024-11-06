@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IU5-LIFE</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <img src="images/vk_logo.png" class="vk-logo" id="vk-link" alt="vk" width="40px"/>
+</head>
+<body>
+<h1 class="title-page" id="title-site-id">Подписчики сообщества IU5-LIFE</h1>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                Сортировка
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+             data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <button class="btn btn-primary" type="button" id="sort-buttons-1"> От A-Z</button>
+                <button class="btn btn-primary" type="button" id="sort-buttons-2"> От Z-A</button>
+                <button class="btn btn-primary" type="button" id="sort-buttons-up-id"> ↑ По ID</button>
+                <button class="btn btn-primary" type="button" id="sort-buttons-down-id"> ↓ По ID</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="root"></div>
+<script src="js/main.js" type="module"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
