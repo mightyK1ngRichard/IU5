@@ -22,4 +22,4 @@
 - [Маркетплейс для продажи тортов на платформе iOS](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-7/Scientific%20research%20work)
 
 ### Саммэри по курсу
-- [ ] Написать
+- [Читать тут](https://github.com/mightyK1ngRichard/IU5/wiki/Term%E2%80%907)
