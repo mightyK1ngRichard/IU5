@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Программа для расчета аналитической модели АСОИУ | Пермяков Дмитрий | ИУ5-12М</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --accent: #9b59b6;
+      --light: #ecf0f1;
+      --dark: #2c3e50;
+      --success: #2ecc71;
+      --warning: #e67e22;
+      --gradient-primary: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+      --gradient-secondary: linear-gradient(135deg, #9b59b6 0%, #3498db 100%);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: var(--gradient-secondary);
+      z-index: 10;
+    }
+
+    /* Секция 1 - Заголовок */
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 40px 50px;
+      background: var(--gradient-primary);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 150px;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+
+    .header img {
+      height: 120px;
+      width: auto;
+      margin-right: 40px;
+      filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .header img:hover {
+      transform: scale(1.05);
+    }
+
+    .header-text {
+      flex: 1;
+      z-index: 2;
+    }
+
+    .header-text p {
+      margin: 8px 0;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    .header-text strong {
+      font-size: 17px;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    /* Разделительная линия */
+    .divider {
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      margin: 20px 50px;
+      border-radius: 3px;
+      opacity: 0.7;
+    }
+
+    /* Секция 2 - Факультет и кафедра */
+    .faculty-section {
+      padding: 30px 50px;
+      background: linear-gradient(to right, #f8f9fa, #ffffff);
+      border-bottom: 1px solid #eee;
+    }
+
+    .faculty-item {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+      padding: 15px 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--secondary);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faculty-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .faculty-label {
+      font-weight: 600;
+      color: var(--primary);
+      min-width: 200px;
+      font-size: 18px;
+    }
+
+    .faculty-value {
+      flex: 1;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--dark);
+      padding: 8px 0;
+      border-bottom: 2px dashed var(--accent);
+      position: relative;
+    }
+
+    .faculty-value::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--success);
+      transition: width 0.3s ease;
+    }
+
+    .faculty-item:hover .faculty-value::after {
+      width: 100%;
+    }
+
+    /* Основной контент */
+    .content {
+      padding: 60px 50px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 42px;
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 25%;
+      width: 50%;
+      height: 3px;
+      background: var(--gradient-secondary);
+      border-radius: 2px;
+    }
+
+    .discipline-container {
+      margin: 40px 0;
+      padding: 30px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 15px;
+      border: 1px solid rgba(52, 152, 219, 0.1);
+    }
+
+    .discipline-label {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .discipline-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.4;
+      position: relative;
+      display: inline-block;
+      padding: 10px 30px;
+    }
+
+    .discipline-name::before,
+    .discipline-name::after {
+      content: "«";
+      color: var(--accent);
+      font-size: 36px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .discipline-name::after {
+      content: "»";
+      left: auto;
+      right: 0;
+    }
+
+    .topic-section {
+      margin: 50px 0;
+      padding: 40px;
+      background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(52, 152, 219, 0.1) 100%);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(155, 89, 182, 0.2);
+    }
+
+    .topic-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-secondary);
+    }
+
+    .subtitle {
+      font-size: 22px;
+      color: #666;
+      margin-bottom: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .topic {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.5;
+      position: relative;
+      padding: 20px;
+    }
+
+    .topic-line {
+      display: block;
+      margin: 15px 0;
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .topic-line::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 28px;
+    }
+
+    /* Таблица подписей */
+    .signatures-section {
+      margin-top: 80px;
+      padding: 40px;
+      background: #f8f9fa;
+      border-radius: 15px;
+      border: 1px solid #eee;
+    }
+
+    table.signatures {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 25px;
+    }
+
+    table.signatures td {
+      padding: 15px;
+      text-align: center;
+      vertical-align: bottom;
+      position: relative;
+    }
+
+    table.signatures tr {
+      transition: transform 0.3s ease;
+    }
+
+    table.signatures tr:hover {
+      transform: translateY(-5px);
+    }
+
+    .signature-label {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 10px;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .signature-line {
+      display: inline-block;
+      border-bottom: 2px solid var(--dark);
+      min-width: 250px;
+      padding: 8px 0;
+      font-weight: 600;
+      color: var(--primary);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .signature-line:hover {
+      border-bottom-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .signature-note {
+      display: block;
+      font-size: 13px;
+      color: #888;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* Футер */
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px;
+      background: var(--gradient-primary);
+      color: white;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.1"><polygon points="0,0 100,0 100,100" fill="white"/></svg>');
+      background-size: cover;
+    }
+
+    .footer-year {
+      font-size: 28px;
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    /* Кнопка */
+    .button-container {
+      margin: 50px 0 30px;
+      text-align: center;
+    }
+
+    a.knopka {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-secondary);
+      color: white;
+      width: 350px;
+      height: 70px;
+      font-size: 22px;
+      text-decoration: none;
+      padding: 0 40px;
+      border-radius: 35px;
+      box-shadow: var(--shadow);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    a.knopka::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.7s ease;
+    }
+
+    a.knopka:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      letter-spacing: 2px;
+    }
+
+    a.knopka:hover::before {
+      left: 100%;
+    }
+
+    a.knopka b {
+      margin-left: 10px;
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    a.knopka:hover b {
+      transform: translateX(10px);
+    }
+
+    /* Декоративные элементы */
+    .decoration {
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .decoration-1 {
+      width: 100px;
+      height: 100px;
+      background: var(--accent);
+      opacity: 0.1;
+      border-radius: 50%;
+      top: 10%;
+      right: 5%;
+    }
+
+    .decoration-2 {
+      width: 60px;
+      height: 60px;
+      background: var(--secondary);
+      opacity: 0.1;
+      border-radius: 10px;
+      bottom: 20%;
+      left: 5%;
+      transform: rotate(45deg);
+    }
+
+    /* Анимации */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Декоративные элементы -->
+  <div class="decoration decoration-1"></div>
+  <div class="decoration decoration-2"></div>
+
+  <!-- СЕКЦИЯ 1 -->
+  <div class="header fade-in">
+    <img src="res/bmstu.jpg" alt="Герб МГТУ им. Н.Э. Баумана">
+    <div class="header-text">
+      <p>Министерство науки и высшего образования Российской Федерации</p>
+      <p>Федеральное государственное автономное образовательное учреждение высшего образования</p>
+      <p>«Московский государственный технический университет имени Н.Э. Баумана</p>
+      <p>(национальный исследовательский университет)»</p>
+      <p><strong>(МГТУ им. Н.Э. Баумана)</strong></p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- СЕКЦИЯ 2 -->
+  <div class="faculty-section fade-in delay-1">
+    <div class="faculty-item">
+      <div class="faculty-label">ФАКУЛЬТЕТ</div>
+      <div class="faculty-value">ИНФОРМАТИКА И СИСТЕМЫ УПРАВЛЕНИЯ</div>
+    </div>
+    <div class="faculty-item">
+      <div class="faculty-label">КАФЕДРА</div>
+      <div class="faculty-value">СИСТЕМЫ ОБРАБОТКИ ИНФОРМАЦИИ И УПРАВЛЕНИЯ</div>
+    </div>
+  </div>
+
+  <!-- Основной контент -->
+  <div class="content fade-in delay-2">
+    <div class="title">КУРСОВАЯ РАБОТА</div>
+    
+    <div class="discipline-container">
+      <div class="discipline-label">по дисциплине:</div>
+      <div class="discipline-name">
+        «Аналитические модели автоматизированных систем обработки информации и управления»
+      </div>
+    </div>
+
+    <div class="subtitle">НА ТЕМУ:</div>
+    
+    <div class="topic-section">
+      <div class="topic">
+        <span class="topic-line">Анализ организации работы АСОИиУ фирмы</span>
+        <span class="topic-line">Модель АСОИиУ</span>
+      </div>
+    </div>
+
+    <!-- Подписи -->
+    <div class="signatures-section fade-in delay-3">
+      <table class="signatures">
+        <tr>
+          <td>
+            <div class="signature-label">Студент</div>
+            <div class="signature-line">ИУ5-12М</div>
+            <span class="signature-note">(группа)</span>
+          </td>
+          <td></td>
+          <td>
+            <div class="signature-line">Д.К. Пермяков</div>
+            <span class="signature-note">(И.О. Фамилия)</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="signature-label">Руководитель курсовой работы</div>
+          </td>
+          <td>
+            <div class="signature-line">В.М. Постников</div>
+            <span class="signature-note">(И.О. Фамилия)</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="footer">
+      <div class="footer-year">Москва — 2025</div>
+    </div>
+
+    <div class="button-container">
+      <a href="prog_theory.html" class="knopka">
+        Перейти к работе
+        <b>→</b>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Добавляем анимации при загрузке
+  document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach((el, index) => {
+      el.style.animationDelay = `${index * 0.2}s`;
+    });
+  });
+</script>
+</body>
+</html>

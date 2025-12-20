@@ -1,0 +1,115 @@
+html, body {
+	background: Honeydew; /* Цвет фона */
+width: 930px;
+height: 620px;
+margin:0 auto;
+margin-top: 5px;
+  }
+  
+  #obozn{
+	  position: absolute;
+	  margin-top: 172px;
+	  margin-left: 300px;
+  }
+  
+  #p_4{
+	  position: absolute;
+	  margin-left: 300px;
+	  margin-top: -96px;
+  }
+
+  #p_5{
+	  position: absolute;
+	  margin-left: 300px;
+	  margin-top: -63px;
+  }
+
+  #p_6{
+	  position: absolute;
+	  margin-left: 300px;
+	  margin-top: -30px;
+  }
+
+  #p_7{
+	  position: absolute;
+	  margin-left: 600px;
+	  margin-top: -96px;
+  }
+
+  #p_8{
+	  position: absolute;
+	  margin-left: 600px;
+	  margin-top: -63px;
+  }
+
+  #p_9{
+	  position: absolute;
+	  margin-left: 600px;
+	  margin-top: -30px;
+  }
+  
+  #k_3{
+	  position: absolute;
+	  margin-left: 300px;
+	  margin-top: -65px;
+  }
+
+  #k_4{
+	  position: absolute;
+	  margin-left: 300px;
+	  margin-top: -33px;
+  }
+
+  label{
+    display:inline-block;
+    width:70px;
+    font-size: 24px;
+  }
+  p{
+    height: 32px;
+    margin: 0px;
+  }
+  p.knopka {
+    position: absolute;
+    background: darkorange;
+    width: 250px;
+	margin-left: 580px;
+	margin-top: -38px;
+    font-size: 25px;
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    padding: 5px; /* отступ от текста */
+    text-align: center;
+	border-radius: 15px;
+	height: 28px;
+  } 
+  p.knopka:hover { background: gold;cursor:pointer; } /* при наведении курсора мышки */
+  table{
+      border-collapse: collapse;
+  }
+  .resOutput{
+    background: white;
+      text-align: center;
+      font-size: 22px;
+	  width: 200px;
+  }
+  .labelForResOutput{
+    background: white;
+      text-align: left;
+      font-size: 22px;
+  }
+  a.knopka {
+    background: darkorange;
+    color: black;
+  width: 250px;
+  margin:0 auto ;
+  font-size: 25px;
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  padding: 5px; /* отступ от текста */
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+} 
+a.knopka:hover { background: gold; } /* при наведении курсора мышки */

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Программа для расчета аналитической модели АСОИУ (упрощенная) — Лавренов Михаил ИУ5-13М</title>
+  <script src="jquery.js"></script>
+  <style>
+    :root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #9b59b6;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --success: #2ecc71;
+    --warning: #e67e22;
+    --gradient-primary: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    --gradient-secondary: linear-gradient(135deg, #9b59b6 0%, #3498db 100%);
+    --gradient-warning: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+    --gradient-success: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    --gradient-info: linear-gradient(135deg, #3498db 0%, #2ecc71 100%);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --border-radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-secondary);
+    z-index: 10;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background: var(--gradient-secondary);
+    border-radius: 2px;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 24px;
+    margin: 30px 0 20px;
+    font-weight: 700;
+    position: relative;
+    padding-left: 15px;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 24px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+/* Информационный бейдж */
+.info-badge {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--primary);
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-badge::before {
+    content: 'ℹ️';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+}
+
+.info-badge strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Секции ввода */
+.input-section,
+.control-section {
+    background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    box-shadow: var(--shadow-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.input-section::before,
+.control-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-info);
+}
+
+.control-section::before {
+    background: var(--gradient-warning);
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.input-row:hover {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(155, 89, 182, 0.05) 100%);
+    padding: 10px 15px;
+    margin: 15px -15px;
+    border-radius: 8px;
+    border-bottom-color: transparent;
+}
+
+.input-row label {
+    flex: 1;
+    font-size: 16px;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.input-row .symbol {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 18px;
+    background: linear-gradient(135deg, var(--accent), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 5px;
+}
+
+.input-row input {
+    width: 150px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid rgba(52, 152, 219, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+    color: var(--dark);
+}
+
+.input-row input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.1);
+}
+
+.input-row input:hover {
+    border-color: var(--secondary);
+}
+
+/* Таблица результатов */
+table.results {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: 30px 0;
+    position: relative;
+}
+
+table.results::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-success);
+}
+
+table.results th {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 18px;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+table.results td {
+    padding: 16px 18px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+table.results tr:nth-child(even) {
+    background: linear-gradient(135deg, rgba(236, 240, 241, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+table.results tr:hover {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(155, 89, 182, 0.1) 100%);
+    transform: translateX(5px);
+}
+
+table.results td:first-child {
+    font-weight: 500;
+    color: var(--dark);
+    border-right: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+table.results td:last-child {
+    font-weight: 700;
+    color: var(--primary);
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+    text-align: center;
+    font-size: 17px;
+}
+
+/* Кнопки */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0 20px;
+    flex-wrap: wrap;
+}
+
+.knopka,
+a.knopka {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-warning);
+    color: white;
+    min-width: 200px;
+    height: 55px;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0 25px;
+    border-radius: 27px;
+    box-shadow: var(--shadow);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.knopka::before,
+a.knopka::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.knopka:hover,
+a.knopka:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    letter-spacing: 0.8px;
+}
+
+.knopka:hover::before,
+a.knopka:hover::before {
+    left: 100%;
+}
+
+.knopka b,
+a.knopka b {
+    margin-left: 8px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.knopka:hover b,
+a.knopka:hover b {
+    transform: translateX(5px);
+}
+
+.knopka.secondary,
+a.knopka.secondary {
+    background: var(--gradient-success);
+}
+
+.knopka.primary,
+a.knopka.primary {
+    background: var(--gradient-info);
+    min-width: 220px;
+}
+
+/* Декоративные элементы */
+.decoration {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.decoration-1 {
+    width: 60px;
+    height: 60px;
+    background: var(--accent);
+    opacity: 0.08;
+    border-radius: 15px;
+    top: 10%;
+    right: 5%;
+    transform: rotate(10deg);
+}
+
+.decoration-2 {
+    width: 80px;
+    height: 80px;
+    background: var(--secondary);
+    opacity: 0.06;
+    border-radius: 50%;
+    bottom: 15%;
+    left: 5%;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Специфические стили */
+sub {
+    font-size: 0.75em;
+    vertical-align: sub;
+    color: var(--accent);
+}
+
+/* Стили для результатов вычислений */
+table.results td:last-child {
+    font-family: 'Courier New', monospace;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    .input-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .input-row input {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .knopka,
+    a.knopka {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    table.results {
+        font-size: 14px;
+    }
+    
+    table.results th,
+    table.results td {
+        padding: 12px;
+    }
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #ecf0f1;
+        --secondary: #3498db;
+        --accent: #9b59b6;
+        --light: #2c3e50;
+        --dark: #ecf0f1;
+    }
+    
+    body {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    .container {
+        background: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .input-section,
+    .control-section {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        border-color: rgba(52, 152, 219, 0.3);
+    }
+    
+    .input-row input {
+        background: #2c3e50;
+        color: #ecf0f1;
+        border-color: rgba(52, 152, 219, 0.4);
+    }
+    
+    table.results {
+        background: #2c3e50;
+    }
+    
+    .info-badge {
+        background: linear-gradient(135deg, rgba(52, 152, 219, 0.2) 0%, rgba(46, 204, 113, 0.2) 100%);
+        color: #ecf0f1;
+        border-color: rgba(52, 152, 219, 0.3);
+    }
+    
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Программа для расчета аналитической модели АСОИУ</h1>
+  
+  <div>
+    <strong>Упрощенная версия</strong> — без учета канала передачи данных и дисковой подсистемы
+  </div>
+
+  <h2>Входные данные</h2>
+
+  <div class="input-section">
+    <div class="input-row">
+      <label>Число рабочих станций сети <span class="">(N)</span></label>
+      <input type="number" id="N" value="10">
+    </div>
+    
+    <div class="input-row">
+      <label>Среднее время дообработки запроса на рабочей станции <span class="symbol">(Т<sub>Д</sub>)</span></label>
+      <input type="number" id="T0" value="0">
+    </div>
+    
+    <div class="input-row">
+      <label>Среднее время формирования запроса от рабочей станции <span class="symbol">(Т<sub>Ф</sub>)</span></label>
+      <input type="number" id="Tp" value="100">
+    </div>
+    
+    <div class="input-row">
+      <label>Число процессоров сервера <span class="symbol">(С)</span></label>
+      <input type="number" id="C" value="1">
+    </div>
+    
+    <div class="input-row">
+      <label>Среднее время обработки запроса в ЦП сервера <span class="symbol">(t<sub>С</sub>)</span></label>
+      <input type="number" id="tpr" value="10">
+    </div>
+  </div>
+
+  <div class="control-section">
+    <h2>Параметры управления</h2>
+    
+    <div class="input-row">
+      <label>Параметр регулирования точности вычисления <span class="symbol">(K<sub>1</sub>)</span></label>
+      <input type="number" id="K1" value="0.995">
+    </div>
+    
+    <div class="input-row">
+      <label>Параметр регулирования точности вычисления <span class="symbol">(K<sub>2</sub>)</span></label>
+      <input type="number" id="K2" value="100">
+    </div>
+    
+    <div class="input-row">
+      <label>Точность вычисления <span class="symbol">(Δ)</span></label>
+      <input type="number" id="delta" value="0.01" step="0.01">
+    </div>
+    
+    <div class="input-row">
+      <label>Количество знаков после запятой <span class="symbol">(N<sub>зн</sub>)</span></label>
+      <input type="number" id="Nzn" value="3">
+    </div>
+  </div>
+
+  <h2>Выходные данные</h2>
+
+  <table class="results">
+    <tr>
+      <th>Показатель</th>
+      <th>Значение</th>
+    </tr>
+    <tr>
+      <td>Загрузка рабочей станции</td>
+      <td id="res1">—</td>
+    </tr>
+    <tr>
+      <td>Загрузка пользователя рабочей станции</td>
+      <td id="res2">—</td>
+    </tr>
+    <tr>
+      <td>Среднее количество работающих PC</td>
+      <td id="res3">—</td>
+    </tr>
+    <tr>
+      <td>Загрузка процессора</td>
+      <td id="res5">—</td>
+    </tr>
+    <tr>
+      <td>Среднее время цикла системы</td>
+      <td id="res7">—</td>
+    </tr>
+    <tr>
+      <td>Среднее время реакции системы</td>
+      <td id="res8">—</td>
+    </tr>
+    <tr>
+      <td>Начальная интенсивность фонового потока</td>
+      <td id="res9">—</td>
+    </tr>
+    <tr>
+      <td>Конечная интенсивность фонового потока</td>
+      <td id="res10">—</td>
+    </tr>
+    <tr>
+      <td>Количество итераций</td>
+      <td id="res11">—</td>
+    </tr>
+  </table>
+
+  <div class="button-container">
+    <a href="prog_theory.html" class="knopka secondary"><b>← Теория</b></a>
+    <p id="go" class="knopka primary"><b>Вычислить</b></p>
+    <a href="about.html" class="knopka"><b>О программе →</b></a>
+  </div>
+
+</div>
+
+<script src="prog.js"></script>
+</body>
+</html>

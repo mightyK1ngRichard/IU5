@@ -1,0 +1,725 @@
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="img/ico" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="general.css">
+    <link rel="stylesheet" type="text/css" href="remont.css">
+    <title>Модель ремонта и обслуживания</title>
+    <script src="graph.js"></script>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div class="window" style="position: relative; padding-bottom: 36px">
+        
+        <div class="headerWindow">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 60px">
+                            <img src="bauman512.jpg" width="60px" height="60px" alt="Герб МГТУ им. Баумана" />
+                        </td>
+                        <td style="width: 20px;"></td>
+                        <td>
+                            <div class="text24" style="font-weight: 600;">
+                                Модель ремонтник с тремя специалистами</div>
+                        </td>
+                        <td style="width: 20px;"></td>
+                        <td>
+                            <div class="text16" style="margin-left: auto; text-align: right;">
+                                <div style="font-weight: 600;">
+                                    Выполнил:
+                                </div>
+                                Пермяков Дмитрий Кириллович
+                                <br />
+                                студент группы ИУ5-12М
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <br />
+
+       
+        
+        <div style="height: 30px;"></div>
+
+        <div class="navWindow">
+            <ul>
+                <a href="oneremont.html">
+                    <li>Один ремонтник</li>
+                </a>
+                <a href="manyremont.html">
+                    <li class="remActive">Три ремонтника</li>
+                </a>
+            </ul>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div class="remontSector">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="remontIn">
+                    <div class="text24" style="font-weight: 600; text-align: center;">
+                      Входные данные
+                    </div>
+                    <div class="vertSpacer"></div>
+                    <table>
+                        <thead>
+                            <tr class="trInManyRemont">
+                                <td class="tdInHead">
+                                    Параметр
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInHead">
+                                    Обозн.
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInHead">
+                                    Значение
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInHead">
+                                    Разм.
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="trInManyRemont">
+                                <td class="tdInParam">
+                                    Среднее время наработки на отказ одного компьютера
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInObozn">
+                                    t<sub>но</sub>
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInVal">
+                                    <input type="number" id="tno" value="1000" />
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInRazm">
+                                    час
+                                </td>
+                            </tr>
+                            <tr class="trInManyRemont">
+                                <td class="tdInParam">
+                                    Среднее время ремонта одного компьютера
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInObozn">
+                                    t<sub>о</sub>
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInVal">
+                                    <input type="number" id="to" value="10" />
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInRazm">
+                                    час
+                                </td>
+                            </tr>
+                            <tr class="trInManyRemont">
+                                <td class="tdInParam">
+                                    Количество компьютеров
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInObozn">
+                                    N
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInVal">
+                                    <input type="number" id="N" value="100" />
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInRazm">
+                                    ед.
+                                </td>
+                            </tr>
+                            <tr class="trInManyRemont">
+                                <td class="tdInParam">
+                                    Количество ремонтников
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInObozn">
+                                    C<sub>1</sub>
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInVal">
+                                    <input type="number" id="C1" value="1" />
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInRazm">
+                                    чел.
+                                </td>
+                            </tr>
+                            <tr class="trInManyRemont">
+                                <td class="tdInParam">
+                                    Количество ремонтников во втором случае
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInObozn">
+                                    C<sub>2</sub>
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInVal">
+                                    <input type="number" id="C2" value="2" />
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInRazm" style="text-align: center;">
+                                    чел.
+                                </td>
+                            </tr>
+                            <tr class="trInManyRemont">
+                                <td class="tdInParam">
+                                    Количество ремонтников в третьем случае
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInObozn">
+                                    C<sub>3</sub>
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInVal">
+                                    <input type="number" id="C3" value="3" />
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInRazm" style="text-align: center;">
+                                    чел.
+                                </td>
+                            </tr>
+                            <tr class="trInManyRemont">
+                                <td class="tdInParam">
+                                    Заработная плата ремонтника за 1 час
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInObozn">
+                                    S<sub>1</sub>
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInVal">
+                                    <input type="number" id="S1" value="250" />
+                                </td>
+                                <td class="tdInSpacer" />
+                                <td class="tdInRazm">
+                                    <table class="frac">
+                                        <tbody>
+                                          <tr>
+                                            <td class="fracUnderlineIn">
+                                              руб.
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              час
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="trInManyRemont">
+                                <td class="tdInParam">
+                                    Финансовые потери организации от неисправного компьютера за 1 час
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInObozn">
+                                    S
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInVal">
+                                    <input type="number" id="S" value="150" />
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInRazm">
+                                    <table class="frac">
+                                        <tbody>
+                                          <tr>
+                                            <td class="fracUnderlineIn">
+                                              руб.
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              час
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="trInManyRemont">
+                                <td class="tdInParam">
+                                    Количество знаков после запятой
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInObozn"></td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInVal">
+                                    <input type="number" id="znak" value="3" />
+                                </td>
+                                <td class="tdInSpacer"></td>
+                                <td class="tdInRazm"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="vertSpacer"></div>
+                    <div class="text16" style="text-align: left; color: red; height: 32px;" id="err"></div>
+                    <div class="vertSpacer"></div>
+                    <div class="blueBtn" id="calculate" style="width: 50%; margin-left: auto; margin-right: auto; margin-top: auto; padding: 15px; margin-bottom: 20px;">
+                        Рассчитать
+                    </div>
+                  </td>
+                  </tr>
+                  </tbody>
+                  </table>
+                  </div>
+                  <td style="width: 1%"></td>
+                  
+        <div id="outTable" class="remontOut" style="display: none; visibility: hidden;">
+            <div>
+                <div class="text24" style="font-weight: 600; text-align: center;">
+                    Результаты расчётов
+                </div>
+                <br />
+                <table class="tableToPaint">
+                    <tbody>
+                        <tr>
+                            <td class="tdOutHead">
+                                Параметр
+                            </td>
+                            <td class="tdOutHead" style="width: 10%">
+                                Обозн.
+                            </td>
+                            <td class="tdOutHead" style="width: 12%">
+                                Значение
+                            </td>
+                            <td class="tdOutHead" style="width: 7%">
+                                Разм.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Интенсивность отказов одного компьютера
+                            </td>
+                            <td class="tdOutObozn">
+                                μ<sub>но</sub>
+                            </td>
+                            <td class="tdOutValRazm" id="muno">
+                            </td>
+                            <td class="tdOutValRazm">
+                                <table class="frac">
+                                    <tbody>
+                                      <tr>
+                                        <td class="fracUnderlineOut">
+                                          1
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          час
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Интенсивность ремонта компьютера
+                            </td>
+                            <td class="tdOutObozn">
+                                μ<sub>о</sub>
+                            </td>
+                            <td class="tdOutValRazm" id="muo">
+                            </td>
+                            <td class="tdOutValRazm">
+                                <table class="frac">
+                                    <tbody>
+                                      <tr>
+                                        <td class="fracUnderlineOut">
+                                          1
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          час
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Коэффициент отношения интенсивности наработки на отказ к интенсивности восстановления
+                                работоспособности компьютера
+                            </td>
+                            <td class="tdOutObozn">
+                                ψ
+                            </td>
+                            <td class="tdOutValRazm" id="psi">
+                            </td>
+                            <td class="tdOutValRazm"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="tdOutHead">
+                                Параметр
+                            </td>
+                            <td class="tdOutHead" style="width: 10%">
+                                Обозн.
+                            </td>
+                            <td class="tdOutHead" style="width: 12%">
+                                Вариант 1
+                            </td>
+                            <td class="tdOutHead" style="width: 12%">
+                                Вариант 2
+                            </td>
+                            <td class="tdOutHead" style="width: 12%">
+                                Вариант 3
+                            </td>
+                            <td class="tdOutHead" style="width: 8%">
+                                Разм.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Количество ремонтников
+                            </td>
+                            <td class="tdOutObozn">
+                                C
+                            </td>
+                            <td class="tdOutValRazm" id="calcC1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="calcC2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="calcC3">
+                            
+                            </td>
+                            <td class="tdOutValRazm">
+                                чел.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Вероятность, что 0 компьютеров находятся в состоянии отказа
+                            </td>
+                            <td class="tdOutObozn">
+                                P<sub>0</sub>
+                            </td>
+                            <td class="tdOutValRazm" id="P01">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="P02">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="P03">
+                            
+                            </td>
+                            <td class="tdOutValRazm"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Среднее количество компьютеров, находящихся в очереди на ремонт
+                            </td>
+                            <td class="tdOutObozn">
+                                Q
+                            </td>
+                            <td class="tdOutValRazm" id="Q1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="Q2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="Q3">
+                            
+                            </td>
+                            <td class="tdOutValRazm">
+                                ед.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Среднее количество компьютеров, находящихся в неисправном состоянии
+                            </td>
+                            <td class="tdOutObozn">
+                                L
+                            </td>
+                            <td class="tdOutValRazm" id="L1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="L2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="L3">
+                            
+                            </td>
+                            <td class="tdOutValRazm">
+                                ед.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Среднее количество компьютеров, которые непосредственно ремонтируются
+                            </td>
+                            <td class="tdOutObozn">
+                                U
+                            </td>
+                            <td class="tdOutValRazm" id="U1">
+
+                            </td>
+                            <td class="tdOutValRazm" id="U2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="U3">
+                            
+                            </td>
+                            <td class="tdOutValRazm">
+                                ед.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Коэффициент загрузки одного специалиста, занятого ремонтом
+                            </td>
+                            <td class="tdOutObozn">
+                                ρ<sub>o</sub>
+                            </td>
+                            <td class="tdOutValRazm" id="roo1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="roo2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="roo3">
+                            
+                            </td>
+                            <td class="tdOutValRazm"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Среднее время пребывания компьютера в неисправном состоянии
+                            </td>
+                            <td class="tdOutObozn">
+                                T<sub>р</sub>
+                            </td>
+                            <td class="tdOutValRazm" id="Tr1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="Tr2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="Tr3">
+                            
+                            </td>
+                            <td class="tdOutValRazm">
+                                час
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Среднее время нахождения компьютера в очереди на ремонт
+                            </td>
+                            <td class="tdOutObozn">
+                                W
+                            </td>
+                            <td class="tdOutValRazm" id="W1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="W2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="W3">
+                            
+                            </td>
+                            <td class="tdOutValRazm">
+                                час
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Среднее время цикла компьютера
+                            </td>
+                            <td class="tdOutObozn">
+                                T<sub>ц</sub>
+                            </td>
+                            <td class="tdOutValRazm" id="Tc1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="Tc2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="Tc3">
+                            
+                            </td>
+                            <td class="tdOutValRazm">
+                                час
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Коэффициент загрузки компьютера (доля времени в исправном состоянии)
+                            </td>
+                            <td class="tdOutObozn">
+                                ρ<sub>e</sub>
+                            </td>
+                            <td class="tdOutValRazm" id="roe1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="roe2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="roe3">
+                            
+                            </td>
+                            <td class="tdOutValRazm"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Среднее количество исправных компьютеров
+                            </td>
+                            <td class="tdOutObozn">
+                                n
+                            </td>
+                            <td class="tdOutValRazm" id="n1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="n2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="n3">
+                            
+                            </td>
+                            <td class="tdOutValRazm">
+                                ед.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Коэффициент режима работы службы ремонта и обслуживания
+                            </td>
+                            <td class="tdOutObozn">
+                                <table class="frac">
+                                    <tbody>
+                                        <tr>
+                                          <td class="fracUnderlineOut" style="font-style: italic;">
+                                              ρ<sub>e</sub>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td style="font-style: italic;">
+                                              ρ<sub>o</sub>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                </table>
+                            </td>
+                            <td class="tdOutValRazm" id="f1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="f2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="f3">
+                            
+                            </td>
+                            <td class="tdOutValRazm"></td>
+                        </tr>
+                        <tr>
+                            <td class="tdOutParam">
+                                Убытки организации работы службы ремонта компьютеров
+                            </td>
+                            <td class="tdOutObozn">
+                                Y
+                            </td>
+                            <td class="tdOutValRazm" id="Y1">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="Y2">
+                            
+                            </td>
+                            <td class="tdOutValRazm" id="Y3">
+                            
+                            </td>
+                            <td class="tdOutValRazm">
+                                <table class="frac">
+                                    <tbody>
+                                      <tr>
+                                        <td class="fracUnderlineOut">
+                                          руб.
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          час
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>             
+            </div>      
+        </div>
+
+	    <!-- Навигация внизу -->
+    <div class="navWindow" style="display: flex; position: absolute; bottom: 0; left: 0; width: 100%; align-items: center; justify-content: center;">
+      <ul style="width: 100%; text-align: center;">
+        <a href="titulnik.html">
+          <li>Титульный лист</li>
+        </a>
+        <a href="oneremont.html">
+          <li class="navActive">Модель обслуживания и ремонта</li>
+        </a>
+        <a href="system.html">
+		    <li>Модель системы</li>
+		</a>
+        <a href="assignments.html">
+          <li>Теория СОИ</li>
+        </a>
+        <a href="qq_theory.html">
+          <li>Теория ремонтник</li>
+        </a>
+        <a href="about.html">
+          <li>О программе</li>
+        </a>
+      </ul>
+    </div>
+
+        <div class="remontSector" id="bottomSector" style="display: none; visibility: hidden;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="visibility: visible; width: 0%;"></td>
+                        <td style="visibility: visible; width: 0%;"></td>
+                        <td>
+                            <div class="remontGraph">
+                                <div class="text18" style="font-weight: 600; text-align: center">
+                                    График зависимости количества ремонтников C от убытков организации Y
+                                </div>
+                                <br />
+                                <div style="width: 100%; height: 350">
+                                    <div id="graph" style="height: 350;"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</body>
+<script src="remont.js"></script>
+
+</html>

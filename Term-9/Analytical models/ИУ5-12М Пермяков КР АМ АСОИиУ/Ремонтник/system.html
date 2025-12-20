@@ -1,0 +1,532 @@
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="img/ico" href="favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="general.css">
+  <link rel="stylesheet" type="text/css" href="system.css">
+  <title>Модель системы</title>
+  <script src="graph.js"></script>
+  <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div class="window" style="position: relative; padding-bottom: 36px">
+
+    <div class="headerWindow">
+      <table>
+        <tbody>
+          <tr>
+            <td style="width: 60px">
+              <img src="bauman512.jpg" width="60px" height="60px" alt="Герб МГТУ им. Баумана" />
+            </td>
+            <td style="width: 20px;"></td>
+            <td>
+              <div class="text24" style="font-weight: 600;">
+                Модель АСОИУ</div>
+            </td>
+            <td style="width: 20px;"></td>
+            <td>
+              <div class="text16" style="margin-left: auto; text-align: right;">
+                <div style="font-weight: 600;">
+                  Выполнил:
+                </div>
+                Пермяков Дмитрий Кириллович
+                <br />
+                студент группы ИУ5-12М
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br />
+
+    <div style="height: 30px;"></div>
+
+    <div class="systemIn">
+      <table>
+        <tbody>
+          <tr>
+            <td style="width: 48%; vertical-align: top;">
+              <div class="text18" style="font-weight: 600; text-align: center;">
+                Входные данные
+              </div>
+              <br />
+              <table>
+                <thead>
+                  <tr class="trInSystem">
+                    <td class="tdInHead">
+                      Параметр
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInHead">
+                      Обозн.
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInHead">
+                      Значение
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInHead">
+                      Разм.
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Число рабочих станций сети
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                      N
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="N" value="100" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                      ед.
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Среднее время дообработки на раб. станции запроса от этой станции к базе данных на сервере
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                      T<sub>0</sub>
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="T0" value="0" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                      мс
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Среднее время формирования запроса от РС к базе данных на сервере
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                      T<sub>р</sub>
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="Tr" value="1000" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                      мс
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Среднее время передачи запроса по каналу в прямом направлении
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                      t<sub>к<sub>1</sub></sub>
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="tk1" value="5" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                      мс
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Среднее время передачи запроса по каналу в обратном направлении
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                      t<sub>к<sub>2</sub></sub>
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="tk2" value="5" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                      мс
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Число процессоров сервера
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                      C
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="C" value="2" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                      ед.
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Среднее время обработки запроса в ЦП сервера
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                      t<sub>пр</sub>
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="tpr" value="10" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                      мс
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Количество дисков
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                      m
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="m" value="2" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                      ед.
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Среднее время обработки запроса на диске сервера
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                      t<sub>д</sub>
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="td" value="20" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                      мс
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Вероятность обращения запроса к ЦП после обработки на диске
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                      p
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="p" value="0.4" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInParam">
+                      Количество знаков после запятой
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInObozn">
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="znak" value="3" />
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInRazm">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+            <td style="width: 4%"></td>
+            <td style="width: 48%; vertical-align: top;">
+              <div class="text18" style="font-weight: 600; text-align: center;">
+                Управляющие параметры
+              </div>
+              <br />
+              <table>
+                <thead>
+                  <tr class="trInSystem">
+                    <td class="tdInHead">
+                      Наименование
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInHead">
+                      Значение
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="trInSystem">
+                    <td class="tdInObozn">
+                      K<sub>1</sub>
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="K1" value="0.995" />
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInObozn">
+                      K<sub>2</sub>
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="K2" value="100" />
+                    </td>
+                  </tr>
+                  <tr class="trInSystem">
+                    <td class="tdInObozn">
+                      Δ
+                    </td>
+                    <td class="tdInSpacer"></td>
+                    <td class="tdInVal">
+                      <input type="number" id="delta" value="0.05" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <div class="text16" style="text-align: left; color: red" id="err"></div>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+      </table>
+
+      <br />
+
+      <div class="blueBtn" id="calculate" style="width: 30%; margin-left: auto; margin-right: auto; padding: 15px;">
+        Рассчитать
+      </div>
+
+    </div>
+
+    <br />
+
+	<!-- Навигация внизу -->
+    <div class="navWindow" style="display: flex; position: absolute; bottom: 0; left: 0; width: 100%; align-items: center; justify-content: center;">
+      <ul style="width: 100%; text-align: center;">
+        <a href="titulnik.html">
+          <li>Титульный лист</li>
+        </a>
+        <a href="oneremont.html">
+          <li>Модель обслуживания и ремонта</li>
+        </a>
+        <a href="system.html">
+		      <li class="navActive">Модель системы</li>
+		    </a>
+        <a href="assignments.html">
+          <li>Теория СОИ</li>
+        </a>
+        <a href="qq_theory.html">
+          <li>Теория ремонтник</li>
+        </a>
+        <a href="about.html">
+          <li>О программе</li>
+        </a>
+      </ul>
+    </div>
+
+
+    <div class="systemOut" id="outTable" style="display: none; visibility: hidden;">
+      <div class="text24" style="font-weight: 600">
+        Результаты расчётов
+      </div>
+      <br />
+      <table style="width: 70%; margin-left: auto; margin-right: auto;">
+        <thead>
+          <tr>
+            <td class="tdOutHead">
+              Параметр
+            </td>
+            <td class="tdOutHead">
+              Обозначение
+            </td>
+            <td class="tdOutHead">
+              Значение
+            </td>
+            <td class="tdOutHead">
+              Размерность
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tdOutParam">
+              Загрузка рабочей станции
+            </td>
+            <td class="tdOutObozn">
+              ρ<sub>РС</sub>
+            </td>
+            <td class="tdOutValRazm" id="roRS"></td>
+            <td class="tdOutValRazm"></td>
+          </tr>
+          <tr>
+            <td class="tdOutParam">
+              Загрузка пользователя рабочей станции
+            </td>
+            <td class="tdOutObozn">
+              ρ<sub>польз</sub>
+            </td>
+            <td class="tdOutValRazm" id="roP"></td>
+            <td class="tdOutValRazm"></td>
+          </tr>
+          <tr>
+            <td class="tdOutParam">
+              Среднее количество работающих рабочих станций
+            </td>
+            <td class="tdOutObozn">
+              K<sub>РС</sub>
+            </td>
+            <td class="tdOutValRazm" id="KRS"></td>
+            <td class="tdOutValRazm">
+              ед.
+            </td>
+          </tr>
+          <tr>
+            <td class="tdOutParam">
+              Загрузка канала
+            </td>
+            <td class="tdOutObozn">
+              ρ<sub>к</sub>
+            </td>
+            <td class="tdOutValRazm" id="roK"></td>
+            <td class="tdOutValRazm"></td>
+          </tr>
+          <tr>
+            <td class="tdOutParam">
+              Загрузка каждого процессора сервера
+            </td>
+            <td class="tdOutObozn">
+              ρ<sub>пр</sub>
+            </td>
+            <td class="tdOutValRazm" id="roPr"></td>
+            <td class="tdOutValRazm"></td>
+          </tr>
+          <tr>
+            <td class="tdOutParam">
+              Загрузка каждого диска сервера
+            </td>
+            <td class="tdOutObozn">
+              ρ<sub>д</sub>
+            </td>
+            <td class="tdOutValRazm" id="roD"></td>
+            <td class="tdOutValRazm"></td>
+          </tr>
+          <tr>
+            <td class="tdOutParam">
+              Среднее время цикла системы
+            </td>
+            <td class="tdOutObozn">
+              T<sub>ц</sub>
+            </td>
+            <td class="tdOutValRazm" id="Tcl"></td>
+            <td class="tdOutValRazm">
+              мс
+            </td>
+          </tr>
+          <tr>
+            <td class="tdOutParam">
+              Среднее время реакции системы
+            </td>
+            <td class="tdOutObozn">
+              T<sub>р</sub>
+            </td>
+            <td class="tdOutValRazm" id="Trk"></td>
+            <td class="tdOutValRazm">
+              мс
+            </td>
+          </tr>
+          <tr>
+            <td class="tdOutParam">
+              Начальная интенсивность фонового потока
+            </td>
+            <td class="tdOutObozn">
+              λ<sub>ф<sub>1</sub></sub>
+            </td>
+            <td class="tdOutValRazm" id="lambdaF1"></td>
+            <td class="tdOutValRazm">
+              <table class="frac">
+                <tbody>
+                  <tr>
+                    <td class="fracUnderlineOut">
+                      1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      мс
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="tdOutParam">
+              Конечная интенсивность фонового потока
+            </td>
+            <td class="tdOutObozn">
+              λ<sub>ф</sub>
+            </td>
+            <td class="tdOutValRazm" id="lambdaF"></td>
+            <td class="tdOutValRazm">
+              <table class="frac">
+                <tbody>
+                  <tr>
+                    <td class="fracUnderlineOut">
+                      1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      мс
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="tdOutParam">
+              Количество итераций
+            </td>
+            <td class="tdOutObozn">
+              i
+            </td>
+            <td class="tdOutValRazm" id="iter"></td>
+            <td class="tdOutValRazm"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+    </div>
+  </div>
+</body>
+<script src="system.js"></script>
+
+</html>

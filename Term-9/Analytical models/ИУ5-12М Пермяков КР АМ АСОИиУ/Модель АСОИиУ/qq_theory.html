@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="img/ico" href="favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="general.css">
+  <link rel="stylesheet" type="text/css" href="system.css">
+  <title>Теория ремонтник</title>
+  <script src="graph.js"></script>
+  <script src="jquery.js"></script>
+</head>
+
+<body>
+  <div class="window" style="position: relative; padding-bottom: 36px">
+
+    <!-- Шапка -->
+    <div class="headerWindow">
+      <table>
+        <tbody>
+          <tr>
+            <td style="width: 60px">
+              <img src="bauman512.jpg" width="60" height="60" alt="Герб МГТУ им. Баумана" />
+            </td>
+            <td style="width: 20px;"></td>
+            <td>
+              <div class="text24" style="font-weight: 600;">
+                Теория ремонтник
+              </div>
+            </td>
+            <td style="width: 20px;"></td>
+            <td>
+              <div class="text16" style="margin-left: auto; text-align: right;">
+                <div style="font-weight: 600;">
+                  Выполнил:
+                </div>
+                Пермяков Дмитрий Кириллович
+                <br />
+                студент группы ИУ5-12М
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br />
+    <div style="height: 30px;"></div>
+
+    <!-- Контент теории -->
+    <div class="systemIn" style="padding: 0 16px;">
+      <div class="text24" style="font-weight: 600; text-align: left; margin-top: 12px;">
+        Общая схема моделируемой системы и условные обозначения
+      </div>
+      <br />
+
+      <!-- Схема -->
+      <div style="display: flex; justify-content: center;">
+        <div style="max-width: 900px; width: 100%; text-align: center;">
+          <img src="scheme_remontnik.png" alt="Общая формализованная схема СОИ" style="max-width: 100%; height: auto;" />
+          <div class="text16">Рисунок 1. Общая формализованная схема модели ремонтник.</div>
+        </div>
+      </div>
+
+      <br />
+      <div class="text24" style="text-align: left;">
+        <p><strong>В схеме используются обозначения:</strong></p>
+      </div>
+      <br />
+
+      <!-- Описания обозначений -->
+      <div class="text24" style="line-height: 1.6; text-align: left;">
+        <p><strong>OA<sub>Кi</sub></strong> — обслуживающий аппарат, имитирующий поломку i-той рабочей станции отправкой заявки на сервер, имитирующему работу ремонтников.</p>
+        <p><strong>OA<sub>Рi</sub></strong> — обслуживающий аппарат, имитирующий работу i-го ремонтника.</p>
+        <p><strong>Бр</strong> — буфер, имитирующий очередь запросов к серверу, имитирующему работу ремонтников.</p>
+        <p>Рассчитаем основные характеристики функционирования СМО M/M/C/N/ПППО/N.</p>
+      </div>
+
+      <!-- Параметры и обозначения модели -->
+      <div class="text24" style="line-height: 1.6; text-align: left;">
+        <p><strong>t<sub>но</sub></strong> = 800 часов — среднее время наработки на отказ одного компьютера.</p>
+        <p><strong>t<sub>о</sub></strong> = 12 часов — среднее время ремонта одного компьютера.</p>
+        <p><strong>μ<sub>но</sub></strong> = 1 / t<sub>но</sub> = 0,00125 1/час — интенсивность отказов одного компьютера.</p>
+        <p><strong>μ<sub>о</sub></strong> = 1 / t<sub>о</sub> = 0,125 1/час — интенсивность ремонта компьютера.</p>
+        <p><strong>N</strong> = 100 — количество компьютеров.</p>
+        <p><strong>C</strong> — количество специалистов, занятых ремонтом компьютеров (1/2/3).</p>
+        <p><strong>P<sub>k</sub></strong> — вероятность, что k компьютеров находятся в состоянии отказа.</p>
+        <p><strong>Ψ</strong> = μ<sub>но</sub> / μ<sub>о</sub> = 0,01 — коэффициент отношения интенсивности наработки на отказ к интенсивности восстановления работоспособности компьютера.</p>
+        <p>Заработная плата специалиста за один час: <strong>S<sub>1</sub> = 250</strong> руб./час.</p>
+        <p>Финансовые потери организации от неисправного компьютера за один час: <strong>S = 1000</strong> руб./час.</p>
+      </div>
+
+      <div class="text24" style="line-height: 1.6; text-align: left;">
+        <p>Для оценки характеристик функционирования рассматриваемой замкнутой СМО M/M/C/N/ПППО/N следует использовать аналитические выражения, которые известны в ТМО как аналитическая модель ремонтника.</p>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- Навигация внизу -->
+    <div class="navWindow" style="display: flex; position: absolute; bottom: 0; left: 0; width: 100%; align-items: center; justify-content: center;">
+      <ul style="width: 100%; text-align: center;">
+        <a href="titulnik.html">
+          <li>Титульный лист</li>
+        </a>
+        <a href="oneremont.html">
+          <li>Модель обслуживания и ремонта</li>
+        </a>
+        <a href="system.html">
+		      <li>Модель системы</li>
+		    </a>
+        <a href="assignments.html">
+          <li>Теория СОИ</li>
+        </a>
+        <a href="qq_theory.html">
+          <li class="navActive">Теория ремонтник</li>
+        </a>
+        <a href="about.html">
+          <li>О программе</li>
+        </a>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Скрипты (если потребуются на этой странице) -->
+  <script src="system.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.remontSector{
+    width: 100%;
+    text-align: center;
+}
+
+.remontIn{
+    border: 2px solid #E4EDEF;
+    text-align: center;
+    width: 100%; 
+    vertical-align: top;
+    padding: 5px;
+}
+
+.trInOneRemont{
+    height: 60px;
+}
+
+.trInManyRemont{
+    height: 55px;
+    font-size: 24px;
+}
+
+.vertSpacer{
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.remontOut{
+    background: #F6F9FA;
+    text-align: center;
+    vertical-align: top;
+    padding: 5px;
+}
+
+.remontGraph{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.7%;
+    background-color: #F6F9FA;
+}

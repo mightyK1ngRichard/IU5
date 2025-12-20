@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Теоретические сведения — Программа для расчета аналитической модели АСОИУ</title>
+  <style>
+    :root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #9b59b6;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --success: #2ecc71;
+    --warning: #e67e22;
+    --gradient-primary: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    --gradient-secondary: linear-gradient(135deg, #9b59b6 0%, #3498db 100%);
+    --gradient-warning: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+    --gradient-success: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-secondary);
+    z-index: 10;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 40px 0 30px;
+    padding: 0 20px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 25%;
+    width: 50%;
+    height: 4px;
+    background: var(--gradient-secondary);
+    border-radius: 2px;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 28px;
+    margin: 40px 0 25px;
+    padding: 0 50px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50px;
+    width: 100px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.scheme-container {
+    background: white;
+    padding: 30px;
+    margin: 30px 50px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scheme-container:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.scheme-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-secondary);
+}
+
+.scheme-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.scheme-container img:hover {
+    transform: scale(1.01);
+}
+
+.caption {
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(155, 89, 182, 0.05) 100%);
+    border-radius: 8px;
+}
+
+.description-block {
+    background: linear-gradient(to bottom, #ffffff, #fafbfc);
+    padding: 25px 30px;
+    margin: 25px 50px;
+    border-radius: 15px;
+    border-left: 5px solid var(--accent);
+    box-shadow: var(--shadow-light);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.description-block:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.description-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(155, 89, 182, 0.03) 0%, rgba(52, 152, 219, 0.03) 100%);
+    z-index: 0;
+}
+
+.description-block p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.description-block strong {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+table.params {
+    width: calc(100% - 100px);
+    margin: 30px 50px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+table.params::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-success);
+}
+
+table.params th {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+table.params td {
+    padding: 18px 20px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+table.params tr:nth-child(even) {
+    background: linear-gradient(135deg, rgba(236, 240, 241, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+table.params tr:hover {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(155, 89, 182, 0.1) 100%);
+}
+
+table.params td:first-child {
+    text-align: center;
+    font-weight: 700;
+    color: var(--primary);
+    width: 150px;
+    font-size: 20px;
+    border-right: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+table.params td strong {
+    font-weight: 700;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 0 40px;
+    padding: 0 50px;
+}
+
+a.knopka {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-warning);
+    color: white;
+    min-width: 250px;
+    height: 60px;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 30px;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+a.knopka::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+a.knopka:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    letter-spacing: 1.5px;
+}
+
+a.knopka:hover::before {
+    left: 100%;
+}
+
+a.knopka b {
+    margin-left: 10px;
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+a.knopka:hover b {
+    transform: translateX(8px);
+}
+
+a.knopka.secondary {
+    background: var(--gradient-success);
+}
+
+/* Декоративные элементы */
+.decoration {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.decoration-1 {
+    width: 80px;
+    height: 80px;
+    background: var(--accent);
+    opacity: 0.08;
+    border-radius: 20px;
+    top: 15%;
+    right: 5%;
+    transform: rotate(15deg);
+}
+
+.decoration-2 {
+    width: 100px;
+    height: 100px;
+    background: var(--secondary);
+    opacity: 0.06;
+    border-radius: 50%;
+    bottom: 20%;
+    left: 5%;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+/* Специфические стили для индексов */
+sub {
+    font-size: 0.8em;
+    vertical-align: sub;
+    color: var(--accent);
+}
+
+/* Дополнительные эффекты для элементов */
+.description-block:hover strong {
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+table.params tr:hover td:first-child {
+    color: var(--accent);
+    border-right-color: rgba(155, 89, 182, 0.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    h1 {
+        font-size: 32px;
+        margin: 30px 0 20px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        padding: 0 20px;
+        margin: 30px 0 20px;
+    }
+    
+    .scheme-container,
+    .description-block,
+    table.params {
+        margin: 20px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    a.knopka {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Общая схема моделируемой СОИ и условные обозначения</h1>
+
+  <div class="scheme-container">
+    <img src="res/scheme.png" alt="Схема СОИ">
+    <p class="caption">Рисунок 1. Общая формализованная схема СОИ</p>
+  </div>
+
+  <h2>Условные обозначения схемы</h2>
+
+  <div class="description-block">
+    <p><strong>ОА<sub>Дi</sub></strong> — обслуживающий аппарат, имитирующий дообработку на i-той рабочей станции сети запроса от этой станции к серверу после обработки запроса на сервере</p>
+  </div>
+
+  <div class="description-block">
+    <p><strong>ОА<sub>Фi</sub></strong> — обслуживающий аппарат, имитирующий формирование запроса от i-той рабочей станции к серверу</p>
+  </div>
+
+  <div class="description-block">
+    <p><strong>Б<sub>К</sub></strong> — буфер, имитирующий очередь запросов к каналу</p>
+  </div>
+
+  <div class="description-block">
+    <p><strong>ОА<sub>К</sub></strong> — обслуживающий аппарат, имитирующий задержку при передаче данных через канал</p>
+  </div>
+
+  <div class="description-block">
+    <p><strong>Б<sub>П</sub></strong> — буфер, имитирующий очередь запросов к процессорам</p>
+  </div>
+
+  <div class="description-block">
+    <p><strong>ЦП<sub>С</sub></strong> — обслуживающие аппараты, имитирующие работу процессоров</p>
+  </div>
+
+  <div class="description-block">
+    <p><strong>Б<sub>Di</sub></strong> — буфер, имитирующий очередь запросов к i-му диску</p>
+  </div>
+
+  <div class="description-block">
+    <p><strong>Д<sub>mi</sub></strong> — обслуживающий аппарат, имитирующий работу i-го диска</p>
+  </div>
+
+  <div class="description-block">
+    <p><strong>γ</strong> — вероятность обращения запроса к ЦП после обработки на диске. Обслуживание заявок во всех ОА подчиняется экспоненциальному закону.</p>
+  </div>
+
+  <h2>Исходные данные аналитической модели</h2>
+
+  <table class="params">
+    <tr>
+      <th>Обозначение</th>
+      <th>Описание</th>
+    </tr>
+    <tr>
+      <td><strong>N</strong></td>
+      <td>Число рабочих станций сети</td>
+    </tr>
+    <tr>
+      <td><strong>Т<sub>Д</sub></strong></td>
+      <td>Среднее значение времени дообработки на рабочей станции сети запроса от этой станции к базе данных на сервере</td>
+    </tr>
+    <tr>
+      <td><strong>Т<sub>Ф</sub></strong></td>
+      <td>Среднее значение времени формирования запроса от рабочей станции сети к базе данных на сервере</td>
+    </tr>
+    <tr>
+      <td><strong>t<sub>К</sub></strong></td>
+      <td>Среднее значение времени передачи запроса по каналу</td>
+    </tr>
+    <tr>
+      <td><strong>С</strong></td>
+      <td>Число процессоров сервера</td>
+    </tr>
+    <tr>
+      <td><strong>t<sub>С</sub></strong></td>
+      <td>Среднее значение времени обработки запроса в ЦП сервера</td>
+    </tr>
+    <tr>
+      <td><strong>t<sub>D</sub></strong></td>
+      <td>Среднее значение времени обработки запроса в диске сервера</td>
+    </tr>
+    <tr>
+      <td><strong>m</strong></td>
+      <td>Число дисков</td>
+    </tr>
+    <tr>
+      <td><strong>γ</strong></td>
+      <td>Вероятность обращения запроса к ЦП после обработки на диске</td>
+    </tr>
+  </table>
+
+  <div class="button-container">
+    <a href="Модель АСОИиУ.html" class="knopka"><b>← Титульный лист</b></a>
+    <a href="prog.html" class="knopka secondary"><b>Программа →</b></a>
+  </div>
+
+</div>
+</body>
+</html>

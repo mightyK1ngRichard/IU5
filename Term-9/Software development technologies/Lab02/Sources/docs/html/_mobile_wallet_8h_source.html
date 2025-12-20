@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Исходный файл src/MobileWallet.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_mobile_wallet_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MobileWallet.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_mobile_wallet_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef MOBILE_WALLET_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define MOBILE_WALLET_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_mobile_wallet.html">   22</a></span><span class="keyword">class </span><a class="code hl_function" href="class_mobile_wallet.html#a0311ff5d3c01b21267ca154f4296cdbc">MobileWallet</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::string owner;   </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">double</span> balance;      </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="class_mobile_wallet.html#a0311ff5d3c01b21267ca154f4296cdbc">MobileWallet</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">double</span> initialBalance);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_mobile_wallet.html#a2c9e6672fb7ca44cc28bc2a24edd062b">deposit</a>(<span class="keywordtype">double</span> amount);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_mobile_wallet.html#a6bae4d03a10343a25945646f0180f756">pay</a>(<span class="keywordtype">double</span> amount);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_mobile_wallet.html#ab875a4cd7e6df43bed69ea35910b27a8">getBalance</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::string <a class="code hl_function" href="class_mobile_wallet.html#a774668c35a28d57cccb22957372d6237">getOwner</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif </span><span class="comment">// MOBILE_WALLET_H</span></div>
+<div class="ttc" id="aclass_mobile_wallet_html_a0311ff5d3c01b21267ca154f4296cdbc"><div class="ttname"><a href="class_mobile_wallet.html#a0311ff5d3c01b21267ca154f4296cdbc">MobileWallet::MobileWallet</a></div><div class="ttdeci">MobileWallet(const std::string &amp;name, double initialBalance)</div><div class="ttdoc">Конструктор кошелька</div><div class="ttdef"><b>Определения</b> MobileWallet.cpp:11</div></div>
+<div class="ttc" id="aclass_mobile_wallet_html_a2c9e6672fb7ca44cc28bc2a24edd062b"><div class="ttname"><a href="class_mobile_wallet.html#a2c9e6672fb7ca44cc28bc2a24edd062b">MobileWallet::deposit</a></div><div class="ttdeci">bool deposit(double amount)</div><div class="ttdoc">Пополнение кошелька</div><div class="ttdef"><b>Определения</b> MobileWallet.cpp:17</div></div>
+<div class="ttc" id="aclass_mobile_wallet_html_a6bae4d03a10343a25945646f0180f756"><div class="ttname"><a href="class_mobile_wallet.html#a6bae4d03a10343a25945646f0180f756">MobileWallet::pay</a></div><div class="ttdeci">bool pay(double amount)</div><div class="ttdoc">Оплата покупки</div><div class="ttdef"><b>Определения</b> MobileWallet.cpp:26</div></div>
+<div class="ttc" id="aclass_mobile_wallet_html_a774668c35a28d57cccb22957372d6237"><div class="ttname"><a href="class_mobile_wallet.html#a774668c35a28d57cccb22957372d6237">MobileWallet::getOwner</a></div><div class="ttdeci">std::string getOwner() const</div><div class="ttdoc">Получить имя владельца</div><div class="ttdef"><b>Определения</b> MobileWallet.cpp:42</div></div>
+<div class="ttc" id="aclass_mobile_wallet_html_ab875a4cd7e6df43bed69ea35910b27a8"><div class="ttname"><a href="class_mobile_wallet.html#ab875a4cd7e6df43bed69ea35910b27a8">MobileWallet::getBalance</a></div><div class="ttdeci">double getBalance() const</div><div class="ttdoc">Получить текущий баланс</div><div class="ttdef"><b>Определения</b> MobileWallet.cpp:35</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_mobile_wallet_8h.html">MobileWallet.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

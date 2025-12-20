@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="img/ico" href="favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="general.css">
+  <link rel="stylesheet" type="text/css" href="system.css">
+  <title>Теория СОИ</title>
+  <script src="graph.js"></script>
+  <script src="jquery.js"></script>
+</head>
+
+<body>
+  <div class="window" style="position: relative; padding-bottom: 36px">
+
+    <!-- Шапка -->
+    <div class="headerWindow">
+      <table>
+        <tbody>
+          <tr>
+            <td style="width: 60px">
+              <img src="bauman512.jpg" width="60" height="60" alt="Герб МГТУ им. Баумана" />
+            </td>
+            <td style="width: 20px;"></td>
+            <td>
+              <div class="text24" style="font-weight: 600;">
+                Теория СОИ
+              </div>
+            </td>
+            <td style="width: 20px;"></td>
+            <td>
+              <div class="text16" style="margin-left: auto; text-align: right;">
+                <div style="font-weight: 600;">
+                  Выполнил:
+                </div>
+                Пермяков Дмитрий Кириллович
+                <br />
+                студент группы ИУ5-12М
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br />
+    <div style="height: 30px;"></div>
+
+    <!-- Контент: Теория СОИ -->
+    <div class="systemIn" style="padding: 0 16px;">
+      <!-- Заголовок -->
+      <div class="text24" style="font-weight: 600; text-align: left;">Общая схема моделируемой СОИ и условные обозначения</div>
+      <br />
+
+      <!-- Схема -->
+      <div style="display: flex; justify-content: center;">
+        <div style="max-width: 900px; width: 100%; text-align: center;">
+          <img src="scheme_ASOIU.png" alt="Общая формализованная схема СОИ" style="max-width: 100%; height: auto;" />
+          <div class="text16">Рисунок 1. Общая формализованная схема СОИ.</div>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <!-- Список обозначений -->
+      <div class="text24" style="font-weight: 600; text-align: left;">В схеме используются следующие обозначения:</div>
+      <br />
+
+      <div class="text24" style="line-height: 1.6; text-align: left;">
+        <p><strong>OA<sub>Дi</sub></strong> — обслуживающий аппарат, имитирующий дообработку на i-той рабочей станции сети запроса от этой станции к серверу после обработки запроса на сервере.</p>
+        <p><strong>OA<sub>фi</sub></strong> — обслуживающий аппарат, имитирующий формирование запроса от i-той рабочей станции к серверу.</p>
+        <p><strong>Бк</strong> — буфер, имитирующий очередь запросов к каналу.</p>
+        <p><strong>ОА<sub>к</sub></strong> — обслуживающий аппарат, имитирующий задержку при передаче данных через канал.</p>
+        <p><strong>Бп</strong> — буфер, имитирующий очередь запросов к процессорам.</p>
+        <p><strong>ОA<sub>n</sub></strong> — обслуживающие аппараты, имитирующие работу процессоров.</p>
+        <p><strong>Б<sub>Дi</sub></strong> — буфер, имитирующий очередь запросов к i-му диску.</p>
+        <p><strong>ОА<sub>Дi</sub></strong> — обслуживающий аппарат, имитирующий работу i-го диска.</p>
+        <p><strong>γ</strong> — вероятность обращения запроса к ЦП после обработки на диске. Обслуживание заявок во всех ОА подчиняется экспоненциальному закону.</p>
+      </div>
+
+      <br />
+      <div class="text24" style="font-weight: 600; text-align: left;">Обозначения параметров аналитической модели</div>
+      <br />
+
+      <!-- Таблица параметров -->
+      <table style="width: 100%; max-width: 1100px; margin: 0;">
+        <thead>
+          <tr>
+            <td class="tdOutHead" style="width: 6%;">№</td>
+            <td class="tdOutHead" style="width: 18%;">Обозначение</td>
+            <td class="tdOutHead">Описание</td>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Входные параметры -->
+          <tr>
+            <td colspan="3">
+              <div class="text24" style="font-weight: 600; padding: 8px 0;">Входные параметры модели</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">1</td>
+            <td class="tdOutValRazm"><strong>N</strong></td>
+            <td class="tdOutParam">Число рабочих станций сети</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">2</td>
+            <td class="tdOutValRazm"><strong>T<sub>0</sub></strong></td>
+            <td class="tdOutParam">Среднее значение времени дообработки на рабочей станции сети запроса от этой станции к базе данных на сервере</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">3</td>
+            <td class="tdOutValRazm"><strong>Т<sub>p</sub></strong></td>
+            <td class="tdOutParam">Среднее значение времени формирования запроса от рабочей станции сети к базе данных на сервере</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">4</td>
+            <td class="tdOutValRazm"><strong>t<sub>k</sub></strong></td>
+            <td class="tdOutParam">Среднее значение времени передачи запроса по каналу</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">5</td>
+            <td class="tdOutValRazm"><strong>C</strong></td>
+            <td class="tdOutParam">Число процессоров сервера</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">6</td>
+            <td class="tdOutValRazm"><strong>t<sub>пр</sub></strong></td>
+            <td class="tdOutParam">Среднее значение времени обработки запроса в ЦП сервера</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">7</td>
+            <td class="tdOutValRazm"><strong>t<sub>дi</sub></strong></td>
+            <td class="tdOutParam">Среднее значение времени обработки запроса в диске сервера</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">8</td>
+            <td class="tdOutValRazm"><strong>m</strong></td>
+            <td class="tdOutParam">Число дисков</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">9</td>
+            <td class="tdOutValRazm"><strong>γ</strong></td>
+            <td class="tdOutParam">Вероятность обращения запроса к ЦП после обработки на диске. Обслуживание заявок во всех ОА подчиняется экспоненциальному закону</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">10</td>
+            <td class="tdOutValRazm"><strong>Δ</strong></td>
+            <td class="tdOutParam">Параметр регулирования точности вычисления</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">11</td>
+            <td class="tdOutValRazm"><strong>N<sub>зн</sub></strong></td>
+            <td class="tdOutParam">Количество знаков после запятой</td>
+          </tr>
+
+          <!-- Выходные параметры -->
+          <tr>
+            <td colspan="3">
+              <div class="text24" style="font-weight: 600; padding: 12px 0 8px;">Выходные параметры модели</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">1</td>
+            <td class="tdOutValRazm"><strong>ρ<sub>РС</sub></strong></td>
+            <td class="tdOutParam">Загрузка рабочей станции</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">2</td>
+            <td class="tdOutValRazm"><strong>ρ<sub>польз</sub></strong></td>
+            <td class="tdOutParam">Загрузка пользователя рабочей станции</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">3</td>
+            <td class="tdOutValRazm"><strong>l<sub>испр</sub></strong></td>
+            <td class="tdOutParam">Среднее количество работающих PC</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">4</td>
+            <td class="tdOutValRazm"><strong>ρ<sub>к</sub></strong></td>
+            <td class="tdOutParam">Загрузка канала</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">5</td>
+            <td class="tdOutValRazm"><strong>ρ<sub>пр</sub></strong></td>
+            <td class="tdOutParam">Загрузка процессора</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">6</td>
+            <td class="tdOutValRazm"><strong>ρ<sub>д</sub></strong></td>
+            <td class="tdOutParam">Загрузка дисков</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">7</td>
+            <td class="tdOutValRazm"><strong>Т<sub>ц</sub></strong></td>
+            <td class="tdOutParam">Среднее время цикла системы</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">8</td>
+            <td class="tdOutValRazm"><strong>Т<sub>реак</sub></strong></td>
+            <td class="tdOutParam">Среднее время реакции системы</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">9</td>
+            <td class="tdOutValRazm"><strong>λ<sub>ф0</sub></strong></td>
+            <td class="tdOutParam">Начальная интенсивность фонового потока</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">10</td>
+            <td class="tdOutValRazm"><strong>λ<sub>фкон</sub></strong></td>
+            <td class="tdOutParam">Конечная интенсивность фонового потока</td>
+          </tr>
+          <tr>
+            <td class="tdOutValRazm">11</td>
+            <td class="tdOutValRazm"><strong>N<sub>итер</sub></strong></td>
+            <td class="tdOutParam">Количество итераций</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br />
+
+    <!-- Навигация внизу -->
+    <div class="navWindow" style="display: flex; position: absolute; bottom: 0; left: 0; width: 100%; align-items: center; justify-content: center;">
+      <ul style="width: 100%; text-align: center;">
+        <a href="titulnik.html">
+          <li>Титульный лист</li>
+        </a>
+        <a href="oneremont.html">
+          <li>Модель обслуживания и ремонта</li>
+        </a>
+        <a href="system.html">
+				  <li>Модель системы</li>
+			  </a>
+        <a href="assignments.html">
+          <li class="navActive">Теория СОИ</li>
+        </a>
+        <a href="qq_theory.html">
+          <li>Теория ремонтник</li>
+        </a>
+        <a href="about.html">
+          <li>О программе</li>
+        </a>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Скрипты проекта (при необходимости) -->
+  <script src="system.js"></script>
+</body>
+</html>

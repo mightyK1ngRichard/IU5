@@ -1,0 +1,26 @@
+# Где искать исходники
+INPUT = ./src
+
+# Куда сохранять документацию
+OUTPUT_DIRECTORY = ./docs
+
+# Форматы
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+
+# Язык проекта (для заголовков/навигации в HTML)
+OUTPUT_LANGUAGE = Russian
+
+# Язык кода
+OPTIMIZE_OUTPUT_FOR_C = NO
+OPTIMIZE_OUTPUT_JAVA = NO
+OPTIMIZE_OUTPUT_FOR_CPLUSPLUS = YES
+
+# Поддержка Markdown
+MARKDOWN_SUPPORT = YES
+
+# Рекурсивный поиск
+RECURSIVE = YES
+
+# Кодировка входных файлов
+INPUT_ENCODING         = UTF-8

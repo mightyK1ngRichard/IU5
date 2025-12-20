@@ -1,0 +1,17 @@
+.systemIn{
+    padding: 0.7%;
+    border: 2px solid #E4EDEF;
+    width: 100%;
+    text-align: center;
+}
+
+.systemOut{
+    padding: 5px;
+    width: 100%;
+    background-color: #F6F9FA;
+    text-align: center;
+}
+
+.trInSystem{
+    height: 40px;
+}

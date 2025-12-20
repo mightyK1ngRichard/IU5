@@ -1,0 +1,101 @@
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="img/ico" href="favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="general.css">
+	<link rel="stylesheet" type="text/css" href="titulnik.css">
+	<title>Титульный лист</title>
+	<style>
+    /* контейнер с отдельными страницами PDF */
+    #pdf-pages {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;              /* расстояние между страницами */
+      align-items: center;
+      margin: 16px 0 24px;
+    }
+    .page {
+      box-shadow: 0 6px 18px rgba(0,0,0,.15);
+      background: #fff;
+    }
+    .page canvas {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* кнопка перехода — сразу под PDF */
+    .cta-wrap {
+      text-align: center;
+      margin: 16px 0 32px; /* ближе к страницам (16px сверху), немного воздуха снизу */
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      line-height: 1;
+      background: #2f7d32;
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(0,0,0,.15);
+      border: 0;
+      transition: transform .06s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+    .cta-btn:hover { box-shadow: 0 10px 22px rgba(0,0,0,.18); transform: translateY(-1px); }
+    .cta-btn:active { transform: translateY(0); opacity: .9; }
+    .cta-btn:focus { outline: 3px solid rgba(47,125,50,.35); outline-offset: 3px; }
+
+    /* базовая раскладка (без «липкого» футера) */
+    html, body { height: 100%; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .window { flex: 1 0 auto; }
+  </style>
+  <script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
+  </script>
+</head>
+
+<body>
+	<div class="window" style="position: relative; padding-bottom: 36px">
+    	<div class="container">
+        <img src="titul.jpg" alt="Титульный лист" class="title-image preview" id="previewImage", width="550px">
+
+
+            
+        </div>
+    </div>
+		
+	<!-- Навигация внизу -->
+    <div class="navWindow" style="display: flex; position: absolute; bottom: 0; left: 0; width: 100%; align-items: center; justify-content: center;">
+      <ul style="width: 100%; text-align: center;">
+        <a href="titulnik.html">
+          <li class="navActive">Титульный лист</li>
+        </a>
+        <a href="oneremont.html">
+          <li>Модель обслуживания и ремонта</li>
+        </a>
+        <a href="system.html">
+		      <li>Модель системы</li>
+		    </a>
+        <a href="assignments.html">
+          <li>Теория СОИ</li>
+        </a>
+        <a href="qq_theory.html">
+          <li>Теория ремонтник</li>
+        </a>
+        <a href="about.html">
+          <li>О программе</li>
+        </a>
+      </ul>
+    </div>
+	</div>
+</body>
+</html>

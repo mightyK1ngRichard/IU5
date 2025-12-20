@@ -1,0 +1,62 @@
+/*C8*/SET SCHEMA PUBLIC
+alter table execution drop constraint UK_lyajh8vurol2rfuk9e6ju2lu3
+alter table execution add constraint UK_lyajh8vurol2rfuk9e6ju2lu3  unique (algorithm, begin)
+/*C10*/SET SCHEMA PUBLIC
+INSERT INTO INPUT VALUES(17,'/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris.csv')
+INSERT INTO FILEINPUT VALUES('','\','/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris.csv',TRUE,TRUE,'','''',',',FALSE,0,FALSE,17)
+COMMIT
+/*C9*/SET SCHEMA PUBLIC
+DELETE FROM FILEINPUT WHERE ID=17
+DELETE FROM INPUT WHERE ID=17
+COMMIT
+/*C11*/SET SCHEMA PUBLIC
+INSERT INTO INPUT VALUES(18,'/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris.csv')
+INSERT INTO FILEINPUT VALUES('','\','/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris.csv',TRUE,TRUE,'','''',',',FALSE,0,FALSE,18)
+COMMIT
+/*C10*/INSERT INTO INPUT VALUES(19,'/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris14.csv')
+INSERT INTO FILEINPUT VALUES('','\','/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris14.csv',TRUE,TRUE,'','''',',',FALSE,0,FALSE,19)
+COMMIT
+/*C12*/SET SCHEMA PUBLIC
+DELETE FROM FILEINPUT WHERE ID=19
+DELETE FROM INPUT WHERE ID=19
+COMMIT
+/*C10*/INSERT INTO INPUT VALUES(20,'/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris14.csv')
+INSERT INTO FILEINPUT VALUES('','\','/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris14.csv',TRUE,TRUE,'','''',',',FALSE,0,FALSE,20)
+COMMIT
+/*C9*/INSERT INTO ALGORITHM VALUES(3,'aced0005737200116a6176612e7574696c2e48617368536574ba44859596b8b7340300007870770c000000043f400000000000027e72002c64652e6d6574616e6f6d652e6261636b656e642e726573756c74735f64622e416c676f726974686d5479706500000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400034346447e71007e000274001052454c4154494f4e414c5f494e50555478','Maximilian Grundke',FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,'Discovering Interesting Conditional Functional Dependencies',FALSE,FALSE,'CFDFinder-1.2-SNAPSHOT.jar',FALSE,FALSE,FALSE,'CFD Finder',FALSE,TRUE,FALSE,FALSE)
+COMMIT
+/*C12*/INSERT INTO EXECUTIONSETTING VALUES(4,TRUE,FALSE,'CFDFinder-1.2-SNAPSHOT.jar2025-11-03T115016',FALSE)
+INSERT INTO EXECUTIONSETTING_INPUTSJSON VALUES(4,'{"type":"fileInput","id":18,"name":"/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris.csv","fileName":"/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris.csv","separator":",","quoteChar":"''","escapeChar":"\\","skipLines":0,"strictQuotes":false,"ignoreLeadingWhiteSpace":true,"hasHeader":true,"skipDifferingLines":false,"comment":"","nullValue":""}')
+INSERT INTO EXECUTIONSETTING_PARAMETERVALUESJSON VALUES(4,'{"type":"configurationValueString","identifier":"PRUNING_STRATEGY","values":["SupportGainPruning"]}')
+INSERT INTO EXECUTIONSETTING_PARAMETERVALUESJSON VALUES(4,'{"type":"configurationValueString","identifier":"EXPANSION_STRATEGY","values":["ConstantPatternStrategy"]}')
+INSERT INTO EXECUTIONSETTING_PARAMETERVALUESJSON VALUES(4,'{"type":"configurationValueString","identifier":"RESULT_STRATEGY","values":["SupportDropPruning"]}')
+INSERT INTO EXECUTIONSETTING_PARAMETERVALUESJSON VALUES(4,'{"type":"configurationValueString","identifier":"MIN_SUPPORT","values":["0.8"]}')
+INSERT INTO EXECUTIONSETTING_PARAMETERVALUESJSON VALUES(4,'{"type":"configurationValueString","identifier":"MIN_CONFIDENCE","values":["1.0"]}')
+INSERT INTO EXECUTIONSETTING_PARAMETERVALUESJSON VALUES(4,'{"type":"configurationValueString","identifier":"MIN_SUPPORT_GAIN","values":["0.2"]}')
+INSERT INTO EXECUTIONSETTING_PARAMETERVALUESJSON VALUES(4,'{"type":"configurationValueString","identifier":"MAX_SUPPORT_DROP","values":["0.0"]}')
+INSERT INTO EXECUTIONSETTING_PARAMETERVALUESJSON VALUES(4,'{"type":"configurationValueRelationalInputGenerator","identifier":"INPUT_GENERATOR","values":[{"type":"defaultFileInputGenerator","inputFile":"/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris.csv","setting":{"type":"ConfigurationSettingFileInput","id":18,"type":"ConfigurationSettingFileInput","fileName":"/Users/mightyk1ngrichard/IU5/Term-9/Optimization of databases of machine learning systems/Homework-01/deployment-1/backend/WEB-INF/classes/inputData/iris.csv","advanced":false,"separatorChar":",","quoteChar":"''","escapeChar":"\\","strictQuotes":false,"ignoreLeadingWhiteSpace":true,"skipLines":0,"header":true,"skipDifferingLines":false,"nullValue":""}}]}')
+INSERT INTO EXECUTIONSETTING_PARAMETERVALUESJSON VALUES(4,'{"type":"configurationValueInteger","identifier":"INPUT_ROW_LIMIT","values":[-1]}')
+INSERT INTO EXECUTIONSETTING_PARAMETERVALUESJSON VALUES(4,'{"type":"configurationValueInteger","identifier":"MAX_PATTERNS","values":[2147483647]}')
+COMMIT
+/*C14*/SET SCHEMA PUBLIC
+alter table execution drop constraint UK_lyajh8vurol2rfuk9e6ju2lu3
+alter table execution add constraint UK_lyajh8vurol2rfuk9e6ju2lu3  unique (algorithm, begin)
+INSERT INTO EXECUTION VALUES(4,FALSE,1762159817403,NULL,NULL,NULL,0,NULL,'CFDFinder-1.2-SNAPSHOT.jar2025-11-03T115016',TRUE,3,4)
+DELETE FROM EXECUTIONSETTING WHERE ID=4
+INSERT INTO EXECUTIONSETTING VALUES(4,TRUE,FALSE,'CFDFinder-1.2-SNAPSHOT.jar2025-11-03T115016',FALSE)
+INSERT INTO EXECUTION_INPUT VALUES(4,18)
+COMMIT
+INSERT INTO RESULT VALUES(4,'results/CFDFinder-1.2-SNAPSHOT.jar2025-11-03T115016_cfd',3,'Conditional Functional Dependency',4)
+DELETE FROM EXECUTION WHERE ID=4
+INSERT INTO EXECUTION VALUES(4,FALSE,1762159817403,NULL,FALSE,NULL,1762159817459,NULL,'CFDFinder-1.2-SNAPSHOT.jar2025-11-03T115016',FALSE,3,4)
+DELETE FROM EXECUTIONSETTING WHERE ID=4
+INSERT INTO EXECUTIONSETTING VALUES(4,TRUE,FALSE,'CFDFinder-1.2-SNAPSHOT.jar2025-11-03T115016',FALSE)
+COMMIT
+DISCONNECT
+/*C8*/DISCONNECT
+/*C13*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C9*/DISCONNECT
+/*C12*/DISCONNECT
+/*C10*/DISCONNECT
+/*C11*/DISCONNECT

@@ -1,0 +1,887 @@
+[Age, Alopecia, Genital thrush, Irritability, Polyphagia, Polyuria, class, muscle stiffness, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, Polyphagia, Polyuria, class, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, muscle stiffness, sudden weight loss] --> partial paresis
+[Age, Gender, Genital thrush, Irritability, Polydipsia, Polyphagia, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Alopecia, Gender, Genital thrush, Irritability, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss] --> Polyuria
+[Age, Genital thrush, Irritability, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Alopecia, Genital thrush, Irritability, Polydipsia, Polyphagia, class, delayed healing, partial paresis, sudden weight loss] --> Polyuria
+[Age, Gender, Genital thrush, Irritability, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis] --> Polyuria
+[Age, Genital thrush, Irritability, Obesity, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis] --> Polyuria
+[Age, Alopecia, Genital thrush, Irritability, Obesity, Polydipsia, Polyphagia, class, delayed healing, partial paresis] --> Polyuria
+[Age, Gender, Genital thrush, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, class] --> partial paresis
+[Age, Genital thrush, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, muscle stiffness] --> partial paresis
+[Age, Alopecia, Genital thrush, Irritability, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, weakness] --> Polyuria
+[Age, Gender, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, delayed healing, sudden weight loss, weakness] --> class
+[Age, Genital thrush, Irritability, Polyphagia, Polyuria, class, sudden weight loss, weakness] --> Polydipsia
+[Age, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, muscle stiffness, sudden weight loss, weakness] --> partial paresis
+[Age, Gender, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, class, weakness] --> partial paresis
+[Age, Gender, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, muscle stiffness, weakness] --> partial paresis
+[Age, Gender, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, delayed healing, weakness] --> partial paresis
+[Age, Gender, Genital thrush, Irritability, Polydipsia, Polyphagia, muscle stiffness, partial paresis, weakness] --> Polyuria
+[Age, Alopecia, Gender, Genital thrush, Irritability, Polydipsia, Polyphagia, delayed healing, partial paresis, weakness] --> Polyuria
+[Age, Genital thrush, Irritability, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, weakness] --> Polyuria
+[Age, Alopecia, Genital thrush, Irritability, Polydipsia, Polyphagia, class, delayed healing, partial paresis, weakness] --> Polyuria
+[Age, Alopecia, Gender, Genital thrush, Irritability, Polyuria, class, delayed healing, muscle stiffness, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, Obesity, Polyuria, muscle stiffness, sudden weight loss] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Obesity, Polyuria, delayed healing, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Genital thrush, Irritability, Obesity, Polyuria, class, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Obesity, Polydipsia, delayed healing, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Genital thrush, Irritability, class, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, class, delayed healing, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Obesity, Polyuria, muscle stiffness, sudden weight loss, weakness] --> Polydipsia, class
+[Age, Gender, Genital thrush, Irritability, Polydipsia, muscle stiffness, partial paresis, weakness] --> class
+[Age, Gender, Genital thrush, Irritability, Obesity, Polydipsia, Polyuria, muscle stiffness, weakness] --> class
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, Polyuria, class, sudden weight loss] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, Polyuria, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, Polyuria, muscle stiffness, sudden weight loss] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> partial paresis
+[Age, Alopecia, Irritability, Obesity, Polyphagia, Polyuria, class, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Irritability, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Irritability, Obesity, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, sudden weight loss] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Obesity, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss] --> Polyuria
+[Age, Gender, Irritability, Polydipsia, Polyphagia, delayed healing, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Alopecia, Irritability, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Gender, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, class, sudden weight loss] --> partial paresis
+[Age, Gender, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, muscle stiffness, sudden weight loss] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Polydipsia, Polyphagia, Polyuria, muscle stiffness, sudden weight loss] --> class
+[Age, Gender, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> partial paresis
+[Age, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, sudden weight loss] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, Polyuria, delayed healing] --> class
+[Age, Alopecia, Gender, Irritability, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis] --> Polyuria
+[Age, Gender, Irritability, Obesity, Polydipsia, Polyphagia, class, delayed healing, partial paresis] --> Polyuria
+[Age, Alopecia, Gender, Irritability, Polydipsia, Polyphagia, class, delayed healing, partial paresis] --> Polyuria
+[Age, Gender, Irritability, Polydipsia, Polyphagia, class, delayed healing, muscle stiffness, partial paresis] --> Polyuria
+[Age, Alopecia, Irritability, Obesity, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis] --> Polyuria
+[Age, Irritability, Obesity, Polydipsia, Polyphagia, class, delayed healing, muscle stiffness, partial paresis] --> Polyuria
+[Age, Alopecia, Gender, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, class] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, muscle stiffness] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing] --> partial paresis
+[Age, Gender, Irritability, Polydipsia, Polyphagia, Polyuria, delayed healing] --> class
+[Age, Alopecia, Gender, Irritability, Polyphagia, class, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Polyphagia, class, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Irritability, Polyphagia, class, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, weakness] --> Polyuria
+[Age, Alopecia, Irritability, Polyphagia, class, muscle stiffness, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Irritability, Polyphagia, class, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Irritability, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush, Polyuria
+[Age, Irritability, Obesity, Polyphagia, class, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Irritability, Polyphagia, class, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Irritability, Polyphagia, Polyuria, class, sudden weight loss, weakness] --> Genital thrush, Polydipsia
+[Age, Gender, Irritability, Obesity, Polyphagia, Polyuria, class, sudden weight loss, weakness] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, Polyuria, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Irritability, Obesity, Polyphagia, Polyuria, delayed healing, sudden weight loss, weakness] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Polyphagia, Polyuria, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Obesity, Polyphagia, Polyuria, class, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Irritability, Polyphagia, Polyuria, class, sudden weight loss, weakness] --> Polydipsia
+[Age, Irritability, Obesity, Polyphagia, Polyuria, class, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Irritability, Polyphagia, Polyuria, class, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Obesity, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, sudden weight loss, weakness] --> partial paresis
+[Age, Alopecia, Irritability, Obesity, Polyphagia, Polyuria, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Irritability, Polyphagia, Polyuria, delayed healing, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Polydipsia, Polyphagia, Polyuria, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, Polyuria, class, weakness] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, Polyuria, muscle stiffness, weakness] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, Polyuria, delayed healing, weakness] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Polydipsia, Polyphagia, muscle stiffness, partial paresis, weakness] --> Polyuria
+[Age, Gender, Irritability, Obesity, Polydipsia, Polyphagia, delayed healing, partial paresis, weakness] --> Polyuria
+[Age, Gender, Irritability, Polydipsia, Polyphagia, delayed healing, muscle stiffness, partial paresis, weakness] --> Polyuria
+[Age, Alopecia, Irritability, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, weakness] --> Polyuria
+[Age, Gender, Irritability, Polydipsia, Polyphagia, Polyuria, partial paresis, weakness] --> class
+[Age, Alopecia, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, weakness] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Obesity, Polyuria, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Irritability, Obesity, Polydipsia, delayed healing, muscle stiffness, sudden weight loss] --> class
+[Age, Gender, Irritability, Polydipsia, delayed healing, muscle stiffness, partial paresis, sudden weight loss] --> class
+[Age, Alopecia, Gender, Irritability, Polydipsia, Polyuria, muscle stiffness, partial paresis, sudden weight loss] --> class
+[Age, Alopecia, Gender, Irritability, Obesity, Polyuria, delayed healing, muscle stiffness] --> class
+[Age, Gender, Irritability, Polydipsia, Polyuria, delayed healing, muscle stiffness] --> class
+[Age, Alopecia, Gender, Irritability, Polydipsia, class, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Irritability, Polydipsia, class, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Obesity, Polydipsia, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Polydipsia, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Irritability, Polydipsia, muscle stiffness, sudden weight loss, weakness] --> class
+[Age, Gender, Irritability, Obesity, Polydipsia, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Irritability, Polydipsia, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Obesity, Polydipsia, class, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Irritability, Polydipsia, class, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Irritability, Polydipsia, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Obesity, Polydipsia, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Polydipsia, Polyuria, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Irritability, Polydipsia, Polyuria, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Irritability, Polydipsia, Polyuria, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Polydipsia, Polyuria, class, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Irritability, Polydipsia, Polyuria, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Polydipsia, Polyuria, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Polydipsia, Polyuria, delayed healing, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Obesity, Polyuria, muscle stiffness, weakness] --> class
+[Age, Alopecia, Gender, Irritability, Obesity, Polydipsia, muscle stiffness, weakness] --> class
+[Age, Gender, Irritability, Obesity, Polydipsia, muscle stiffness, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Irritability, Polydipsia, muscle stiffness, partial paresis, weakness] --> class
+[Age, Gender, Irritability, Polydipsia, delayed healing, muscle stiffness, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Irritability, Polydipsia, Polyuria, muscle stiffness, weakness] --> class
+[Age, Gender, Irritability, Polydipsia, Polyuria, muscle stiffness, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Irritability, Polyphagia, class, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, Obesity, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria, class
+[Age, Alopecia, Genital thrush, Irritability, Obesity, Polyphagia, class, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, Polyphagia, Polyuria, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Polyphagia, Polyuria, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, Polyphagia, Polyuria, class, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, sudden weight loss, visual blurring] --> partial paresis
+[Age, Gender, Genital thrush, Irritability, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Genital thrush, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, sudden weight loss, visual blurring] --> partial paresis
+[Age, Alopecia, Genital thrush, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, visual blurring] --> partial paresis
+[Age, Genital thrush, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, visual blurring] --> partial paresis
+[Age, Genital thrush, Irritability, Polyphagia, class, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, Polyphagia, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Genital thrush, Irritability, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> Polydipsia, class
+[Age, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> partial paresis
+[Age, Genital thrush, Irritability, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Gender, Genital thrush, Irritability, Polyphagia, Polyuria, visual blurring, weakness] --> class
+[Age, Alopecia, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, class, visual blurring, weakness] --> partial paresis
+[Age, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, muscle stiffness, visual blurring, weakness] --> partial paresis
+[Age, Genital thrush, Irritability, Obesity, Polyphagia, Polyuria, delayed healing, visual blurring, weakness] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Irritability, class, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, Obesity, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, Obesity, class, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring] --> class
+[Age, Gender, Genital thrush, Irritability, class, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Genital thrush, Irritability, Obesity, class, partial paresis, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Genital thrush, Irritability, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Obesity, Polyuria, sudden weight loss, visual blurring, weakness] --> class
+[Age, Gender, Genital thrush, Irritability, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> class
+[Age, Gender, Genital thrush, Irritability, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> class
+[Age, Genital thrush, Irritability, Polydipsia, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Gender, Genital thrush, Irritability, Polyuria, partial paresis, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, class, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Irritability, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Alopecia, Irritability, Obesity, Polyphagia, class, delayed healing, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, Polyuria, sudden weight loss, visual blurring] --> partial paresis
+[Age, Alopecia, Irritability, Polyphagia, Polyuria, class, delayed healing, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Irritability, Obesity, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> partial paresis
+[Age, Gender, Irritability, Polydipsia, Polyphagia, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Irritability, Obesity, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> partial paresis
+[Age, Gender, Irritability, Obesity, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, visual blurring] --> Polyuria
+[Age, Gender, Irritability, Polydipsia, Polyphagia, class, delayed healing, partial paresis, visual blurring] --> Polyuria
+[Age, Gender, Irritability, Obesity, Polydipsia, Polyphagia, Polyuria, visual blurring] --> partial paresis
+[Age, Gender, Irritability, Polyphagia, class, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Gender, Irritability, Obesity, Polyphagia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Gender, Irritability, Polyphagia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Gender, Irritability, Obesity, Polyphagia, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Irritability, Obesity, Polyphagia, class, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Irritability, Polyphagia, class, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Irritability, Obesity, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush, Polyuria
+[Age, Gender, Irritability, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Irritability, Polyphagia, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Irritability, Obesity, Polydipsia, Polyphagia, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Irritability, Obesity, Polyphagia, Polyuria, visual blurring, weakness] --> partial paresis
+[Age, Irritability, Obesity, Polyphagia, Polyuria, delayed healing, muscle stiffness, visual blurring, weakness] --> partial paresis
+[Age, Gender, Irritability, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, visual blurring, weakness] --> Polyuria
+[Age, Gender, Irritability, Obesity, Polydipsia, Polyphagia, muscle stiffness, partial paresis, visual blurring, weakness] --> Polyuria
+[Age, Irritability, Obesity, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, visual blurring, weakness] --> Polyuria
+[Age, Gender, Irritability, Polydipsia, Polyphagia, Polyuria, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Irritability, Polydipsia, muscle stiffness, sudden weight loss, visual blurring] --> class
+[Age, Gender, Irritability, Polydipsia, Polyuria, delayed healing, sudden weight loss, visual blurring] --> class
+[Age, Alopecia, Gender, Irritability, Polyuria, delayed healing, visual blurring] --> class
+[Age, Gender, Irritability, Obesity, Polydipsia, Polyuria, delayed healing, visual blurring] --> class
+[Age, Gender, Irritability, Polydipsia, Polyuria, delayed healing, partial paresis, visual blurring] --> class
+[Age, Gender, Irritability, Obesity, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Gender, Irritability, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Irritability, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Irritability, Polydipsia, class, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Gender, Irritability, Polydipsia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Irritability, Obesity, Polydipsia, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Gender, Irritability, Polydipsia, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Irritability, Obesity, Polydipsia, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Irritability, Obesity, Polydipsia, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Irritability, Polydipsia, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Gender, Irritability, Polydipsia, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Irritability, Polydipsia, Polyuria, sudden weight loss, visual blurring, weakness] --> Genital thrush, class
+[Age, Irritability, Polydipsia, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Irritability, Polydipsia, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Obesity, Polyuria, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Irritability, Polydipsia, Polyuria, visual blurring, weakness] --> class
+[Age, Gender, Irritability, Polydipsia, Polyuria, partial paresis, visual blurring, weakness] --> class
+[Age, Gender, Irritability, Polydipsia, Polyuria, delayed healing, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Irritability, Itching, Polyuria, class, delayed healing, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, Itching, Obesity, Polyuria, delayed healing, sudden weight loss] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Itching, Obesity, Polyuria, delayed healing, muscle stiffness] --> class
+[Age, Alopecia, Gender, Genital thrush, Irritability, Itching, Obesity, class, muscle stiffness, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, Itching, class, delayed healing, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, Itching, Obesity, class, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Itching, Obesity, Polyuria, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Itching, Obesity, Polyuria, muscle stiffness, weakness] --> class
+[Age, Alopecia, Gender, Irritability, Itching, Obesity, Polyphagia, class, sudden weight loss] --> Genital thrush
+[Age, Irritability, Itching, Obesity, Polyphagia, class, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Irritability, Itching, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Irritability, Itching, Obesity, Polyphagia, class, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Irritability, Itching, Obesity, Polyphagia, class, delayed healing, muscle stiffness, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Irritability, Itching, Polyphagia, class, delayed healing, muscle stiffness, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Itching, Obesity, Polyphagia, Polyuria, sudden weight loss] --> partial paresis
+[Age, Alopecia, Irritability, Itching, Polyphagia, Polyuria, class, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Irritability, Itching, Polyphagia, Polyuria, class, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Irritability, Itching, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Irritability, Itching, Obesity, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Itching, Polydipsia, Polyphagia, partial paresis, sudden weight loss] --> class
+[Age, Irritability, Itching, Polydipsia, Polyphagia, class, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Irritability, Itching, Polydipsia, Polyphagia, class, delayed healing, partial paresis, sudden weight loss] --> Polyuria
+[Age, Alopecia, Irritability, Itching, Polydipsia, Polyphagia, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Irritability, Itching, Polydipsia, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Itching, Obesity, Polyphagia, Polyuria, class] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Itching, Obesity, Polyphagia, Polyuria, delayed healing] --> partial paresis
+[Age, Gender, Irritability, Itching, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis] --> Polyuria
+[Age, Gender, Irritability, Itching, Polydipsia, Polyphagia, class, delayed healing, partial paresis] --> Polyuria
+[Age, Irritability, Itching, Obesity, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis] --> Polyuria
+[Age, Irritability, Itching, Obesity, Polydipsia, Polyphagia, class, delayed healing, partial paresis] --> Polyuria
+[Age, Alopecia, Gender, Irritability, Itching, Polydipsia, Polyphagia, Polyuria] --> class
+[Age, Alopecia, Irritability, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness] --> partial paresis
+[Age, Gender, Irritability, Itching, Polyphagia, class, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Irritability, Itching, Polyphagia, class, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Itching, Obesity, Polyphagia, class, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Irritability, Itching, Polyphagia, class, delayed healing, sudden weight loss, weakness] --> Genital thrush, Polydipsia
+[Age, Irritability, Itching, Obesity, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss, weakness] --> partial paresis
+[Age, Irritability, Itching, Polydipsia, Polyphagia, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Irritability, Itching, Polydipsia, Polyphagia, muscle stiffness, partial paresis, weakness] --> Polyuria
+[Age, Gender, Irritability, Itching, Polydipsia, Polyphagia, delayed healing, partial paresis, weakness] --> Polyuria
+[Age, Irritability, Itching, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, weakness] --> Polyuria
+[Age, Irritability, Itching, Polydipsia, Polyphagia, class, delayed healing, partial paresis, weakness] --> Polyuria
+[Age, Gender, Irritability, Itching, Polydipsia, class, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Itching, Polydipsia, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Itching, Polydipsia, muscle stiffness, partial paresis, sudden weight loss] --> class
+[Age, Irritability, Itching, Obesity, Polydipsia, class, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Irritability, Itching, Polydipsia, class, delayed healing, muscle stiffness, sudden weight loss] --> Genital thrush
+[Age, Irritability, Itching, Polydipsia, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Irritability, Itching, Polydipsia, delayed healing, muscle stiffness, sudden weight loss] --> Genital thrush
+[Age, Gender, Irritability, Itching, Polydipsia, Polyuria, sudden weight loss] --> Genital thrush
+[Age, Irritability, Itching, Obesity, Polydipsia, Polyuria, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Irritability, Itching, Polydipsia, Polyuria, delayed healing, muscle stiffness, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Itching, Polydipsia, Polyuria, muscle stiffness] --> class
+[Age, Gender, Irritability, Itching, Polydipsia, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Itching, Obesity, Polydipsia, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Irritability, Itching, Polydipsia, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Irritability, Itching, Polydipsia, muscle stiffness, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Irritability, Itching, Polyphagia, sudden weight loss, visual blurring] --> Polydipsia, class
+[Age, Alopecia, Gender, Genital thrush, Irritability, Itching, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Alopecia, Genital thrush, Irritability, Itching, Polyphagia, class, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, Itching, Polyphagia, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Genital thrush, Irritability, Itching, Obesity, Polyphagia, Polyuria, visual blurring] --> partial paresis
+[Age, Genital thrush, Irritability, Itching, Polyphagia, class, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, Itching, Obesity, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Irritability, Itching, delayed healing, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Genital thrush, Irritability, Itching, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Itching, Polyuria, delayed healing, sudden weight loss, visual blurring] --> class
+[Age, Alopecia, Gender, Genital thrush, Irritability, Itching, Polyuria, visual blurring] --> class
+[Age, Gender, Genital thrush, Irritability, Itching, Obesity, Polyuria, delayed healing, visual blurring] --> class
+[Age, Gender, Genital thrush, Irritability, Itching, Polyuria, delayed healing, partial paresis, visual blurring] --> class
+[Age, Gender, Genital thrush, Irritability, Itching, Obesity, class, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Itching, class, delayed healing, sudden weight loss, visual blurring, weakness] --> Polydipsia, muscle stiffness
+[Age, Genital thrush, Irritability, Itching, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Itching, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Irritability, Itching, Polyuria, visual blurring, weakness] --> class
+[Age, Alopecia, Irritability, Itching, Obesity, Polyphagia, class, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Irritability, Itching, Polyphagia, class, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Irritability, Itching, Obesity, Polyphagia, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Gender, Irritability, Itching, Polyphagia, Polyuria, class, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Irritability, Itching, Polyphagia, Polyuria, class, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Irritability, Itching, Polyphagia, Polyuria, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Irritability, Itching, Polyphagia, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Gender, Irritability, Itching, Polydipsia, Polyphagia, sudden weight loss, visual blurring] --> class
+[Age, Gender, Irritability, Itching, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Irritability, Itching, Polydipsia, Polyphagia, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Gender, Irritability, Itching, Obesity, Polyphagia, Polyuria, visual blurring] --> partial paresis
+[Age, Alopecia, Irritability, Itching, Obesity, Polyphagia, Polyuria, delayed healing, visual blurring] --> partial paresis
+[Age, Irritability, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, visual blurring] --> partial paresis
+[Age, Irritability, Itching, Polyphagia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Irritability, Itching, Polyphagia, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Irritability, Itching, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Irritability, Itching, Obesity, Polyphagia, Polyuria, delayed healing, visual blurring, weakness] --> partial paresis
+[Age, Alopecia, Gender, Irritability, Itching, Obesity, class, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Irritability, Itching, Obesity, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Irritability, Itching, Obesity, Polyuria, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Irritability, Itching, Polydipsia, class, delayed healing, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Irritability, Itching, Polydipsia, Polyuria, delayed healing, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Gender, Irritability, Itching, Obesity, Polyuria, visual blurring] --> class
+[Age, Alopecia, Gender, Irritability, Itching, Polydipsia, Polyuria, visual blurring] --> class
+[Age, Alopecia, Gender, Irritability, Itching, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Irritability, Itching, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Irritability, Itching, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Irritability, Itching, Polydipsia, delayed healing, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, Polyuria, class, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, Polyphagia, Polyuria, delayed healing, partial paresis, sudden weight loss] --> Polydipsia, class
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polydipsia, Polyphagia, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, Polyphagia, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss] --> class
+[Age, Genital thrush, Obesity, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Alopecia, Genital thrush, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Genital thrush, Polydipsia, Polyphagia, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Gender, Genital thrush, Obesity, Polydipsia, Polyphagia, Polyuria, class, sudden weight loss] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, Polyphagia, Polyuria, muscle stiffness, sudden weight loss] --> class
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> class
+[Age, Gender, Genital thrush, Obesity, Polydipsia, Polyphagia, Polyuria, muscle stiffness] --> partial paresis
+[Age, Gender, Genital thrush, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing] --> partial paresis
+[Age, Alopecia, Genital thrush, Obesity, Polydipsia, Polyphagia, Polyuria, muscle stiffness] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, class, muscle stiffness, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Polyphagia, class, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Genital thrush, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Polyuria
+[Age, Alopecia, Genital thrush, Polyphagia, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Genital thrush, Polyphagia, Polyuria, class, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, Polyphagia, Polyuria, class, sudden weight loss, weakness] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyphagia, Polyuria, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, Polyphagia, Polyuria, partial paresis, sudden weight loss, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyphagia, Polyuria, delayed healing, sudden weight loss, weakness] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, Polyuria, delayed healing, sudden weight loss, weakness] --> Irritability
+[Age, Genital thrush, Polyphagia, Polyuria, class, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Polyuria
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, delayed healing, sudden weight loss, weakness] --> class
+[Age, Genital thrush, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Polyuria
+[Age, Genital thrush, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss, weakness] --> partial paresis
+[Age, Gender, Genital thrush, Obesity, Polyphagia, Polyuria, class, muscle stiffness, weakness] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyphagia, Polyuria, muscle stiffness, weakness] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, Polyuria, delayed healing, muscle stiffness, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, partial paresis, weakness] --> Irritability
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, partial paresis, weakness] --> class
+[Age, Gender, Genital thrush, Obesity, Polydipsia, Polyphagia, Polyuria, class, weakness] --> partial paresis
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, Polyuria, delayed healing, weakness] --> class
+[Age, Alopecia, Genital thrush, Polydipsia, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyuria, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyuria, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, Polyuria, delayed healing, muscle stiffness, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Genital thrush, Polyuria, class, delayed healing, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, muscle stiffness, partial paresis, sudden weight loss] --> class
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polydipsia, delayed healing, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, Polyuria, delayed healing, muscle stiffness, sudden weight loss] --> class
+[Age, Gender, Genital thrush, Obesity, Polyuria, class, muscle stiffness, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Polyuria, class, delayed healing, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Genital thrush, Polyuria, class, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyuria, muscle stiffness, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, Polyuria, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, Polyuria, muscle stiffness, partial paresis, sudden weight loss, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyuria, delayed healing, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Polyuria, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Irritability
+[Age, Genital thrush, Obesity, Polyuria, class, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Genital thrush, Polyuria, delayed healing, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, muscle stiffness, sudden weight loss, weakness] --> class
+[Age, Gender, Genital thrush, Polydipsia, muscle stiffness, partial paresis, sudden weight loss, weakness] --> class
+[Age, Alopecia, Genital thrush, Polydipsia, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Genital thrush, Polydipsia, Polyuria, muscle stiffness, sudden weight loss, weakness] --> class
+[Age, Alopecia, Genital thrush, Polydipsia, Polyuria, delayed healing, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyuria, muscle stiffness, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polydipsia, muscle stiffness, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, delayed healing, muscle stiffness, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, Polyuria, delayed healing, muscle stiffness, weakness] --> class
+[Age, Gender, Polyphagia, Polyuria, class, delayed healing, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> class
+[Age, Obesity, Polyphagia, Polyuria, class, delayed healing, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Polyphagia, Polyuria, class, delayed healing, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Gender, Obesity, Polydipsia, Polyphagia, delayed healing, sudden weight loss] --> class
+[Age, Alopecia, Gender, Obesity, Polydipsia, Polyphagia, delayed healing, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Alopecia, Gender, Polydipsia, Polyphagia, delayed healing, muscle stiffness, partial paresis, sudden weight loss] --> class
+[Age, Obesity, Polydipsia, Polyphagia, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Gender, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> class
+[Age, Alopecia, Gender, Polydipsia, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> class
+[Age, Gender, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Polyphagia, class, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Polyphagia, class, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Obesity, Polyphagia, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush, Polyuria
+[Age, Alopecia, Gender, Obesity, Polyphagia, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Polyphagia, Polyuria, class, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Polyphagia, Polyuria, class, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Polyphagia, Polyuria, class, delayed healing, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, delayed healing, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Polyphagia, Polyuria, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Obesity, Polyphagia, Polyuria, class, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Polyphagia, Polyuria, class, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Obesity, Polyphagia, Polyuria, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Obesity, Polyphagia, Polyuria, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Polydipsia, Polyphagia, muscle stiffness, sudden weight loss, weakness] --> class
+[Age, Gender, Obesity, Polydipsia, Polyphagia, delayed healing, sudden weight loss, weakness] --> class
+[Age, Gender, Obesity, Polydipsia, Polyphagia, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Polyuria
+[Age, Alopecia, Obesity, Polydipsia, Polyphagia, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush, Irritability
+[Age, Alopecia, Gender, Polydipsia, Polyphagia, Polyuria, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, muscle stiffness, weakness] --> class
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, delayed healing, weakness] --> class
+[Age, Alopecia, Gender, Polyphagia, Polyuria, delayed healing, muscle stiffness, partial paresis, weakness] --> Irritability
+[Age, Alopecia, Obesity, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, partial paresis, weakness] --> Irritability
+[Age, Gender, Obesity, Polydipsia, Polyphagia, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Obesity, Polydipsia, Polyphagia, muscle stiffness, weakness] --> class
+[Age, Alopecia, Gender, Polydipsia, Polyphagia, muscle stiffness, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Obesity, Polydipsia, Polyphagia, delayed healing, weakness] --> class
+[Age, Gender, Polydipsia, Polyphagia, delayed healing, muscle stiffness, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Polydipsia, Polyphagia, Polyuria, muscle stiffness, weakness] --> class
+[Age, Gender, Obesity, Polydipsia, Polyphagia, Polyuria, muscle stiffness, weakness] --> class
+[Age, Alopecia, Gender, Polydipsia, Polyphagia, Polyuria, partial paresis, weakness] --> class
+[Age, Gender, Polydipsia, Polyphagia, Polyuria, muscle stiffness, partial paresis, weakness] --> class
+[Age, Gender, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, weakness] --> class
+[Age, Alopecia, Gender, Polydipsia, Polyphagia, Polyuria, delayed healing, weakness] --> class
+[Age, Gender, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, weakness] --> class
+[Age, Alopecia, Gender, Polyuria, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Obesity, Polyuria, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Obesity, Polydipsia, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush, Irritability
+[Age, Alopecia, Gender, Polydipsia, Polyuria, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, class, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, class, delayed healing, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Gender, Genital thrush, Polyphagia, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia, Polyuria
+[Age, Genital thrush, Obesity, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia, Polyuria
+[Age, Alopecia, Genital thrush, Obesity, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, Polyuria, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, Polyphagia, Polyuria, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, Polyuria, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Polyphagia, Polyuria, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Polyphagia, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring] --> class
+[Age, Genital thrush, Polyphagia, Polyuria, class, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, Polydipsia, Polyphagia, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, delayed healing, sudden weight loss, visual blurring] --> class
+[Age, Alopecia, Genital thrush, Polydipsia, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Alopecia, Genital thrush, Obesity, Polydipsia, Polyphagia, Polyuria, sudden weight loss, visual blurring] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, visual blurring] --> Polyuria
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, Polyphagia, class, delayed healing, partial paresis, visual blurring] --> Polyuria
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, class, delayed healing, muscle stiffness, partial paresis, visual blurring] --> Polyuria
+[Age, Genital thrush, Obesity, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, visual blurring] --> Polyuria
+[Age, Alopecia, Genital thrush, Obesity, Polydipsia, Polyphagia, class, delayed healing, partial paresis, visual blurring] --> Polyuria
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, Polyuria, delayed healing, visual blurring] --> class
+[Age, Alopecia, Genital thrush, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, visual blurring] --> partial paresis
+[Age, Gender, Genital thrush, Obesity, Polyphagia, class, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, Polyphagia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, partial paresis, sudden weight loss, visual blurring, weakness] --> Polydipsia, class
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> Polyuria
+[Age, Genital thrush, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Polydipsia, Polyuria
+[Age, Alopecia, Genital thrush, Polyphagia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Genital thrush, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> Polyuria
+[Age, Alopecia, Genital thrush, Obesity, Polyphagia, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Genital thrush, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability, muscle stiffness
+[Age, Gender, Genital thrush, Polyphagia, Polyuria, class, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Genital thrush, Obesity, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> Polydipsia, class, muscle stiffness
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> Polydipsia, class
+[Age, Gender, Genital thrush, Polyphagia, Polyuria, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Polyphagia, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> Polydipsia, class, muscle stiffness
+[Age, Alopecia, Genital thrush, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Genital thrush, Obesity, Polyphagia, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, sudden weight loss, visual blurring, weakness] --> class
+[Age, Alopecia, Genital thrush, Polydipsia, Polyphagia, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Genital thrush, Obesity, Polydipsia, Polyphagia, Polyuria, muscle stiffness, sudden weight loss, visual blurring, weakness] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, class, delayed healing, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyphagia, delayed healing, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Polyphagia, delayed healing, muscle stiffness, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Polyphagia, class, delayed healing, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Gender, Genital thrush, Obesity, Polyphagia, Polyuria, visual blurring, weakness] --> partial paresis
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, muscle stiffness, partial paresis, visual blurring, weakness] --> Polyuria
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, Polyphagia, delayed healing, visual blurring, weakness] --> Irritability
+[Age, Gender, Genital thrush, Polydipsia, Polyphagia, delayed healing, partial paresis, visual blurring, weakness] --> Polyuria
+[Age, Genital thrush, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, visual blurring, weakness] --> Polyuria
+[Age, Alopecia, Genital thrush, Polydipsia, Polyphagia, class, delayed healing, partial paresis, visual blurring, weakness] --> Polyuria
+[Age, Alopecia, Genital thrush, Polydipsia, Polyphagia, Polyuria, class, delayed healing, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Obesity, Polydipsia, Polyphagia, Polyuria, visual blurring, weakness] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Obesity, class, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Obesity, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> class
+[Age, Alopecia, Genital thrush, Obesity, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyuria, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Polyuria, muscle stiffness, sudden weight loss, visual blurring] --> class
+[Age, Alopecia, Gender, Genital thrush, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> class
+[Age, Gender, Genital thrush, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Genital thrush, Obesity, Polyuria, class, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Polydipsia, muscle stiffness, sudden weight loss, visual blurring] --> class
+[Age, Gender, Genital thrush, Polydipsia, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> class
+[Age, Alopecia, Gender, Genital thrush, Polyuria, delayed healing, muscle stiffness, visual blurring] --> class
+[Age, Gender, Genital thrush, Polydipsia, Polyuria, delayed healing, muscle stiffness, visual blurring] --> class
+[Age, Gender, Genital thrush, Obesity, class, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Obesity, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Genital thrush, Obesity, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Genital thrush, Obesity, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> class
+[Age, Gender, Genital thrush, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Obesity, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> class
+[Age, Gender, Genital thrush, Obesity, Polyuria, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyuria, sudden weight loss, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> Irritability, class
+[Age, Gender, Genital thrush, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> class, muscle stiffness
+[Age, Gender, Genital thrush, Polyuria, muscle stiffness, sudden weight loss, visual blurring, weakness] --> class
+[Age, Genital thrush, Obesity, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Genital thrush, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Genital thrush, Polydipsia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Genital thrush, Polydipsia, muscle stiffness, sudden weight loss, visual blurring, weakness] --> class
+[Age, Alopecia, Genital thrush, Polydipsia, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Genital thrush, Polydipsia, delayed healing, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Gender, Genital thrush, Polydipsia, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Genital thrush, Polydipsia, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Gender, Genital thrush, Polyuria, muscle stiffness, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Obesity, Polyuria, delayed healing, visual blurring, weakness] --> class
+[Age, Gender, Genital thrush, Polydipsia, muscle stiffness, partial paresis, visual blurring, weakness] --> class
+[Age, Gender, Genital thrush, Polydipsia, Polyuria, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Obesity, Polyphagia, class, delayed healing, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Obesity, Polyphagia, class, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Obesity, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Polyphagia, class, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Obesity, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Gender, Polyphagia, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Obesity, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Obesity, Polyphagia, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia, Polyuria
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia, partial paresis
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, delayed healing, sudden weight loss, visual blurring] --> partial paresis
+[Age, Alopecia, Gender, Polyphagia, Polyuria, delayed healing, sudden weight loss, visual blurring] --> Polydipsia, class
+[Age, Obesity, Polyphagia, Polyuria, class, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Obesity, Polydipsia, Polyphagia, muscle stiffness, sudden weight loss, visual blurring] --> class
+[Age, Alopecia, Gender, Polydipsia, Polyphagia, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> class
+[Age, Gender, Obesity, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria, class
+[Age, Gender, Polydipsia, Polyphagia, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> class
+[Age, Gender, Obesity, Polydipsia, Polyphagia, Polyuria, sudden weight loss, visual blurring] --> partial paresis
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, delayed healing, visual blurring] --> class
+[Age, Alopecia, Gender, Polyphagia, Polyuria, delayed healing, muscle stiffness, visual blurring] --> class
+[Age, Gender, Obesity, Polydipsia, Polyphagia, class, delayed healing, partial paresis, visual blurring] --> Polyuria
+[Age, Obesity, Polydipsia, Polyphagia, class, delayed healing, muscle stiffness, partial paresis, visual blurring] --> Polyuria
+[Age, Gender, Obesity, Polydipsia, Polyphagia, Polyuria, muscle stiffness, visual blurring] --> partial paresis
+[Age, Gender, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, visual blurring] --> class
+[Age, Alopecia, Gender, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, visual blurring] --> partial paresis
+[Age, Alopecia, Gender, Polydipsia, Polyphagia, Polyuria, delayed healing, visual blurring] --> class
+[Age, Gender, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, visual blurring] --> class
+[Age, Alopecia, Gender, Polyphagia, class, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Polyphagia, class, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Obesity, Polyphagia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Obesity, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> Polyuria
+[Age, Obesity, Polyphagia, class, partial paresis, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Polyphagia, class, partial paresis, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Obesity, Polyphagia, class, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Obesity, Polyphagia, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Gender, Polyphagia, Polyuria, class, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> Polydipsia, partial paresis
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Obesity, Polyphagia, Polyuria, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Polyphagia, Polyuria, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Polyphagia, Polyuria, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Gender, Obesity, Polydipsia, Polyphagia, sudden weight loss, visual blurring, weakness] --> class
+[Age, Obesity, Polydipsia, Polyphagia, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Obesity, Polydipsia, Polyphagia, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Gender, Polydipsia, Polyphagia, Polyuria, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Polydipsia, Polyphagia, Polyuria, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> partial paresis
+[Age, Alopecia, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Obesity, Polyphagia, delayed healing, muscle stiffness, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Obesity, Polyphagia, class, delayed healing, muscle stiffness, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Obesity, Polyphagia, Polyuria, visual blurring, weakness] --> class
+[Age, Gender, Obesity, Polyphagia, Polyuria, muscle stiffness, visual blurring, weakness] --> partial paresis
+[Age, Gender, Obesity, Polyphagia, Polyuria, delayed healing, visual blurring, weakness] --> partial paresis
+[Age, Alopecia, Gender, Polyphagia, Polyuria, delayed healing, muscle stiffness, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Obesity, Polydipsia, Polyphagia, visual blurring, weakness] --> class
+[Age, Gender, Obesity, Polydipsia, Polyphagia, delayed healing, partial paresis, visual blurring, weakness] --> Polyuria
+[Age, Gender, Obesity, Polydipsia, Polyphagia, Polyuria, visual blurring, weakness] --> class, partial paresis
+[Age, Alopecia, Gender, Polydipsia, Polyphagia, Polyuria, visual blurring, weakness] --> class
+[Age, Gender, Polydipsia, Polyphagia, Polyuria, muscle stiffness, visual blurring, weakness] --> class
+[Age, Alopecia, Polydipsia, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, visual blurring, weakness] --> partial paresis
+[Age, Alopecia, Gender, Obesity, class, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Obesity, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Polyuria, class, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Polyuria, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Obesity, Polydipsia, class, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush, Irritability
+[Age, Obesity, Polydipsia, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Polydipsia, Polyuria, class, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Gender, Polydipsia, Polyuria, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Polydipsia, Polyuria, class, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Genital thrush, Irritability
+[Age, Polydipsia, Polyuria, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Genital thrush, Itching, Polydipsia, Polyphagia, partial paresis, sudden weight loss] --> class
+[Age, Gender, Genital thrush, Itching, Obesity, Polydipsia, Polyphagia, delayed healing, muscle stiffness, sudden weight loss] --> class
+[Age, Gender, Genital thrush, Itching, Obesity, Polyphagia, Polyuria, delayed healing] --> class
+[Age, Gender, Genital thrush, Itching, Obesity, Polydipsia, Polyphagia, Polyuria] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Itching, Polydipsia, Polyphagia, Polyuria] --> class
+[Age, Genital thrush, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, muscle stiffness] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyphagia, class, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, Obesity, Polyphagia, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyphagia, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Obesity, Polyphagia, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Polyphagia, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Polyphagia, delayed healing, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Genital thrush, Itching, Obesity, Polyphagia, Polyuria, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Genital thrush, Itching, Polyphagia, Polyuria, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, Polydipsia, Polyphagia, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Obesity, Polydipsia, Polyphagia, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Polydipsia, Polyphagia, delayed healing, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Polydipsia, Polyphagia, Polyuria, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Genital thrush, Itching, Obesity, Polyphagia, Polyuria, weakness] --> class, partial paresis
+[Age, Alopecia, Genital thrush, Itching, Polyphagia, Polyuria, class, partial paresis, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Polydipsia, Polyphagia, Polyuria, class, weakness] --> Irritability
+[Age, Gender, Genital thrush, Itching, Obesity, Polyuria, delayed healing, muscle stiffness, sudden weight loss] --> class
+[Age, Gender, Genital thrush, Itching, Obesity, Polyuria, delayed healing, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Genital thrush, Itching, Obesity, Polyuria, class, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Itching, Polydipsia, Polyuria, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Genital thrush, Itching, Obesity, Polyuria, delayed healing, muscle stiffness] --> class
+[Age, Alopecia, Gender, Genital thrush, Itching, Obesity, Polydipsia, Polyuria, muscle stiffness] --> class
+[Age, Alopecia, Gender, Genital thrush, Itching, Polydipsia, Polyuria, delayed healing, muscle stiffness] --> class
+[Age, Gender, Genital thrush, Itching, Obesity, Polyuria, class, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Itching, Polyuria, class, delayed healing, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Itching, Obesity, Polyuria, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Itching, Obesity, Polyuria, muscle stiffness, sudden weight loss, weakness] --> Polydipsia, class
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyuria, muscle stiffness, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Polyuria, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Polydipsia, muscle stiffness, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Itching, Polyphagia, class, muscle stiffness, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, class, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Itching, Obesity, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Itching, Obesity, Polyphagia, class, delayed healing, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Gender, Itching, Polyphagia, Polyuria, class, sudden weight loss] --> Genital thrush
+[Age, Gender, Itching, Polyphagia, Polyuria, class, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, Polyuria, sudden weight loss] --> Genital thrush, class
+[Age, Alopecia, Gender, Itching, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Itching, Obesity, Polyphagia, Polyuria, class, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Itching, Polyphagia, Polyuria, class, partial paresis, sudden weight loss] --> Polydipsia
+[Age, Itching, Obesity, Polyphagia, Polyuria, class, delayed healing, muscle stiffness, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Itching, Obesity, Polyphagia, Polyuria, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Itching, Obesity, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Gender, Itching, Polydipsia, Polyphagia, class, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Gender, Itching, Obesity, Polydipsia, Polyphagia, sudden weight loss] --> class
+[Age, Alopecia, Gender, Itching, Obesity, Polydipsia, Polyphagia, muscle stiffness, sudden weight loss] --> Genital thrush
+[Age, Gender, Itching, Polydipsia, Polyphagia, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Alopecia, Gender, Itching, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss] --> Polyuria, class
+[Age, Itching, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss] --> Polyuria
+[Age, Itching, Obesity, Polydipsia, Polyphagia, class, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Itching, Obesity, Polydipsia, Polyphagia, class, delayed healing, partial paresis, sudden weight loss] --> Polyuria
+[Age, Itching, Obesity, Polydipsia, Polyphagia, muscle stiffness, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Gender, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, sudden weight loss] --> Genital thrush, partial paresis
+[Age, Gender, Itching, Polydipsia, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, sudden weight loss] --> partial paresis
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, Polyuria, partial paresis] --> class
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, Polyuria, delayed healing] --> class
+[Age, Alopecia, Gender, Itching, Obesity, Polydipsia, Polyphagia, Polyuria] --> class, partial paresis
+[Age, Gender, Itching, Polydipsia, Polyphagia, Polyuria, delayed healing] --> class
+[Age, Alopecia, Gender, Itching, Polyphagia, class, muscle stiffness, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Itching, Polyphagia, class, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Itching, Polyphagia, class, delayed healing, sudden weight loss, weakness] --> Irritability, Polydipsia
+[Age, Alopecia, Gender, Itching, Polyphagia, muscle stiffness, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, delayed healing, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Polyphagia, delayed healing, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Itching, Polyphagia, class, partial paresis, sudden weight loss, weakness] --> Polydipsia
+[Age, Alopecia, Itching, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Polyuria
+[Age, Alopecia, Itching, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, weakness] --> Polyuria
+[Age, Alopecia, Itching, Obesity, Polyphagia, muscle stiffness, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Itching, Obesity, Polyphagia, delayed healing, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Itching, Polyphagia, Polyuria, class, sudden weight loss, weakness] --> Genital thrush, Polydipsia
+[Age, Gender, Itching, Obesity, Polyphagia, Polyuria, class, sudden weight loss, weakness] --> partial paresis
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, Polyuria, sudden weight loss, weakness] --> Polydipsia
+[Age, Gender, Itching, Obesity, Polyphagia, Polyuria, delayed healing, sudden weight loss, weakness] --> partial paresis
+[Age, Itching, Obesity, Polyphagia, Polyuria, class, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Itching, Obesity, Polyphagia, Polyuria, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Itching, Polydipsia, Polyphagia, muscle stiffness, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Gender, Itching, Polydipsia, Polyphagia, delayed healing, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Itching, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss, weakness] --> Polyuria
+[Age, Gender, Itching, Polydipsia, Polyphagia, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Itching, Polydipsia, Polyphagia, sudden weight loss, weakness] --> class
+[Age, Itching, Polydipsia, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, weakness] --> Polyuria
+[Age, Alopecia, Itching, Obesity, Polydipsia, Polyphagia, muscle stiffness, sudden weight loss, weakness] --> Irritability
+[Age, Itching, Obesity, Polydipsia, Polyphagia, delayed healing, sudden weight loss, weakness] --> Genital thrush
+[Age, Gender, Itching, Polydipsia, Polyphagia, Polyuria, sudden weight loss, weakness] --> Genital thrush
+[Age, Alopecia, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, Polyuria, weakness] --> class, partial paresis
+[Age, Alopecia, Gender, Itching, Polyphagia, Polyuria, weakness] --> Irritability
+[Age, Alopecia, Itching, Obesity, Polyphagia, Polyuria, class, partial paresis, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Obesity, Polydipsia, Polyphagia, weakness] --> class
+[Age, Gender, Itching, Polydipsia, Polyphagia, partial paresis, weakness] --> class
+[Age, Gender, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, weakness] --> class
+[Age, Alopecia, Gender, Itching, Polydipsia, Polyphagia, Polyuria, weakness] --> class
+[Age, Alopecia, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, class, weakness] --> Irritability
+[Age, Alopecia, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, weakness] --> partial paresis
+[Age, Alopecia, Gender, Itching, Obesity, Polyuria, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Itching, Obesity, Polydipsia, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Itching, Polydipsia, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Gender, Itching, Polydipsia, delayed healing, muscle stiffness, partial paresis, sudden weight loss] --> class
+[Age, Gender, Itching, Polydipsia, delayed healing, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Alopecia, Itching, Obesity, Polydipsia, delayed healing, sudden weight loss] --> Genital thrush
+[Age, Itching, Obesity, Polydipsia, delayed healing, partial paresis, sudden weight loss] --> Genital thrush
+[Age, Gender, Itching, Polydipsia, Polyuria, delayed healing, muscle stiffness, sudden weight loss] --> class
+[Age, Alopecia, Gender, Itching, Obesity, Polyuria, muscle stiffness, partial paresis] --> class
+[Age, Alopecia, Gender, Itching, Polydipsia, Polyuria, delayed healing, muscle stiffness, partial paresis] --> class
+[Age, Alopecia, Gender, Itching, Polyuria, delayed healing, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Itching, Obesity, Polyuria, delayed healing, partial paresis, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Polydipsia, muscle stiffness, sudden weight loss, weakness] --> class
+[Age, Alopecia, Gender, Itching, Polydipsia, delayed healing, muscle stiffness, sudden weight loss, weakness] --> Irritability
+[Age, Alopecia, Itching, Obesity, Polydipsia, delayed healing, sudden weight loss, weakness] --> Irritability
+[Age, Gender, Itching, Polydipsia, Polyuria, muscle stiffness, sudden weight loss, weakness] --> class
+[Age, Alopecia, Gender, Itching, Obesity, Polydipsia, muscle stiffness, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Itching, Polydipsia, delayed healing, muscle stiffness, partial paresis, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyphagia, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Genital thrush, Itching, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Genital thrush, Itching, Polyphagia, class, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Genital thrush, Itching, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polydipsia, Polyuria
+[Age, Gender, Genital thrush, Itching, Polyphagia, Polyuria, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Itching, Polydipsia, Polyphagia, sudden weight loss, visual blurring] --> class
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyphagia, Polyuria, visual blurring] --> class
+[Age, Gender, Genital thrush, Itching, Polyphagia, Polyuria, delayed healing, visual blurring] --> class
+[Age, Gender, Genital thrush, Itching, Polydipsia, Polyphagia, class, muscle stiffness, partial paresis, visual blurring] --> Polyuria
+[Age, Alopecia, Genital thrush, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, visual blurring] --> partial paresis
+[Age, Alopecia, Gender, Genital thrush, Itching, Obesity, Polyphagia, sudden weight loss, visual blurring, weakness] --> Polydipsia, class
+[Age, Genital thrush, Itching, Polyphagia, class, partial paresis, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Gender, Genital thrush, Itching, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyphagia, class, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, Obesity, Polyphagia, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyphagia, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Obesity, Polyphagia, class, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Gender, Genital thrush, Itching, Polyphagia, Polyuria, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Itching, Polydipsia, Polyphagia, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, Obesity, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Itching, muscle stiffness, sudden weight loss, visual blurring] --> class
+[Age, Alopecia, Gender, Genital thrush, Itching, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Genital thrush, Itching, Obesity, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Genital thrush, Itching, class, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Genital thrush, Itching, Obesity, Polyuria, class, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Gender, Genital thrush, Itching, Obesity, Polyuria, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyuria, delayed healing, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Genital thrush, Itching, Obesity, Polyuria, class, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Genital thrush, Itching, Obesity, Polyuria, class, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Genital thrush, Itching, Obesity, Polyuria, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyuria, muscle stiffness, visual blurring] --> class
+[Age, Gender, Genital thrush, Itching, Polyuria, delayed healing, muscle stiffness, visual blurring] --> class
+[Age, Gender, Genital thrush, Itching, class, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Polydipsia
+[Age, Alopecia, Genital thrush, Itching, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyuria, sudden weight loss, visual blurring, weakness] --> class
+[Age, Gender, Genital thrush, Itching, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> class
+[Age, Alopecia, Genital thrush, Itching, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Obesity, Polydipsia, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Polydipsia, Polyuria, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, class, muscle stiffness, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, Obesity, muscle stiffness, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, muscle stiffness, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, class, muscle stiffness, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyuria, muscle stiffness, visual blurring, weakness] --> Irritability
+[Age, Gender, Genital thrush, Itching, Polyuria, muscle stiffness, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Itching, Polyuria, delayed healing, visual blurring, weakness] --> class
+[Age, Gender, Genital thrush, Itching, Polyuria, delayed healing, partial paresis, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Genital thrush, Itching, Polydipsia, muscle stiffness, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Genital thrush, Itching, Polydipsia, Polyuria, class, muscle stiffness, visual blurring, weakness] --> Irritability
+[Age, Gender, Itching, Obesity, Polyphagia, class, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Gender, Itching, Polyphagia, class, muscle stiffness, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Itching, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Itching, Obesity, Polyphagia, class, partial paresis, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Itching, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Itching, Obesity, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Alopecia, Itching, Polyphagia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Genital thrush, Polydipsia
+[Age, Itching, Obesity, Polyphagia, class, delayed healing, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Itching, Obesity, Polyphagia, class, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Itching, Polyphagia, class, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Itching, Obesity, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Gender, Itching, Polyphagia, Polyuria, class, partial paresis, sudden weight loss, visual blurring] --> Polydipsia
+[Age, Gender, Itching, Polyphagia, Polyuria, class, delayed healing, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Gender, Itching, Polyphagia, Polyuria, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Itching, Polyphagia, Polyuria, class, partial paresis, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Itching, Polyphagia, Polyuria, partial paresis, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Itching, Polyphagia, Polyuria, delayed healing, sudden weight loss, visual blurring] --> Genital thrush, muscle stiffness
+[Age, Itching, Obesity, Polyphagia, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Gender, Itching, Polydipsia, Polyphagia, class, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Gender, Itching, Obesity, Polydipsia, Polyphagia, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Gender, Itching, Obesity, Polydipsia, Polyphagia, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Gender, Itching, Polydipsia, Polyphagia, delayed healing, sudden weight loss, visual blurring] --> class
+[Age, Gender, Itching, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring] --> class
+[Age, Itching, Polydipsia, Polyphagia, class, partial paresis, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Itching, Polydipsia, Polyphagia, class, delayed healing, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Itching, Polydipsia, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Polyuria
+[Age, Itching, Obesity, Polydipsia, Polyphagia, partial paresis, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Itching, Polydipsia, Polyphagia, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Itching, Obesity, Polydipsia, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Itching, Polydipsia, Polyphagia, Polyuria, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Itching, Polydipsia, Polyphagia, Polyuria, delayed healing, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, Polyuria, visual blurring] --> class
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, Polyuria, muscle stiffness, visual blurring] --> partial paresis
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, Polyuria, delayed healing, visual blurring] --> partial paresis
+[Age, Alopecia, Gender, Itching, Polyphagia, Polyuria, delayed healing, visual blurring] --> class
+[Age, Alopecia, Gender, Itching, Polydipsia, Polyphagia, class, delayed healing, partial paresis, visual blurring] --> Polyuria
+[Age, Gender, Itching, Polydipsia, Polyphagia, class, delayed healing, muscle stiffness, partial paresis, visual blurring] --> Polyuria
+[Age, Itching, Obesity, Polydipsia, Polyphagia, class, delayed healing, partial paresis, visual blurring] --> Polyuria
+[Age, Gender, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, visual blurring] --> partial paresis
+[Age, Alopecia, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, visual blurring] --> partial paresis
+[Age, Itching, Obesity, Polydipsia, Polyphagia, Polyuria, delayed healing, muscle stiffness, visual blurring] --> partial paresis
+[Age, Gender, Itching, Polyphagia, class, sudden weight loss, visual blurring, weakness] --> Genital thrush, Polydipsia
+[Age, Alopecia, Gender, Itching, Polyphagia, class, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Gender, Itching, Polyphagia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Polyphagia, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Itching, Polyphagia, class, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Itching, Polyphagia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> Genital thrush, muscle stiffness
+[Age, Itching, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> Polyuria
+[Age, Itching, Obesity, Polyphagia, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Itching, Obesity, Polyphagia, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Itching, Polyphagia, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Itching, Obesity, Polyphagia, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Itching, Polyphagia, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability, muscle stiffness
+[Age, Gender, Itching, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Itching, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Itching, Obesity, Polyphagia, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Itching, Polyphagia, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Gender, Itching, Polydipsia, Polyphagia, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Itching, Polydipsia, Polyphagia, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Itching, Obesity, Polydipsia, Polyphagia, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Itching, Polydipsia, Polyphagia, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Itching, Polydipsia, Polyphagia, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Itching, Polydipsia, Polyphagia, delayed healing, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Alopecia, Itching, Polydipsia, Polyphagia, Polyuria, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Polyphagia, class, delayed healing, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Obesity, Polyphagia, delayed healing, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Polyphagia, delayed healing, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Itching, Polyphagia, class, delayed healing, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Gender, Itching, Obesity, Polyphagia, Polyuria, visual blurring, weakness] --> partial paresis
+[Age, Alopecia, Itching, Polyphagia, Polyuria, class, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Polydipsia, Polyphagia, delayed healing, visual blurring, weakness] --> Irritability
+[Age, Gender, Itching, Polydipsia, Polyphagia, delayed healing, partial paresis, visual blurring, weakness] --> Polyuria
+[Age, Itching, Polydipsia, Polyphagia, class, delayed healing, partial paresis, visual blurring, weakness] --> Polyuria
+[Age, Gender, Itching, Polydipsia, Polyphagia, Polyuria, visual blurring, weakness] --> class
+[Age, Alopecia, Itching, Polydipsia, Polyphagia, Polyuria, class, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Polyuria, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> class
+[Age, Alopecia, Gender, Itching, Polydipsia, class, muscle stiffness, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Gender, Itching, Polydipsia, class, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Gender, Itching, Obesity, Polydipsia, class, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Gender, Itching, Obesity, Polydipsia, muscle stiffness, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Gender, Itching, Polydipsia, delayed healing, muscle stiffness, sudden weight loss, visual blurring] --> class
+[Age, Itching, Obesity, Polydipsia, class, delayed healing, partial paresis, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Itching, Polydipsia, delayed healing, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Itching, Polydipsia, delayed healing, partial paresis, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Gender, Itching, Obesity, Polydipsia, Polyuria, muscle stiffness, partial paresis, sudden weight loss, visual blurring] --> Genital thrush
+[Age, Alopecia, Itching, Obesity, Polydipsia, Polyuria, class, delayed healing, sudden weight loss, visual blurring] --> muscle stiffness
+[Age, Alopecia, Gender, Itching, Polyuria, delayed healing, muscle stiffness, partial paresis, visual blurring] --> class
+[Age, Gender, Itching, Polydipsia, Polyuria, delayed healing, muscle stiffness, partial paresis, visual blurring] --> class
+[Age, Alopecia, Gender, Itching, muscle stiffness, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Itching, delayed healing, muscle stiffness, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Gender, Itching, Polyuria, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Gender, Itching, Obesity, Polyuria, sudden weight loss, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Itching, Polyuria, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> class
+[Age, Gender, Itching, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Itching, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Itching, Obesity, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Itching, Polyuria, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Gender, Itching, Polydipsia, class, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Gender, Itching, Polydipsia, class, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Gender, Itching, Polydipsia, sudden weight loss, visual blurring, weakness] --> Genital thrush, Irritability
+[Age, Gender, Itching, Polydipsia, delayed healing, muscle stiffness, sudden weight loss, visual blurring, weakness] --> class
+[Age, Alopecia, Itching, Polydipsia, class, delayed healing, partial paresis, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Alopecia, Itching, Polydipsia, delayed healing, sudden weight loss, visual blurring, weakness] --> Irritability
+[Age, Gender, Itching, Polydipsia, Polyuria, partial paresis, sudden weight loss, visual blurring, weakness] --> Genital thrush
+[Age, Gender, Itching, Polydipsia, Polyuria, delayed healing, sudden weight loss, visual blurring, weakness] --> muscle stiffness
+[Age, Gender, Itching, Polydipsia, Polyuria, sudden weight loss, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Itching, class, delayed healing, muscle stiffness, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, delayed healing, muscle stiffness, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Itching, class, delayed healing, muscle stiffness, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Polyuria, muscle stiffness, partial paresis, visual blurring, weakness] --> Irritability
+[Age, Alopecia, Gender, Itching, Polyuria, delayed healing, partial paresis, visual blurring, weakness] --> class
+[Age, Alopecia, Gender, Itching, Polydipsia, muscle stiffness, partial paresis, visual blurring, weakness] --> class
+[Age, Gender, Itching, Polydipsia, delayed healing, muscle stiffness, partial paresis, visual blurring, weakness] --> class
+[Age, Gender, Itching, Polydipsia, Polyuria, partial paresis, visual blurring, weakness] --> class
+[Age, Alopecia, Itching, Polydipsia, Polyuria, class, delayed healing, muscle stiffness, visual blurring, weakness] --> Irritability

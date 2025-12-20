@@ -1,0 +1,252 @@
+/* WINDOW */
+
+.window{
+    margin: 2%;
+}
+
+/* NAVIGATION */
+
+.headerWindow{
+    width: 100%;
+}
+
+.navWindow ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navWindow li{
+    display: inline;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'Arial', serif;
+    color: #000000;
+    resize: both;
+    margin-right: 5%
+}
+
+.navWindow a:hover{
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.navActive{
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'Arial', serif;
+    color: #000000;
+    resize: both;
+    font-weight: 600; 
+    color: #9F9F9F;
+    border-bottom: 4px solid #9F9F9F; 
+    padding-bottom: 5px;  
+    font-weight: 600; 
+}
+
+.remActive{
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'Arial', serif;
+    color: #000000;
+    resize: both;
+    font-weight: 600; 
+    color: #9F9F9F;
+    border-bottom: 4px solid #9F9F9F; 
+    padding-bottom: 5px;  
+    font-weight: 600; 
+}
+
+/* LINKS */
+a{
+    text-decoration: none;
+}
+
+/* TEXT */
+
+.text14{
+    font-size: 16px;
+    font-family: 'Arial', serif;
+    font-weight: 400;
+    color: #000000;
+    resize: both;
+}
+
+.text16{
+    font-size: 16px;
+    font-family: 'Arial', serif;
+    font-weight: 400;
+    color: #000000;
+    resize: both;
+}
+
+.text18{
+    font-size: 18px;
+    font-family: 'Arial', serif;
+    font-weight: 400;
+    color: #000000;
+    resize: both;
+}
+
+.text24{
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Arial', serif;
+    font-weight: 400;
+    color: #000000;
+    resize: both;
+}
+
+/* TABLES */
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tdInHead{
+    font-size: 24px;
+    font-family: 'Arial', serif;
+    border-top: 2px solid #E4EDEF;
+    border-bottom: 2px solid #E4EDEF;
+    text-align: center;
+    font-weight: 600;
+}
+
+.tdInParam{
+    font-size: 24px;
+    font-family: 'Arial', serif;
+    border-top: 2px solid #E4EDEF;
+    border-bottom: 2px solid #E4EDEF;
+    text-align: left;
+}
+
+.tdInVal{
+    font-size: 24px;
+    font-family: 'Arial', serif;
+    border-top: 2px solid #E4EDEF;
+    border-bottom: 2px solid #E4EDEF;
+    width: 25%;
+}
+
+.tdInRazm{
+    font-size: 24px;
+    font-family: 'Arial', serif;
+    border-top: 2px solid #E4EDEF;
+    border-bottom: 2px solid #E4EDEF;
+    text-align: center;
+}
+
+.tdInObozn{
+    font-size: 24px;
+    font-family: 'Arial', serif;
+    border-top: 2px solid #E4EDEF;
+    border-bottom: 2px solid #E4EDEF;
+    font-style: italic;
+    text-align: center;
+}
+
+.tdInSpacer{
+    width: 10px;
+    font-size: 24px;
+    font-family: 'Arial', serif;
+    border-bottom: 2px solid #E4EDEF;
+    border-top: 2px solid #E4EDEF;
+}
+
+.tdOutHead{
+    font-size: 24px;
+    font-family: 'Arial', serif;
+    text-align: center;
+    font-weight: 600;
+}
+
+.tdOutParam{
+    font-size: 24px;
+    font-family: 'Arial', serif;
+    text-align: left;
+}
+
+.tdOutObozn{
+    font-size: 24px;
+    font-family: 'Arial', serif;
+    text-align: center;
+    font-style: italic;
+}
+
+.tdOutValRazm{
+    font-size: 24px;
+    font-family: 'Arial', serif;
+    text-align: center;
+}
+
+.tdNavSpacer{
+    width: 50px;
+}
+
+.tdNavFinalSpacer{
+    width: 50%;
+}
+
+.frac{
+    width: 3px;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+}
+
+.fracUnderlineIn{
+    border-bottom: 1px solid black
+}
+
+/* INPUTS */
+
+input{
+    display: table-cell;
+    height: 28px;
+    font-size: 24px;
+    border: 2px solid #9F9F9F;
+    width: 94%;
+}
+
+input:focus{
+    border: 2px solid #000000;
+}
+
+input:active{
+    border: 2px solid #000000;
+}
+
+.errorInput{
+    border: 2px solid red;
+}
+
+/* BUTTONS */
+
+.blueBtn{
+    background: #FFFFFF;
+    font-family: 'Arial', serif;
+    font-style: normal;
+    border: 2px solid #4DBDC2;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.blueBtn:hover{
+    background: #F1FAFA;
+}
+
+.blueBtn:active{
+    background: #4DBDC2;
+    color: #FFFFFF;
+}
+
+/* COLOR */
+
+.yellow{
+    background-color: lightblue;
+}
+
+body {
+    background-color: #FFFFFF; 
+}

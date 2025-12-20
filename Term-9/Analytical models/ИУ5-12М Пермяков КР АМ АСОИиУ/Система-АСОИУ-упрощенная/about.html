@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>О программе — Программа для расчёта аналитической модели АСОИУ</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --accent: #9b59b6;
+      --light: #ecf0f1;
+      --success: #2ecc71;
+      --warning: #e67e22;
+      --gradient-primary: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+      --gradient-secondary: linear-gradient(135deg, #9b59b6 0%, #3498db 100%);
+      --gradient-warning: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: var(--gradient-secondary);
+      z-index: 10;
+    }
+    
+    .header {
+      background: var(--gradient-primary);
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+    
+    h1 {
+      font-size: 42px;
+      font-weight: 800;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 2;
+      margin-bottom: 15px;
+    }
+    
+    .subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 20px;
+      position: relative;
+      z-index: 2;
+      font-weight: 300;
+    }
+    
+    .content {
+      padding: 50px 40px;
+    }
+    
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .info-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(52, 152, 219, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .info-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+    
+    .info-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gradient-warning);
+    }
+    
+    .info-card.developer::before {
+      background: var(--gradient-secondary);
+    }
+    
+    .info-card.tech::before {
+      background: var(--gradient-primary);
+    }
+    
+    .card-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 15px;
+    }
+    
+    .icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--accent), var(--secondary));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: white;
+      box-shadow: 0 5px 15px rgba(155, 89, 182, 0.3);
+    }
+    
+    .icon.developer {
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+    }
+    
+    .icon.tech {
+      background: linear-gradient(135deg, #e67e22, #d35400);
+    }
+    
+    .card-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0;
+    }
+    
+    .card-content {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.8;
+    }
+    
+    .card-content p {
+      margin: 10px 0;
+    }
+    
+    .requirements {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 15px;
+      padding: 40px;
+      margin: 40px 0;
+      border-left: 5px solid var(--success);
+    }
+    
+    .requirements h2 {
+      color: var(--primary);
+      font-size: 28px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .requirements h2::before {
+      content: '⚙️';
+      font-size: 32px;
+    }
+    
+    .req-list {
+      list-style: none;
+    }
+    
+    .req-item {
+      margin: 20px 0;
+      padding-left: 35px;
+      position: relative;
+    }
+    
+    .req-item::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      background: var(--success);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .req-title {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    
+    .req-desc {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.6;
+      padding-left: 10px;
+    }
+    
+    .browser-list {
+      display: flex;
+      gap: 20px;
+      margin: 15px 0;
+      flex-wrap: wrap;
+    }
+    
+    .browser {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+    
+    .browser:hover {
+      transform: translateY(-3px);
+    }
+    
+    .browser-icon {
+      font-size: 24px;
+    }
+    
+    .browser-name {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px;
+      background: var(--gradient-primary);
+      color: white;
+      border-radius: 15px;
+    }
+    
+    .footer-year {
+      font-size: 24px;
+      font-weight: 700;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .button-container {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+    
+    a.knopka {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-warning);
+      color: white;
+      width: 250px;
+      height: 60px;
+      font-size: 20px;
+      text-decoration: none;
+      padding: 0 30px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      font-weight: 600;
+    }
+    
+    a.knopka::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.7s ease;
+    }
+    
+    a.knopka:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    a.knopka:hover::before {
+      left: 100%;
+    }
+    
+    a.knopka b {
+      margin-left: 10px;
+      font-size: 22px;
+      transition: transform 0.3s ease;
+    }
+    
+    a.knopka:hover b {
+      transform: translateX(-5px);
+    }
+    
+    /* Анимации */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        margin: 10px;
+        border-radius: 15px;
+      }
+      
+      .header {
+        padding: 40px 20px;
+      }
+      
+      h1 {
+        font-size: 32px;
+      }
+      
+      .content {
+        padding: 30px 20px;
+      }
+      
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .browser-list {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="header fade-in">
+      <h1>📋 О программе</h1>
+      <p class="subtitle">Программа для расчёта аналитической модели АСОИУ</p>
+    </div>
+    
+    <div class="content">
+      
+      <div class="info-grid">
+        <div class="info-card developer fade-in" style="animation-delay: 0.2s;">
+          <div class="card-header">
+            <div class="icon developer">👤</div>
+            <h3 class="card-title">Разработчик</h3>
+          </div>
+          <div class="card-content">
+            <p><strong>Пермяков Дмитрий Кириллович</strong></p>
+            <p>Студент группы <strong>ИУ5-12М</strong></p>
+            <p>Факультет: Информатика и системы управления</p>
+            <p>Кафедра: Системы обработки информации и управления</p>
+          </div>
+        </div>
+        
+        <div class="info-card tech fade-in" style="animation-delay: 0.4s;">
+          <div class="card-header">
+            <div class="icon tech">💻</div>
+            <h3 class="card-title">Технологии</h3>
+          </div>
+          <div class="card-content">
+            <p><strong>Стек разработки:</strong></p>
+            <p>HTML5 + CSS3 + JavaScript (ES6+)</p>
+            <p><strong>Библиотеки:</strong></p>
+            <p>jQuery (для удобства манипуляции DOM)</p>
+            <p><strong>Принципы:</strong></p>
+            <p>Чистый код • Адаптивный дизайн • Современные веб-стандарты</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="requirements fade-in" style="animation-delay: 0.6s;">
+        <h2>Требования к запуску программы</h2>
+        
+        <ul class="req-list">
+          <li class="req-item">
+            <div class="req-title">Операционная система</div>
+            <div class="req-desc">Windows 7 и выше, macOS 10.12+, Linux с современным браузером</div>
+          </li>
+          
+          <li class="req-item">
+            <div class="req-title">Поддерживаемые браузеры</div>
+            <div class="req-desc">Версии не старше 2019 года:</div>
+            <div class="browser-list">
+              <div class="browser">
+                <span class="browser-icon">🌐</span>
+                <span class="browser-name">Google Chrome</span>
+              </div>
+              <div class="browser">
+                <span class="browser-icon">🌐</span>
+                <span class="browser-name">Яндекс.Браузер</span>
+              </div>
+              <div class="browser">
+                <span class="browser-icon">🌐</span>
+                <span class="browser-name">Mozilla Firefox</span>
+              </div>
+              <div class="browser">
+                <span class="browser-icon">🌐</span>
+                <span class="browser-name">Microsoft Edge</span>
+              </div>
+            </div>
+          </li>
+          
+          <li class="req-item">
+            <div class="req-title">Дополнительные требования</div>
+            <div class="req-desc">
+              • Включенный JavaScript<br>
+              • Поддержка современных веб-стандартов<br>
+              • Дополнительные плагины не требуются
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="footer fade-in" style="animation-delay: 0.8s;">
+        <div class="footer-year">Москва — 2025</div>
+      </div>
+      
+      <div class="button-container">
+        <a href="prog.html" class="knopka">
+          <b>←</b> Назад к программе
+        </a>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <script>
+    // Анимация при загрузке
+    document.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.2}s`;
+      });
+    });
+  </script>
+</body>
+</html>
