@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, sans-serif" font-size="13">
+  <style>
+    .title    { font-size:18px; font-weight:bold; fill:#1a1a1a; }
+    .subtitle { font-size:13px; fill:#555; }
+    .node     { fill:#eef3fb; stroke:#2b6cb0; stroke-width:1.5; }
+    .root     { fill:#dbeafe; stroke:#1d4ed8; stroke-width:2; }
+    .posting  { fill:#fef3c7; stroke:#b45309; stroke-width:1.5; }
+    .heap     { fill:#dcfce7; stroke:#15803d; stroke-width:1.5; }
+    .lbl      { fill:#111; }
+    .small    { font-size:11px; fill:#444; }
+    .mono     { font-family:Consolas,Menlo,monospace; font-size:12px; }
+    .arrow    { stroke:#444; stroke-width:1.2; fill:none; }
+    .arrow-hl { stroke:#b45309; stroke-width:1.8; fill:none; }
+  </style>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#444"/>
+    </marker>
+    <marker id="arrhl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="28" class="title">GIN (Generalized Inverted Index) на колонке disciplines TEXT[]</text>
+  <text x="20" y="48" class="subtitle">Каждый элемент массива → упорядоченный список TID-ов строк, в которых он встречается</text>
+
+  <!-- ENTRY TREE (B-tree of keys) -->
+  <text x="20" y="86" class="lbl" font-weight="bold">1. Entry tree (B-дерево ключей)</text>
+
+  <rect x="370" y="100" width="190" height="40" rx="6" class="root"/>
+  <text x="465" y="125" text-anchor="middle" class="mono">"Самбо"</text>
+
+  <rect x="170" y="170" width="170" height="40" rx="6" class="node"/>
+  <text x="255" y="195" text-anchor="middle" class="mono">"Баскетбол" | "Плавание"</text>
+
+  <rect x="580" y="170" width="170" height="40" rx="6" class="node"/>
+  <text x="665" y="195" text-anchor="middle" class="mono">"Футбол" | "Шахматы"</text>
+
+  <line x1="465" y1="140" x2="255" y2="170" class="arrow" marker-end="url(#arr)"/>
+  <line x1="465" y1="140" x2="665" y2="170" class="arrow" marker-end="url(#arr)"/>
+
+  <!-- LEAF entries -->
+  <rect x="60"  y="250" width="120" height="34" rx="4" class="node"/>
+  <text x="120" y="271" text-anchor="middle" class="mono">Баскетбол</text>
+  <rect x="200" y="250" width="120" height="34" rx="4" class="node"/>
+  <text x="260" y="271" text-anchor="middle" class="mono">Плавание</text>
+  <rect x="350" y="250" width="120" height="34" rx="4" class="node"/>
+  <text x="410" y="271" text-anchor="middle" class="mono">Самбо</text>
+  <rect x="500" y="250" width="120" height="34" rx="4" class="node"/>
+  <text x="560" y="271" text-anchor="middle" class="mono">Футбол</text>
+  <rect x="650" y="250" width="120" height="34" rx="4" class="node"/>
+  <text x="710" y="271" text-anchor="middle" class="mono">Шахматы</text>
+
+  <line x1="255" y1="210" x2="120" y2="250" class="arrow" marker-end="url(#arr)"/>
+  <line x1="255" y1="210" x2="260" y2="250" class="arrow" marker-end="url(#arr)"/>
+  <line x1="465" y1="140" x2="410" y2="250" class="arrow" marker-end="url(#arr)"/>
+  <line x1="665" y1="210" x2="560" y2="250" class="arrow-hl" marker-end="url(#arrhl)"/>
+  <line x1="665" y1="210" x2="710" y2="250" class="arrow" marker-end="url(#arr)"/>
+
+  <!-- POSTING LISTS / TREE -->
+  <text x="20" y="330" class="lbl" font-weight="bold">2. Posting list / posting tree (TID-ы)</text>
+
+  <rect x="60"  y="345" width="120" height="30" rx="4" class="posting"/>
+  <text x="120" y="365" text-anchor="middle" class="small">(5,1)(7,3)(12,2)</text>
+
+  <rect x="200" y="345" width="120" height="30" rx="4" class="posting"/>
+  <text x="260" y="365" text-anchor="middle" class="small">(1,4)(8,7)</text>
+
+  <rect x="350" y="345" width="120" height="30" rx="4" class="posting"/>
+  <text x="410" y="365" text-anchor="middle" class="small">(3,5)</text>
+
+  <rect x="500" y="345" width="120" height="50" rx="4" class="posting"/>
+  <text x="560" y="365" text-anchor="middle" class="small">posting tree (большой):</text>
+  <text x="560" y="383" text-anchor="middle" class="small">(2,1)(2,4)(4,2)(6,5)(9,7)…</text>
+
+  <rect x="650" y="345" width="120" height="30" rx="4" class="posting"/>
+  <text x="710" y="365" text-anchor="middle" class="small">(10,2)(15,1)</text>
+
+  <line x1="120" y1="284" x2="120" y2="345" class="arrow" marker-end="url(#arr)"/>
+  <line x1="260" y1="284" x2="260" y2="345" class="arrow" marker-end="url(#arr)"/>
+  <line x1="410" y1="284" x2="410" y2="345" class="arrow" marker-end="url(#arr)"/>
+  <line x1="560" y1="284" x2="560" y2="345" class="arrow-hl" marker-end="url(#arrhl)"/>
+  <line x1="710" y1="284" x2="710" y2="345" class="arrow" marker-end="url(#arr)"/>
+
+  <!-- HEAP -->
+  <text x="20" y="440" class="lbl" font-weight="bold">3. Heap (таблица students)</text>
+  <rect x="60" y="455" width="780" height="40" rx="6" class="heap"/>
+  <text x="80"  y="480" class="mono">[1]  …Шахматы…</text>
+  <text x="200" y="480" class="mono">[2]  …Футбол…</text>
+  <text x="320" y="480" class="mono">[3]  …Самбо…</text>
+  <text x="440" y="480" class="mono">[4]  …Футбол…</text>
+  <text x="560" y="480" class="mono">[5]  …Баскетбол…</text>
+  <text x="680" y="480" class="mono">[…]  …</text>
+
+  <line x1="560" y1="395" x2="200" y2="455" class="arrow-hl" marker-end="url(#arrhl)"/>
+  <line x1="560" y1="395" x2="440" y2="455" class="arrow-hl" marker-end="url(#arrhl)"/>
+
+  <text x="20" y="535" class="small">Поиск disciplines @&gt; ARRAY['Футбол']: спускаемся по entry-tree к ключу «Футбол» → читаем posting tree → возвращаем bitmap TID-ов → bitmap heap scan.</text>
+</svg>

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berry Classifier — ДЗ-1</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #faf6f0;
+            --ink: #1a1208;
+            --berry-dark: #3b1a2e;
+            --berry-mid: #7c3158;
+            --berry-bright: #c0415a;
+            --raspberry: #e8294a;
+            --strawberry: #f25c3d;
+            --blackberry: #4a1942;
+            --gold: #d4a043;
+            --soft: #f0e8e0;
+            --muted: #8a7060;
+            --radius: 4px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── Noise texture overlay ── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(250,246,240,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(60,26,46,0.1);
+            padding: 0 2rem;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.25rem;
+            color: var(--berry-dark);
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--berry-bright);
+            display: inline-block;
+        }
+
+        nav {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        nav a {
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 0.4rem 0.9rem;
+            border-radius: 2px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--berry-dark);
+            background: var(--soft);
+        }
+
+        /* ── HERO BAND ── */
+        .hero {
+            margin-top: 64px;
+            background: var(--berry-dark);
+            color: white;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; left: 0; right: 0;
+            height: 40px;
+            background: var(--cream);
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+
+        .hero-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-sub {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.55);
+            max-width: 420px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Decorative berries */
+        .berry-deco {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.12;
+        }
+        .berry-deco.b1 { width: 280px; height: 280px; background: var(--berry-bright); top: -80px; right: -60px; }
+        .berry-deco.b2 { width: 180px; height: 180px; background: var(--gold); bottom: 20px; left: -40px; }
+        .berry-deco.b3 { width: 100px; height: 100px; background: white; top: 40px; left: 15%; }
+
+        /* ── LAYOUT ── */
+        .page-body {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 5rem;
+        }
+
+        /* ── SECTION TITLE ── */
+        .section-title {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.7rem;
+            color: var(--berry-dark);
+            letter-spacing: -0.02em;
+        }
+
+        .section-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(60,26,46,0.12);
+        }
+
+        /* ── UPLOAD CARD ── */
+        .upload-card {
+            background: white;
+            border: 1px solid rgba(60,26,46,0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 2px 20px rgba(60,26,46,0.06);
+        }
+
+        .upload-zone {
+            border: 2px dashed rgba(60,26,46,0.2);
+            border-radius: 8px;
+            padding: 3rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s;
+            background: var(--cream);
+            position: relative;
+            margin: 1.5rem;
+        }
+
+        .upload-zone:hover,
+        .upload-zone.drag-over {
+            border-color: var(--berry-bright);
+            background: #fff5f5;
+        }
+
+        .upload-zone input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+
+        .upload-icon-wrap {
+            width: 64px; height: 64px;
+            border-radius: 50%;
+            background: var(--soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.2rem;
+            font-size: 1.8rem;
+            transition: transform 0.3s;
+        }
+
+        .upload-zone:hover .upload-icon-wrap { transform: scale(1.08); }
+
+        .upload-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--berry-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .upload-hint {
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        .upload-hint span { color: var(--berry-bright); font-weight: 500; }
+
+        .file-chosen {
+            display: none;
+            margin: 0 1.5rem 1rem;
+            padding: 0.6rem 1rem;
+            background: #f0fff4;
+            border: 1px solid #86efac;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #166534;
+        }
+
+        /* Image preview (before submit) */
+        #previewWrap {
+            display: none;
+            margin: 0 1.5rem 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(60,26,46,0.1);
+            text-align: center;
+        }
+
+        #previewWrap img {
+            max-height: 220px;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #previewWrap p {
+            font-size: 0.78rem;
+            color: var(--muted);
+            padding: 0.5rem;
+            background: var(--soft);
+        }
+
+        .card-footer {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--berry-dark);
+            color: white;
+            border: none;
+            padding: 0.9rem 1.5rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            background: var(--berry-mid);
+            transform: translateY(-1px);
+        }
+
+        .submit-btn:active { transform: translateY(0); }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Loading */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .spinner {
+            width: 36px; height: 36px;
+            border: 2px solid var(--soft);
+            border-top-color: var(--berry-bright);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 0.75rem;
+        }
+
+        .loading p { font-size: 0.85rem; color: var(--muted); }
+
+        /* ── RESULT SECTION ── */
+        .result-section {
+            margin-bottom: 3.5rem;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .result-grid { grid-template-columns: 1fr; }
+        }
+
+        .result-image-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(60,26,46,0.08);
+            box-shadow: 0 2px 12px rgba(60,26,46,0.06);
+        }
+
+        .result-image-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .result-image-caption {
+            padding: 0.9rem 1rem;
+        }
+
+        .result-image-caption p {
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+
+        .result-verdict-card {
+            background: var(--berry-dark);
+            border-radius: 10px;
+            padding: 2rem;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 2px 12px rgba(60,26,46,0.15);
+        }
+
+        .verdict-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .verdict-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.6rem;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .verdict-id {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 1.5rem;
+        }
+
+        .verdict-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .verdict-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .verdict-features li {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.65);
+            display: flex;
+            gap: 0.5rem;
+            align-items: flex-start;
+            line-height: 1.45;
+        }
+
+        .verdict-features li .fi { flex-shrink: 0; margin-top: 0.05em; }
+
+        .verdict-success {
+            margin-top: 1.5rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255,255,255,0.06);
+            border-radius: 6px;
+            border-left: 3px solid var(--gold);
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.5;
+        }
+
+        /* ── CLASSES GRID ── */
+        .classes-section {
+            margin-bottom: 3.5rem;
+        }
+
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .classes-grid { grid-template-columns: 1fr; }
+        }
+
+        .class-card {
+            background: white;
+            border: 1px solid rgba(60,26,46,0.08);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(60,26,46,0.05);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .class-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(60,26,46,0.1);
+        }
+
+        .class-card-header {
+            padding: 1.25rem 1.25rem 1rem;
+            border-bottom: 1px solid rgba(60,26,46,0.06);
+        }
+
+        .class-emoji { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
+
+        .class-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            color: var(--berry-dark);
+            letter-spacing: -0.01em;
+        }
+
+        .class-badge {
+            display: inline-block;
+            margin-top: 0.4rem;
+            padding: 0.15rem 0.55rem;
+            background: var(--soft);
+            border-radius: 3px;
+            font-size: 0.72rem;
+            color: var(--muted);
+            letter-spacing: 0.05em;
+        }
+
+        .class-features {
+            padding: 1rem 1.25rem;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+
+        .class-features li {
+            display: flex;
+            gap: 0.6rem;
+            font-size: 0.82rem;
+            color: #4a3a30;
+            line-height: 1.45;
+        }
+
+        .class-features li .fi { flex-shrink: 0; font-size: 0.9rem; margin-top: 0.08em; }
+
+        /* Accent stripe per class */
+        .class-card[data-id="0"] .class-card-header { border-top: 3px solid var(--blackberry); }
+        .class-card[data-id="1"] .class-card-header { border-top: 3px solid var(--strawberry); }
+        .class-card[data-id="2"] .class-card-header { border-top: 3px solid var(--raspberry); }
+
+        /* ── FOOTER ── */
+        .footer {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: rgba(250,246,240,0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(60,26,46,0.08);
+            text-align: center;
+            padding: 0.75rem;
+            font-size: 0.78rem;
+            color: var(--muted);
+            z-index: 100;
+        }
+
+        .footer strong { color: var(--berry-dark); font-weight: 600; }
+
+        /* ── ANIMATIONS ── */
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-body > * {
+            animation: fadeUp 0.5s ease both;
+        }
+
+        .page-body > *:nth-child(1) { animation-delay: 0.05s; }
+        .page-body > *:nth-child(2) { animation-delay: 0.12s; }
+        .page-body > *:nth-child(3) { animation-delay: 0.2s; }
+
+        /* ── SCROLL PADDING ── */
+        section[id] { scroll-margin-top: 80px; }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        <span class="logo-dot"></span>
+        BerryNet
+    </div>
+    <nav>
+        <a href="#upload">Загрузка</a>
+        <a href="#classes">Классы</a>
+        {% if scorePrediction %}<a href="#result">Результат</a>{% endif %}
+    </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="berry-deco b1"></div>
+    <div class="berry-deco b2"></div>
+    <div class="berry-deco b3"></div>
+    <p class="hero-label">Домашнее задание № 1 · ResNet20 · CIFAR-100</p>
+    <h1>Классификация<br><em>ягод</em> нейросетью</h1>
+    <p class="hero-sub">Загрузите фотографию — модель определит, ежевика это, клубника или малина</p>
+</div>
+
+<div class="page-body">
+
+    <!-- UPLOAD -->
+    <section id="upload">
+        <div class="section-title">
+            <h2>Загрузить изображение</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="upload-card">
+            <form action="predictImage" method="post" enctype="multipart/form-data" id="uploadForm">
+                {% csrf_token %}
+
+                <div class="upload-zone" id="uploadZone">
+                    <input name="filePath" type="file" id="fileInput" accept="image/*">
+                    <div class="upload-icon-wrap">📁</div>
+                    <p class="upload-title">Выберите или перетащите фото</p>
+                    <p class="upload-hint">Форматы: <span>JPG, PNG</span> и другие растровые</p>
+                </div>
+
+                <div class="file-chosen" id="fileChosen">
+                    ✅ Выбран файл: <strong id="chosenName"></strong>
+                </div>
+
+                <!-- Preview before submit -->
+                <div id="previewWrap">
+                    <img id="previewImg" src="" alt="Предпросмотр">
+                    <p>Предпросмотр · изображение будет отправлено на классификацию</p>
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Анализировать изображение
+                    </button>
+                </div>
+            </form>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Нейросеть обрабатывает изображение…</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULT -->
+    {% if scorePrediction %}
+    <section id="result" class="result-section">
+        <div class="section-title">
+            <h2>Результат</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="result-grid">
+
+            <!-- Uploaded image -->
+            {% if uploaded_image_url %}
+            <div class="result-image-card">
+                <img src="{{ uploaded_image_url }}" alt="Загруженное изображение">
+                <div class="result-image-caption">
+                    <p>Изображение, отправленное на классификацию</p>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Verdict -->
+            <div class="result-verdict-card">
+                <p class="verdict-label">Предсказанный класс</p>
+                <p class="verdict-name">
+                    {% if predictedClassInfo.emoji %}{{ predictedClassInfo.emoji }} {% endif %}{{ scorePrediction.class_name }}
+                </p>
+                <p class="verdict-id">ID класса: {{ scorePrediction.class_id }}</p>
+
+                {% if predictedClassInfo.features %}
+                <div class="verdict-divider"></div>
+                <ul class="verdict-features">
+                    {% for feature in predictedClassInfo.features %}
+                    <li>
+                        <span class="fi">{{ feature.icon }}</span>
+                        <span>{{ feature.text }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <div class="verdict-success">
+                    Модель успешно классифицировала изображение.<br>
+                    Архитектура ResNet20, датасет CIFAR-100.
+                </div>
+            </div>
+
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- CLASSES -->
+    <section id="classes" class="classes-section">
+        <div class="section-title">
+            <h2>Классы модели</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="classes-grid">
+            {% for class_id, class_info in classExamples.items %}
+            <div class="class-card" data-id="{{ class_id }}">
+                <div class="class-card-header">
+                    <span class="class-emoji">{{ class_info.emoji }}</span>
+                    <p class="class-name">{{ class_info.name }}</p>
+                    <span class="class-badge">ID {{ class_id }}</span>
+                </div>
+                <ul class="class-features">
+                    {% for feature in class_info.features %}
+                    <li>
+                        <span class="fi">{{ feature.icon }}</span>
+                        <span>{{ feature.text }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+</div><!-- /page-body -->
+
+<footer class="footer">
+    © 2026 <strong>Пермяков Дмитрий</strong> · МГТУ им. Баумана · ДЗ-1 · Нейросетевая классификация изображений
+</footer>
+
+<script>
+    const fileInput   = document.getElementById('fileInput');
+    const fileChosen  = document.getElementById('fileChosen');
+    const chosenName  = document.getElementById('chosenName');
+    const uploadZone  = document.getElementById('uploadZone');
+    const previewWrap = document.getElementById('previewWrap');
+    const previewImg  = document.getElementById('previewImg');
+    const form        = document.getElementById('uploadForm');
+    const submitBtn   = document.getElementById('submitBtn');
+    const loading     = document.getElementById('loading');
+
+    fileInput.addEventListener('change', function () {
+        if (this.files && this.files[0]) {
+            const file = this.files[0];
+            chosenName.textContent = file.name;
+            fileChosen.style.display = 'block';
+            uploadZone.style.borderColor = 'var(--berry-bright)';
+
+            const reader = new FileReader();
+            reader.onload = e => {
+                previewImg.src = e.target.result;
+                previewWrap.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        } else {
+            fileChosen.style.display = 'none';
+            previewWrap.style.display = 'none';
+            uploadZone.style.borderColor = '';
+        }
+    });
+
+    // Drag & drop
+    uploadZone.addEventListener('dragover', e => {
+        e.preventDefault();
+        uploadZone.classList.add('drag-over');
+    });
+
+    uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
+
+    uploadZone.addEventListener('drop', e => {
+        e.preventDefault();
+        uploadZone.classList.remove('drag-over');
+        const dt = e.dataTransfer;
+        if (dt.files.length) {
+            fileInput.files = dt.files;
+            fileInput.dispatchEvent(new Event('change'));
+        }
+    });
+
+    // Submit
+    form.addEventListener('submit', function (e) {
+        if (!fileInput.files.length) {
+            e.preventDefault();
+            alert('Пожалуйста, выберите изображение для анализа');
+            return;
+        }
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Отправка…';
+        loading.style.display = 'block';
+    });
+
+    // Smooth nav scroll
+    document.querySelectorAll('nav a').forEach(a => {
+        a.addEventListener('click', e => {
+            const href = a.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const el = document.querySelector(href);
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Auto-scroll to result on load
+    {% if scorePrediction %}
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const r = document.getElementById('result');
+            if (r) r.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+    });
+    {% endif %}
+</script>
+</body>
+</html>

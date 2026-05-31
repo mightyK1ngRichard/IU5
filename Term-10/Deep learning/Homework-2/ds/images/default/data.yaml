@@ -1,0 +1,10 @@
+names:
+  0: None
+  1: blackberry
+  2: raspberry
+  3: strawberry
+nc: 4
+path: /content/gdrive/MyDrive/ds/images/default
+test: images/test
+train: images/train
+val: images/val

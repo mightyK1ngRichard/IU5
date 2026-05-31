@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, sans-serif" font-size="13">
+  <style>
+    .title    { font-size:18px; font-weight:bold; fill:#1a1a1a; }
+    .subtitle { font-size:13px; fill:#555; }
+    .page     { fill:#eef3fb; stroke:#2b6cb0; stroke-width:1.2; }
+    .page-hit { fill:#fde68a; stroke:#b45309; stroke-width:2; }
+    .range    { fill:#fff7ed; stroke:#c2410c; stroke-width:1.6; }
+    .summary  { fill:#fee2e2; stroke:#b91c1c; stroke-width:1.6; }
+    .mono     { font-family:Consolas,Menlo,monospace; font-size:11px; }
+    .small    { font-size:11px; fill:#444; }
+    .lbl      { fill:#111; }
+    .arrow    { stroke:#444; stroke-width:1.2; fill:none; }
+    .arrow-hl { stroke:#b45309; stroke-width:2; fill:none; }
+  </style>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#444"/>
+    </marker>
+    <marker id="arrhl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="28" class="title">BRIN (Block Range INdex) на колонке trainings.training_date</text>
+  <text x="20" y="48" class="subtitle">Для каждого диапазона страниц хранится только сводка min/max. Эффективен при коррелированном порядке данных.</text>
+
+  <!-- HEAP table — pages -->
+  <text x="20" y="86" class="lbl" font-weight="bold">Куча таблицы trainings (страницы 0..N)</text>
+  <g>
+    <!-- range 1 -->
+    <rect x="20" y="100" width="220" height="80" rx="6" class="range"/>
+    <text x="30" y="118" class="small">Диапазон 1 (страницы 0..31)</text>
+    <rect x="30"  y="125" width="40" height="48" class="page"/><text x="50"  y="153" class="mono" text-anchor="middle">p0</text>
+    <rect x="74"  y="125" width="40" height="48" class="page"/><text x="94"  y="153" class="mono" text-anchor="middle">p1</text>
+    <rect x="118" y="125" width="40" height="48" class="page"/><text x="138" y="153" class="mono" text-anchor="middle">…</text>
+    <rect x="162" y="125" width="40" height="48" class="page"/><text x="182" y="153" class="mono" text-anchor="middle">p31</text>
+    <text x="30" y="173" class="small">2021-01-01 … 2021-02-12</text>
+
+    <!-- range 2 (HIT) -->
+    <rect x="250" y="100" width="220" height="80" rx="6" class="range"/>
+    <text x="260" y="118" class="small">Диапазон 2 (страницы 32..63)</text>
+    <rect x="260" y="125" width="40" height="48" class="page-hit"/><text x="280" y="153" class="mono" text-anchor="middle">p32</text>
+    <rect x="304" y="125" width="40" height="48" class="page-hit"/><text x="324" y="153" class="mono" text-anchor="middle">p33</text>
+    <rect x="348" y="125" width="40" height="48" class="page-hit"/><text x="368" y="153" class="mono" text-anchor="middle">…</text>
+    <rect x="392" y="125" width="40" height="48" class="page-hit"/><text x="412" y="153" class="mono" text-anchor="middle">p63</text>
+    <text x="260" y="173" class="small">2021-02-13 … 2021-03-28</text>
+
+    <!-- range 3 -->
+    <rect x="480" y="100" width="220" height="80" rx="6" class="range"/>
+    <text x="490" y="118" class="small">Диапазон 3 (страницы 64..95)</text>
+    <rect x="490" y="125" width="40" height="48" class="page"/><text x="510" y="153" class="mono" text-anchor="middle">p64</text>
+    <rect x="534" y="125" width="40" height="48" class="page"/><text x="554" y="153" class="mono" text-anchor="middle">p65</text>
+    <rect x="578" y="125" width="40" height="48" class="page"/><text x="598" y="153" class="mono" text-anchor="middle">…</text>
+    <rect x="622" y="125" width="40" height="48" class="page"/><text x="642" y="153" class="mono" text-anchor="middle">p95</text>
+    <text x="490" y="173" class="small">2021-03-29 … 2021-05-11</text>
+
+    <!-- range N -->
+    <rect x="710" y="100" width="170" height="80" rx="6" class="range"/>
+    <text x="720" y="118" class="small">…</text>
+    <rect x="720" y="125" width="40" height="48" class="page"/>
+    <rect x="764" y="125" width="40" height="48" class="page"/>
+    <rect x="808" y="125" width="40" height="48" class="page"/>
+    <text x="720" y="173" class="small">…</text>
+  </g>
+
+  <!-- BRIN index summaries -->
+  <text x="20" y="225" class="lbl" font-weight="bold">BRIN-индекс — компактные сводки (по одной на диапазон)</text>
+
+  <g>
+    <rect x="20"  y="240" width="220" height="60" rx="6" class="summary"/>
+    <text x="30"  y="258" class="small">Сводка R1</text>
+    <text x="30"  y="275" class="mono">min = 2021-01-01</text>
+    <text x="30"  y="290" class="mono">max = 2021-02-12</text>
+
+    <rect x="250" y="240" width="220" height="60" rx="6" class="summary"/>
+    <text x="260" y="258" class="small">Сводка R2 — ПОПАДАЕТ</text>
+    <text x="260" y="275" class="mono">min = 2021-02-13</text>
+    <text x="260" y="290" class="mono">max = 2021-03-28</text>
+
+    <rect x="480" y="240" width="220" height="60" rx="6" class="summary"/>
+    <text x="490" y="258" class="small">Сводка R3</text>
+    <text x="490" y="275" class="mono">min = 2021-03-29</text>
+    <text x="490" y="290" class="mono">max = 2021-05-11</text>
+
+    <rect x="710" y="240" width="170" height="60" rx="6" class="summary"/>
+    <text x="720" y="258" class="small">…</text>
+    <text x="720" y="275" class="mono">min = …</text>
+    <text x="720" y="290" class="mono">max = …</text>
+  </g>
+
+  <line x1="130" y1="240" x2="130" y2="180" class="arrow" marker-end="url(#arr)"/>
+  <line x1="360" y1="240" x2="360" y2="180" class="arrow-hl" marker-end="url(#arrhl)"/>
+  <line x1="590" y1="240" x2="590" y2="180" class="arrow" marker-end="url(#arr)"/>
+
+  <!-- QUERY example -->
+  <rect x="20" y="340" width="860" height="60" rx="8" fill="#f1f5f9" stroke="#475569"/>
+  <text x="30" y="362" class="lbl" font-weight="bold">Поиск:</text>
+  <text x="30" y="382" class="mono">WHERE training_date BETWEEN '2021-02-15' AND '2021-03-10'</text>
+
+  <!-- Algorithm explanation -->
+  <text x="20" y="430" class="lbl" font-weight="bold">Алгоритм:</text>
+  <text x="20" y="450" class="small">1. Сканируется индекс (он крошечный — десятки байт на диапазон) и отбираются только те сводки, у которых интервал [min;max] пересекается с условием.</text>
+  <text x="20" y="468" class="small">2. Для отобранных диапазонов выполняется Bitmap Heap Scan по страницам диапазона, для каждой строки перепроверяется условие (lossy bitmap).</text>
+  <text x="20" y="486" class="small">3. Размер индекса ≈ pages_per_range × количество_диапазонов байт → на 1 млн строк типично &lt; 50 КБ, тогда как B-tree был бы &gt; 20 МБ.</text>
+  <text x="20" y="514" class="small">Ключевое условие эффективности: физический порядок строк должен коррелировать со значениями индексируемого поля (correlation статистики).</text>
+  <text x="20" y="532" class="small">Иначе один диапазон страниц «увидит» min..max близкие к глобальным, и индекс перестанет отсекать страницы.</text>
+</svg>

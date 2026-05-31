@@ -1,0 +1,3955 @@
+{
+  "login": "Пермяков Дмитрий Кириллович (b8417b6e-7004-4adc-8d94-49ef63170522)",
+  "graphState": [
+    {
+      "id": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+      "type": "vertex",
+      "attributes": {
+        "value": {
+          "type": "float",
+          "system": false,
+          "value": 0.8
+        },
+        "importance": {
+          "type": "float",
+          "system": false,
+          "value": 0.9
+        },
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Сон"
+        }
+      },
+      "edges": [
+        "51845d17-9a56-42e3-beef-c6d4f99effa8",
+        "3254b1ca-f9c9-47b8-832e-118453b21201",
+        "bfaf8a0b-02e1-4570-aafd-dce8798a1aca"
+      ],
+      "children": [],
+      "parents": [
+        "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      ]
+    },
+    {
+      "id": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+      "type": "vertex",
+      "attributes": {
+        "value": {
+          "type": "float",
+          "system": false,
+          "value": 0.5
+        },
+        "importance": {
+          "type": "float",
+          "system": false,
+          "value": 1
+        },
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Стресс"
+        }
+      },
+      "edges": [
+        "3254b1ca-f9c9-47b8-832e-118453b21201"
+      ],
+      "children": [],
+      "parents": [
+        "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      ]
+    },
+    {
+      "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9",
+      "type": "metavertex",
+      "attributes": {
+        "value": {
+          "type": "float",
+          "system": false,
+          "value": 0.7
+        },
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "[MV1] Состояние студента"
+        }
+      },
+      "edges": [
+        "1bf90548-9ee7-466a-a097-142cb26f7652",
+        "456aa982-e701-4bc8-b735-bc2896817672"
+      ],
+      "children": [
+        "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+        "077582d0-ce05-4a51-b92e-cd0d53d2b510"
+      ],
+      "parents": []
+    },
+    {
+      "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+      "type": "vertex",
+      "attributes": {
+        "value": {
+          "type": "float",
+          "system": false,
+          "value": 0.5
+        },
+        "importance": {
+          "type": "float",
+          "system": false,
+          "value": 1
+        },
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Успеваемость"
+        }
+      },
+      "edges": [
+        "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      ],
+      "children": [],
+      "parents": [
+        "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      ]
+    },
+    {
+      "id": "51845d17-9a56-42e3-beef-c6d4f99effa8",
+      "type": "edge",
+      "attributes": {
+        "weight": {
+          "type": "float",
+          "system": false,
+          "value": 0.8
+        },
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Положительно влияет на"
+        }
+      },
+      "edges": [],
+      "children": [],
+      "parents": [],
+      "source": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+      "target": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+      "directed": true
+    },
+    {
+      "id": "2e188232-59d2-4620-b6e3-bf7945e08c14",
+      "type": "metavertex",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "[MV2] Социальная среда"
+        }
+      },
+      "edges": [
+        "1bf90548-9ee7-466a-a097-142cb26f7652"
+      ],
+      "children": [
+        "568834e1-0b5e-4da1-a720-1148baf5e4c2",
+        "133b9d44-7e43-42e5-ae35-cba6a8c11a00"
+      ],
+      "parents": []
+    },
+    {
+      "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+      "type": "vertex",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Друзья"
+        }
+      },
+      "edges": [
+        "6c339dbf-e52d-48e3-af0b-95578f79e284"
+      ],
+      "children": [],
+      "parents": [
+        "2e188232-59d2-4620-b6e3-bf7945e08c14"
+      ]
+    },
+    {
+      "id": "568834e1-0b5e-4da1-a720-1148baf5e4c2",
+      "type": "vertex",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Настроение"
+        }
+      },
+      "edges": [
+        "6c339dbf-e52d-48e3-af0b-95578f79e284"
+      ],
+      "children": [],
+      "parents": [
+        "2e188232-59d2-4620-b6e3-bf7945e08c14"
+      ]
+    },
+    {
+      "id": "3254b1ca-f9c9-47b8-832e-118453b21201",
+      "type": "edge",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Негативно влияет на"
+        }
+      },
+      "edges": [],
+      "children": [],
+      "parents": [],
+      "source": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+      "target": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+      "directed": true
+    },
+    {
+      "id": "6c339dbf-e52d-48e3-af0b-95578f79e284",
+      "type": "edge",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Положительно влияют на"
+        }
+      },
+      "edges": [],
+      "children": [],
+      "parents": [],
+      "source": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+      "target": "568834e1-0b5e-4da1-a720-1148baf5e4c2",
+      "directed": true
+    },
+    {
+      "id": "1bf90548-9ee7-466a-a097-142cb26f7652",
+      "type": "metaedge",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Положительно влияет на"
+        }
+      },
+      "edges": [],
+      "children": [],
+      "parents": [],
+      "source": "2e188232-59d2-4620-b6e3-bf7945e08c14",
+      "target": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9",
+      "directed": true
+    },
+    {
+      "id": "0b840d28-b3ec-4846-8898-f0ad51be8fba",
+      "type": "metavertex",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "[MV3] Рабочая среда"
+        }
+      },
+      "edges": [
+        "456aa982-e701-4bc8-b735-bc2896817672"
+      ],
+      "children": [
+        "3ef172b6-c2e0-4a62-998c-2f207d41c60b",
+        "666c7a94-5e8a-42ba-9e56-893560a9aa4a"
+      ],
+      "parents": []
+    },
+    {
+      "id": "3ef172b6-c2e0-4a62-998c-2f207d41c60b",
+      "type": "vertex",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Работа"
+        }
+      },
+      "edges": [
+        "badc937c-0a99-4924-ba8f-7de68e643227",
+        "bfaf8a0b-02e1-4570-aafd-dce8798a1aca"
+      ],
+      "children": [],
+      "parents": [
+        "0b840d28-b3ec-4846-8898-f0ad51be8fba"
+      ]
+    },
+    {
+      "id": "666c7a94-5e8a-42ba-9e56-893560a9aa4a",
+      "type": "vertex",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Доход"
+        }
+      },
+      "edges": [
+        "badc937c-0a99-4924-ba8f-7de68e643227"
+      ],
+      "children": [],
+      "parents": [
+        "0b840d28-b3ec-4846-8898-f0ad51be8fba"
+      ]
+    },
+    {
+      "id": "badc937c-0a99-4924-ba8f-7de68e643227",
+      "type": "edge",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Положительно влияет на"
+        }
+      },
+      "edges": [],
+      "children": [],
+      "parents": [],
+      "source": "3ef172b6-c2e0-4a62-998c-2f207d41c60b",
+      "target": "666c7a94-5e8a-42ba-9e56-893560a9aa4a",
+      "directed": true
+    },
+    {
+      "id": "bfaf8a0b-02e1-4570-aafd-dce8798a1aca",
+      "type": "edge",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Негативно влияет на"
+        }
+      },
+      "edges": [],
+      "children": [],
+      "parents": [],
+      "source": "3ef172b6-c2e0-4a62-998c-2f207d41c60b",
+      "target": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+      "directed": false
+    },
+    {
+      "id": "456aa982-e701-4bc8-b735-bc2896817672",
+      "type": "metaedge",
+      "attributes": {
+        "name": {
+          "type": "string",
+          "system": false,
+          "value": "Негативно влияет на"
+        }
+      },
+      "edges": [],
+      "children": [],
+      "parents": [],
+      "source": "0b840d28-b3ec-4846-8898-f0ad51be8fba",
+      "target": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9",
+      "directed": true
+    }
+  ],
+  "actionLog": [
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "login",
+        "label": "Имя пользователя"
+      },
+      "timestamp": 1778448984995
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778448992198
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449091193
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Сон"
+      },
+      "timestamp": 1778449092361
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449097200
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Название",
+        "value": "value"
+      },
+      "timestamp": 1778449097628
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449098644
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "float"
+      },
+      "timestamp": 1778449099658
+    },
+    {
+      "name": "add-attribute",
+      "payload": {
+        "label": "value",
+        "type": "float"
+      },
+      "timestamp": 1778449100890
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": ""
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449100906
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449104829
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Название",
+        "value": "importance"
+      },
+      "timestamp": 1778449105327
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449105930
+    },
+    {
+      "name": "add-attribute",
+      "payload": {
+        "label": "importance",
+        "type": "float"
+      },
+      "timestamp": 1778449107178
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "float"
+      },
+      "timestamp": 1778449106732
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": ""
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": ""
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449107194
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0."
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": ""
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449114453
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.8"
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": ""
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449115021
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.8"
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": "0ж"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449116481
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.8"
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": "0.8"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449118014
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.8"
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": "0.9"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449118890
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "type": "vertex",
+        "attributes": {
+          "value": {
+            "type": "float",
+            "system": false,
+            "value": 0.8
+          },
+          "importance": {
+            "type": "float",
+            "system": false,
+            "value": 0.9
+          },
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Сон"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449124737
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449131280
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449132014
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Название",
+        "value": "Стресс"
+      },
+      "timestamp": 1778449132521
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449133396
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Стресс"
+      },
+      "timestamp": 1778449133990
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449139237
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Название",
+        "value": "value"
+      },
+      "timestamp": 1778449139631
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449140665
+    },
+    {
+      "name": "add-attribute",
+      "payload": {
+        "label": "value",
+        "type": "float"
+      },
+      "timestamp": 1778449141819
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "float"
+      },
+      "timestamp": 1778449141332
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": ""
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449141834
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449143879
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.5"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449144809
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449150547
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Название",
+        "value": "importance"
+      },
+      "timestamp": 1778449151978
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449153037
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "float"
+      },
+      "timestamp": 1778449153707
+    },
+    {
+      "name": "add-attribute",
+      "payload": {
+        "label": "importance",
+        "type": "float"
+      },
+      "timestamp": 1778449154411
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.5"
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": ""
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449154425
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.5"
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": "0.9"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449156478
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.5"
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449159854
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.5"
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": "1.0"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449161355
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+        "type": "vertex",
+        "attributes": {
+          "value": {
+            "type": "float",
+            "system": false,
+            "value": 0.5
+          },
+          "importance": {
+            "type": "float",
+            "system": false,
+            "value": 1
+          },
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Стресс"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449165628
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449166464
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449174772
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449175562
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Состояние студента"
+      },
+      "timestamp": 1778449175833
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "ЬМСостояние студента"
+      },
+      "timestamp": 1778449182686
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Состояние студента"
+      },
+      "timestamp": 1778449184345
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "MVСостояние студента"
+      },
+      "timestamp": 1778449185292
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "MV1 Состояние студента"
+      },
+      "timestamp": 1778449186404
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "MV1] Состояние студента"
+      },
+      "timestamp": 1778449188277
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "[MV1] Состояние студента"
+      },
+      "timestamp": 1778449189385
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449191241
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "metavertex"
+      },
+      "timestamp": 1778449192402
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449221947
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449223371
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Название",
+        "value": "value"
+      },
+      "timestamp": 1778449223142
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "float"
+      },
+      "timestamp": 1778449224086
+    },
+    {
+      "name": "add-attribute",
+      "payload": {
+        "label": "value",
+        "type": "float"
+      },
+      "timestamp": 1778449224622
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": ""
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449224632
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0ч "
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449227456
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449228409
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0."
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449229332
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.7"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449229849
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "children": [
+            "1f6e918f-2514-4f4c-b172-3253ff6d10e6"
+          ]
+        }
+      },
+      "timestamp": 1778449234712
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "children": [
+            "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+            "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f"
+          ]
+        }
+      },
+      "timestamp": 1778449236935
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9",
+        "type": "metavertex",
+        "attributes": {
+          "value": {
+            "type": "float",
+            "system": false,
+            "value": 0.7
+          },
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "[MV1] Состояние студента"
+          }
+        },
+        "children": [
+          "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+          "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f"
+        ],
+        "parents": []
+      },
+      "timestamp": 1778449238884
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449239715
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+        "position": {
+          "x": 45.01363298355784,
+          "y": -2.74515271695725
+        }
+      },
+      "timestamp": 1778449240907
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449241602
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449252376
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449253147
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "edge"
+      },
+      "timestamp": 1778449255639
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449267744
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Сон → Успеваемость"
+      },
+      "timestamp": 1778449268119
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Сон  Успеваемость"
+      },
+      "timestamp": 1778449269013
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Сон на Успеваемость"
+      },
+      "timestamp": 1778449270086
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "source",
+        "label": "Источник"
+      },
+      "timestamp": 1778449276719
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "source": "1f6e918f-2514-4f4c-b172-3253ff6d10e6"
+        }
+      },
+      "timestamp": 1778449279890
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "target",
+        "label": "Цель"
+      },
+      "timestamp": 1778449280582
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "target": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f"
+        }
+      },
+      "timestamp": 1778449282530
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "target",
+        "label": "Цель"
+      },
+      "timestamp": 1778449286148
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "target": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+        }
+      },
+      "timestamp": 1778449287080
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449296553
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449297296
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Успеваемость"
+      },
+      "timestamp": 1778449296946
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "vertex"
+      },
+      "timestamp": 1778449298332
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449299187
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449304467
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449304800
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Название",
+        "value": "value"
+      },
+      "timestamp": 1778449304631
+    },
+    {
+      "name": "add-attribute",
+      "payload": {
+        "label": "value",
+        "type": "float"
+      },
+      "timestamp": 1778449305990
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "float"
+      },
+      "timestamp": 1778449305570
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": ""
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449306004
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449309955
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "importance"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449309682
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449312244
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "float"
+      },
+      "timestamp": 1778449312970
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449322059
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Название",
+        "value": "importance"
+      },
+      "timestamp": 1778449322302
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0."
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449324787
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.5"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449325581
+    },
+    {
+      "name": "add-attribute",
+      "payload": {
+        "label": "importance",
+        "type": "float"
+      },
+      "timestamp": 1778449329162
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.5"
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": ""
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449329175
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "value",
+              "type": "float",
+              "system": false,
+              "value": "0.5"
+            },
+            {
+              "label": "importance",
+              "type": "float",
+              "system": false,
+              "value": "1.0"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449330892
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "type": "vertex",
+        "attributes": {
+          "value": {
+            "type": "float",
+            "system": false,
+            "value": 0.5
+          },
+          "importance": {
+            "type": "float",
+            "system": false,
+            "value": 1
+          },
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Успеваемость"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449335083
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449336314
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449337073
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510"
+      },
+      "timestamp": 1778449337437
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510"
+      },
+      "timestamp": 1778449337438
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "parents": [
+            "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+          ]
+        }
+      },
+      "timestamp": 1778449340255
+    },
+    {
+      "name": "apply-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "type": "vertex",
+        "attributes": {
+          "value": {
+            "type": "float",
+            "system": false,
+            "value": 0.5
+          },
+          "importance": {
+            "type": "float",
+            "system": false,
+            "value": 1
+          },
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Успеваемость"
+          }
+        },
+        "children": [],
+        "parents": [
+          "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+        ]
+      },
+      "timestamp": 1778449340871
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449341503
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "position": {
+          "x": 12.752272163926307,
+          "y": 20.50545319342308
+        }
+      },
+      "timestamp": 1778449343177
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449343647
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449345522
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449363132
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449363530
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Сон → Успеваемость"
+      },
+      "timestamp": 1778449363818
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Сон  Успеваемость"
+      },
+      "timestamp": 1778449364779
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Сон на Успеваемость"
+      },
+      "timestamp": 1778449366134
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449367506
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "edge"
+      },
+      "timestamp": 1778449368394
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "source",
+        "label": "Источник"
+      },
+      "timestamp": 1778449370001
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "target",
+        "label": "Цель"
+      },
+      "timestamp": 1778449370978
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "source": "1f6e918f-2514-4f4c-b172-3253ff6d10e6"
+        }
+      },
+      "timestamp": 1778449370676
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "target": "077582d0-ce05-4a51-b92e-cd0d53d2b510"
+        }
+      },
+      "timestamp": 1778449371959
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449378943
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Название",
+        "value": "weight"
+      },
+      "timestamp": 1778449380618
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449381192
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "float"
+      },
+      "timestamp": 1778449381866
+    },
+    {
+      "name": "add-attribute",
+      "payload": {
+        "label": "weight",
+        "type": "float"
+      },
+      "timestamp": 1778449382415
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "weight",
+              "type": "float",
+              "system": false,
+              "value": ""
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449382423
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "weight",
+              "type": "float",
+              "system": false,
+              "value": "-0."
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449384138
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "weight",
+              "type": "float",
+              "system": false,
+              "value": "-0.8"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778449385037
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8",
+        "type": "edge",
+        "source": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "target": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "directed": false,
+        "attributes": {
+          "weight": {
+            "type": "float",
+            "system": false,
+            "value": -0.8
+          },
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Сон на Успеваемость"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449390476
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "position": {
+          "x": 9.25681649177892,
+          "y": 123.52211572888262
+        }
+      },
+      "timestamp": 1778449391852
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "position": {
+          "x": 9.25681649177892,
+          "y": 182.5399900851029
+        }
+      },
+      "timestamp": 1778449392431
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "position": {
+          "x": 96.28317359332397,
+          "y": 182.5399900851029
+        }
+      },
+      "timestamp": 1778449393964
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "position": {
+          "x": 94.2825676829437,
+          "y": 182.5399900851029
+        }
+      },
+      "timestamp": 1778449394105
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449394306
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449394306
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449394457
+    },
+    {
+      "name": "pan-graph",
+      "payload": {
+        "pan": {
+          "x": 531.4182210400759,
+          "y": 352.65461736253906
+        }
+      },
+      "timestamp": 1778449394548
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449394981
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449468539
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449470805
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "position": {
+          "x": 157.30165385992456,
+          "y": 182.5399900851029
+        }
+      },
+      "timestamp": 1778449471841
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449554993
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449555775
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "MV2 — Социальная среда"
+      },
+      "timestamp": 1778449556415
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "MV2 Социальная среда"
+      },
+      "timestamp": 1778449557857
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "MV2] Социальная среда"
+      },
+      "timestamp": 1778449559303
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "[MV2] Социальная среда"
+      },
+      "timestamp": 1778449560321
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449563516
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "metavertex"
+      },
+      "timestamp": 1778449564365
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "2e188232-59d2-4620-b6e3-bf7945e08c14",
+        "type": "metavertex",
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "[MV2] Социальная среда"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449568674
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449572814
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449573492
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Друзья"
+      },
+      "timestamp": 1778449573686
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+        "type": "vertex",
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Друзья"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449577140
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449581589
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449582045
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Настроение"
+      },
+      "timestamp": 1778449582204
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "parents": [
+            "2e188232-59d2-4620-b6e3-bf7945e08c14"
+          ]
+        }
+      },
+      "timestamp": 1778449585423
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "568834e1-0b5e-4da1-a720-1148baf5e4c2",
+        "type": "vertex",
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Настроение"
+          }
+        },
+        "children": [],
+        "parents": [
+          "2e188232-59d2-4620-b6e3-bf7945e08c14"
+        ]
+      },
+      "timestamp": 1778449585983
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00"
+      },
+      "timestamp": 1778449586840
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00"
+      },
+      "timestamp": 1778449586841
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "parents": [
+            "2e188232-59d2-4620-b6e3-bf7945e08c14"
+          ]
+        }
+      },
+      "timestamp": 1778449592005
+    },
+    {
+      "name": "apply-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+        "type": "vertex",
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Друзья"
+          }
+        },
+        "children": [],
+        "parents": [
+          "2e188232-59d2-4620-b6e3-bf7945e08c14"
+        ]
+      },
+      "timestamp": 1778449593215
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449651626
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449651627
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449652868
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449652869
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      },
+      "timestamp": 1778449653347
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      },
+      "timestamp": 1778449653348
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      },
+      "timestamp": 1778449653485
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      },
+      "timestamp": 1778449653485
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      },
+      "timestamp": 1778449654556
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      },
+      "timestamp": 1778449654556
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Направлен",
+        "value": true
+      },
+      "timestamp": 1778449656887
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "directed": true
+        }
+      },
+      "timestamp": 1778449656889
+    },
+    {
+      "name": "apply-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8",
+        "type": "edge",
+        "source": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "target": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "directed": true,
+        "attributes": {
+          "weight": {
+            "type": "float",
+            "system": false,
+            "value": -0.8
+          },
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Сон на Успеваемость"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449658072
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449675440
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449677180
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449678738
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "edge"
+      },
+      "timestamp": 1778449678232
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": ""
+      },
+      "timestamp": 1778449680059
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Стре"
+      },
+      "timestamp": 1778449681034
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": ""
+      },
+      "timestamp": 1778449682072
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "-"
+      },
+      "timestamp": 1778449683734
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "source",
+        "label": "Источник"
+      },
+      "timestamp": 1778449685118
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "target",
+        "label": "Цель"
+      },
+      "timestamp": 1778449686528
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "source": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f"
+        }
+      },
+      "timestamp": 1778449686164
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "target": "1f6e918f-2514-4f4c-b172-3253ff6d10e6"
+        }
+      },
+      "timestamp": 1778449687578
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "3254b1ca-f9c9-47b8-832e-118453b21201",
+        "type": "edge",
+        "source": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+        "target": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "directed": false,
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "-"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449691316
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449692603
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449692604
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449693832
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "3254b1ca-f9c9-47b8-832e-118453b21201"
+      },
+      "timestamp": 1778449694727
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "3254b1ca-f9c9-47b8-832e-118453b21201"
+      },
+      "timestamp": 1778449694727
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449695831
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": ""
+      },
+      "timestamp": 1778449696209
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Плохо"
+      },
+      "timestamp": 1778449697340
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Негт"
+      },
+      "timestamp": 1778449699215
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Негативно влия"
+      },
+      "timestamp": 1778449701587
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Негативно влияен"
+      },
+      "timestamp": 1778449702321
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Негативно влияе "
+      },
+      "timestamp": 1778449703214
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Негативно влияе"
+      },
+      "timestamp": 1778449703856
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Негативно влияет на"
+      },
+      "timestamp": 1778449704908
+    },
+    {
+      "name": "apply-element",
+      "payload": {
+        "id": "3254b1ca-f9c9-47b8-832e-118453b21201",
+        "type": "edge",
+        "source": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+        "target": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "directed": false,
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Негативно влияет на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449706344
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449706820
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449707724
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449707725
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+        "position": {
+          "x": 394.18747941804054,
+          "y": -51.36543095157871
+        }
+      },
+      "timestamp": 1778449708810
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+        "position": {
+          "x": 425.1968710289359,
+          "y": -55.36664277233937
+        }
+      },
+      "timestamp": 1778449709322
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+        "position": {
+          "x": 425.1968710289359,
+          "y": -55.36664277233937
+        }
+      },
+      "timestamp": 1778449709441
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "position": {
+          "x": 348.01030220362884,
+          "y": 185.90087670882903
+        }
+      },
+      "timestamp": 1778449710248
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "position": {
+          "x": 230.811598694898,
+          "y": 64.62309887364057
+        }
+      },
+      "timestamp": 1778449711974
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "position": {
+          "x": 225.8100839189471,
+          "y": 55.620372276929004
+        }
+      },
+      "timestamp": 1778449712515
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449712841
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449713395
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449713396
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      },
+      "timestamp": 1778449714170
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      },
+      "timestamp": 1778449714171
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449715476
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Положитель"
+      },
+      "timestamp": 1778449717128
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Положительно влияет на"
+      },
+      "timestamp": 1778449719511
+    },
+    {
+      "name": "apply-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8",
+        "type": "edge",
+        "source": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "target": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "directed": true,
+        "attributes": {
+          "weight": {
+            "type": "float",
+            "system": false,
+            "value": -0.8
+          },
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Положительно влияет на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449720457
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449720949
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449724960
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778449724960
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "3254b1ca-f9c9-47b8-832e-118453b21201"
+      },
+      "timestamp": 1778449725935
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "3254b1ca-f9c9-47b8-832e-118453b21201"
+      },
+      "timestamp": 1778449725936
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Направлен",
+        "value": true
+      },
+      "timestamp": 1778449726966
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "directed": true
+        }
+      },
+      "timestamp": 1778449726967
+    },
+    {
+      "name": "apply-element",
+      "payload": {
+        "id": "3254b1ca-f9c9-47b8-832e-118453b21201",
+        "type": "edge",
+        "source": "dce38efd-c6bd-4542-9025-5a5cb8aa6c4f",
+        "target": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "directed": true,
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Негативно влияет на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449727646
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449728157
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00"
+      },
+      "timestamp": 1778449749789
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00"
+      },
+      "timestamp": 1778449749790
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449751150
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449751740
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449752228
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449753314
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "edge"
+      },
+      "timestamp": 1778449752820
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Положительно влияют на"
+      },
+      "timestamp": 1778449756962
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "source",
+        "label": "Источник"
+      },
+      "timestamp": 1778449757913
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "target",
+        "label": "Цель"
+      },
+      "timestamp": 1778449760916
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "source": "133b9d44-7e43-42e5-ae35-cba6a8c11a00"
+        }
+      },
+      "timestamp": 1778449760422
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "target": "568834e1-0b5e-4da1-a720-1148baf5e4c2"
+        }
+      },
+      "timestamp": 1778449763005
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "6c339dbf-e52d-48e3-af0b-95578f79e284",
+        "type": "edge",
+        "source": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+        "target": "568834e1-0b5e-4da1-a720-1148baf5e4c2",
+        "directed": false,
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Положительно влияют на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449765566
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+        "position": {
+          "x": -99.24967298605283,
+          "y": 327.4183367892243
+        }
+      },
+      "timestamp": 1778449767012
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "568834e1-0b5e-4da1-a720-1148baf5e4c2",
+        "position": {
+          "x": 33.27759298106274,
+          "y": 151.3795585248821
+        }
+      },
+      "timestamp": 1778449768698
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "568834e1-0b5e-4da1-a720-1148baf5e4c2",
+        "position": {
+          "x": 33.27759298106274,
+          "y": 151.3795585248821
+        }
+      },
+      "timestamp": 1778449768958
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "6c339dbf-e52d-48e3-af0b-95578f79e284"
+      },
+      "timestamp": 1778449769602
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "6c339dbf-e52d-48e3-af0b-95578f79e284"
+      },
+      "timestamp": 1778449769602
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "6c339dbf-e52d-48e3-af0b-95578f79e284"
+      },
+      "timestamp": 1778449770281
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "6c339dbf-e52d-48e3-af0b-95578f79e284"
+      },
+      "timestamp": 1778449770282
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Направлен",
+        "value": true
+      },
+      "timestamp": 1778449771157
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "directed": true
+        }
+      },
+      "timestamp": 1778449771159
+    },
+    {
+      "name": "apply-element",
+      "payload": {
+        "id": "6c339dbf-e52d-48e3-af0b-95578f79e284",
+        "type": "edge",
+        "source": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+        "target": "568834e1-0b5e-4da1-a720-1148baf5e4c2",
+        "directed": true,
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Положительно влияют на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449772317
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449772786
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+        "position": {
+          "x": -272.3020842339528,
+          "y": 203.38077034564287
+        }
+      },
+      "timestamp": 1778449775382
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+        "position": {
+          "x": -272.3020842339528,
+          "y": 201.38016443526251
+        }
+      },
+      "timestamp": 1778449775789
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "2e188232-59d2-4620-b6e3-bf7945e08c14"
+      },
+      "timestamp": 1778449775965
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "2e188232-59d2-4620-b6e3-bf7945e08c14"
+      },
+      "timestamp": 1778449775966
+    },
+    {
+      "name": "zoom-graph",
+      "payload": {
+        "zoom": 1.0036909309200972
+      },
+      "timestamp": 1778449785823
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449786627
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "position": {
+          "x": 216.45587043840385,
+          "y": 216.79623568399575
+        }
+      },
+      "timestamp": 1778449788636
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+        "position": {
+          "x": -351.03541839647386,
+          "y": 179.45442580772504
+        }
+      },
+      "timestamp": 1778449789427
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "133b9d44-7e43-42e5-ae35-cba6a8c11a00",
+        "position": {
+          "x": -354.0252918456835,
+          "y": 178.45780132465512
+        }
+      },
+      "timestamp": 1778449789558
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449790002
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449791340
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "metaedge"
+      },
+      "timestamp": 1778449792299
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "source",
+        "label": "Источник"
+      },
+      "timestamp": 1778449793176
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "source": "2e188232-59d2-4620-b6e3-bf7945e08c14"
+        }
+      },
+      "timestamp": 1778449795958
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "target",
+        "label": "Цель"
+      },
+      "timestamp": 1778449796489
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "target": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+        }
+      },
+      "timestamp": 1778449797267
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449800875
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Положи"
+      },
+      "timestamp": 1778449802381
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Положж"
+      },
+      "timestamp": 1778449803458
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Положительно влияет на"
+      },
+      "timestamp": 1778449806515
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "1bf90548-9ee7-466a-a097-142cb26f7652",
+        "type": "metaedge",
+        "source": "2e188232-59d2-4620-b6e3-bf7945e08c14",
+        "target": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9",
+        "directed": true,
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Положительно влияет на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449809494
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449810136
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449879997
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449880726
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "["
+      },
+      "timestamp": 1778449882035
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "[MV"
+      },
+      "timestamp": 1778449883582
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "[MV3] Работ"
+      },
+      "timestamp": 1778449887163
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "[MV3] Рабочая среда"
+      },
+      "timestamp": 1778449888859
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449889488
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "metavertex"
+      },
+      "timestamp": 1778449890641
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "0b840d28-b3ec-4846-8898-f0ad51be8fba",
+        "type": "metavertex",
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "[MV3] Рабочая среда"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449893295
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449894845
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449895237
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Работа"
+      },
+      "timestamp": 1778449897075
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "parents": [
+            "0b840d28-b3ec-4846-8898-f0ad51be8fba"
+          ]
+        }
+      },
+      "timestamp": 1778449900535
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "3ef172b6-c2e0-4a62-998c-2f207d41c60b",
+        "type": "vertex",
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Работа"
+          }
+        },
+        "children": [],
+        "parents": [
+          "0b840d28-b3ec-4846-8898-f0ad51be8fba"
+        ]
+      },
+      "timestamp": 1778449901448
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449903660
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449904557
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Доход"
+      },
+      "timestamp": 1778449905929
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "parents": [
+            "0b840d28-b3ec-4846-8898-f0ad51be8fba"
+          ]
+        }
+      },
+      "timestamp": 1778449908318
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "666c7a94-5e8a-42ba-9e56-893560a9aa4a",
+        "type": "vertex",
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Доход"
+          }
+        },
+        "children": [],
+        "parents": [
+          "0b840d28-b3ec-4846-8898-f0ad51be8fba"
+        ]
+      },
+      "timestamp": 1778449909057
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449912290
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449917158
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Поло"
+      },
+      "timestamp": 1778449917991
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Положительно влия"
+      },
+      "timestamp": 1778449920202
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Положительно влияет на "
+      },
+      "timestamp": 1778449921327
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Положительно влияет на"
+      },
+      "timestamp": 1778449922131
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449923595
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449926433
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "edge"
+      },
+      "timestamp": 1778449928108
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "source",
+        "label": "Источник"
+      },
+      "timestamp": 1778449928856
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "target",
+        "label": "Цель"
+      },
+      "timestamp": 1778449931200
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "source": "3ef172b6-c2e0-4a62-998c-2f207d41c60b"
+        }
+      },
+      "timestamp": 1778449930822
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "target": "666c7a94-5e8a-42ba-9e56-893560a9aa4a"
+        }
+      },
+      "timestamp": 1778449932239
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "badc937c-0a99-4924-ba8f-7de68e643227",
+        "type": "edge",
+        "source": "3ef172b6-c2e0-4a62-998c-2f207d41c60b",
+        "target": "666c7a94-5e8a-42ba-9e56-893560a9aa4a",
+        "directed": false,
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Положительно влияет на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449933349
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "3ef172b6-c2e0-4a62-998c-2f207d41c60b",
+        "position": {
+          "x": -94.00735425507172,
+          "y": -157.0419631921208
+        }
+      },
+      "timestamp": 1778449935003
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Направлен",
+        "value": true
+      },
+      "timestamp": 1778449936507
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "directed": true
+        }
+      },
+      "timestamp": 1778449936508
+    },
+    {
+      "name": "apply-element",
+      "payload": {
+        "id": "badc937c-0a99-4924-ba8f-7de68e643227",
+        "type": "edge",
+        "source": "3ef172b6-c2e0-4a62-998c-2f207d41c60b",
+        "target": "666c7a94-5e8a-42ba-9e56-893560a9aa4a",
+        "directed": true,
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Положительно влияет на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449937166
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "666c7a94-5e8a-42ba-9e56-893560a9aa4a",
+        "position": {
+          "x": -116.93646839953922,
+          "y": -133.98457940430882
+        }
+      },
+      "timestamp": 1778449940197
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449940520
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449945810
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449946375
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Не"
+      },
+      "timestamp": 1778449949587
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Нег"
+      },
+      "timestamp": 1778449950943
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Негативно влияет на"
+      },
+      "timestamp": 1778449953885
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449955416
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449960758
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "edge"
+      },
+      "timestamp": 1778449961474
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "source",
+        "label": "Источник"
+      },
+      "timestamp": 1778449962479
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "target",
+        "label": "Цель"
+      },
+      "timestamp": 1778449964710
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "source": "3ef172b6-c2e0-4a62-998c-2f207d41c60b"
+        }
+      },
+      "timestamp": 1778449964243
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "target": "1f6e918f-2514-4f4c-b172-3253ff6d10e6"
+        }
+      },
+      "timestamp": 1778449965818
+    },
+    {
+      "name": "add-attribute",
+      "payload": {
+        "label": "",
+        "type": "string"
+      },
+      "timestamp": 1778449966986
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449969908
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Название"
+      },
+      "timestamp": 1778449970324
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "bfaf8a0b-02e1-4570-aafd-dce8798a1aca",
+        "type": "edge",
+        "source": "3ef172b6-c2e0-4a62-998c-2f207d41c60b",
+        "target": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "directed": false,
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Негативно влияет на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778449971190
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449972369
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "666c7a94-5e8a-42ba-9e56-893560a9aa4a",
+        "position": {
+          "x": -115.93984391646934,
+          "y": -125.01495905667986
+        }
+      },
+      "timestamp": 1778449975806
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778449976416
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "666c7a94-5e8a-42ba-9e56-893560a9aa4a",
+        "position": {
+          "x": -101.98710115349104,
+          "y": -86.14660421695439
+        }
+      },
+      "timestamp": 1778449992746
+    },
+    {
+      "name": "select-editor-tab",
+      "payload": {
+        "tabId": "create"
+      },
+      "timestamp": 1778449993456
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Тип"
+      },
+      "timestamp": 1778449994317
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Тип",
+        "value": "metaedge"
+      },
+      "timestamp": 1778449995037
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "source",
+        "label": "Источник"
+      },
+      "timestamp": 1778449995668
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "label": "Имя"
+      },
+      "timestamp": 1778449998344
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Не"
+      },
+      "timestamp": 1778449999511
+    },
+    {
+      "name": "update-field",
+      "payload": {
+        "label": "Имя",
+        "value": "Негативно влияет на"
+      },
+      "timestamp": 1778450002972
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "source",
+        "label": "Источник"
+      },
+      "timestamp": 1778450004341
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "source": "0b840d28-b3ec-4846-8898-f0ad51be8fba"
+        }
+      },
+      "timestamp": 1778450008518
+    },
+    {
+      "name": "focus-field",
+      "payload": {
+        "name": "target",
+        "label": "Цель"
+      },
+      "timestamp": 1778450009046
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "target": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+        }
+      },
+      "timestamp": 1778450011467
+    },
+    {
+      "name": "create-element",
+      "payload": {
+        "id": "456aa982-e701-4bc8-b735-bc2896817672",
+        "type": "metaedge",
+        "source": "0b840d28-b3ec-4846-8898-f0ad51be8fba",
+        "target": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9",
+        "directed": true,
+        "attributes": {
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Негативно влияет на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778450014666
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778450015574
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "666c7a94-5e8a-42ba-9e56-893560a9aa4a",
+        "position": {
+          "x": -123.76339073116864,
+          "y": -61.77605948329535
+        }
+      },
+      "timestamp": 1778450019532
+    },
+    {
+      "name": "drag-graph-element",
+      "payload": {
+        "id": "666c7a94-5e8a-42ba-9e56-893560a9aa4a",
+        "position": {
+          "x": -115.79039486660952,
+          "y": -58.786186034085695
+        }
+      },
+      "timestamp": 1778450019842
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": null
+      },
+      "timestamp": 1778450020115
+    },
+    {
+      "name": "zoom-graph",
+      "payload": {
+        "zoom": 0.9497296573624235
+      },
+      "timestamp": 1778450020658
+    },
+    {
+      "name": "zoom-graph",
+      "payload": {
+        "zoom": 0.9532350439205157
+      },
+      "timestamp": 1778450020802
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778450171394
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "5a5f1c26-0867-49b6-ad51-8eb879f3eff9"
+      },
+      "timestamp": 1778450171395
+    },
+    {
+      "name": "select-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      },
+      "timestamp": 1778450172427
+    },
+    {
+      "name": "click-graph-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8"
+      },
+      "timestamp": 1778450172428
+    },
+    {
+      "name": "update-form",
+      "payload": {
+        "diff": {
+          "attributes": [
+            {
+              "label": "weight",
+              "type": "float",
+              "system": false,
+              "value": "0.8"
+            }
+          ]
+        }
+      },
+      "timestamp": 1778450178407
+    },
+    {
+      "name": "apply-element",
+      "payload": {
+        "id": "51845d17-9a56-42e3-beef-c6d4f99effa8",
+        "type": "edge",
+        "source": "1f6e918f-2514-4f4c-b172-3253ff6d10e6",
+        "target": "077582d0-ce05-4a51-b92e-cd0d53d2b510",
+        "directed": true,
+        "attributes": {
+          "weight": {
+            "type": "float",
+            "system": false,
+            "value": 0.8
+          },
+          "name": {
+            "type": "string",
+            "system": false,
+            "value": "Положительно влияет на"
+          }
+        },
+        "children": [],
+        "parents": []
+      },
+      "timestamp": 1778450179399
+    }
+  ]
+}

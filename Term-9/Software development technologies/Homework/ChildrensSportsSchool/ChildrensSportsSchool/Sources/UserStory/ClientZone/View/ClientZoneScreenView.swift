@@ -5,9 +5,7 @@
 
 import SwiftUI
 
-struct ClientZoneScreenView<
-    ProfileView: View
->: View {
+struct ClientZoneScreenView<ProfileView: View>: View {
 
     @State
     var state: ClientZoneScreenViewState

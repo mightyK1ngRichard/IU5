@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0f0f0f;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 24px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53, #48c774);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #888;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #333;
+  border-top-color: #ff6b6b;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Drop zone */
+.drop-zone {
+  width: 100%;
+  max-width: 720px;
+  border: 2px dashed #333;
+  border-radius: 16px;
+  padding: 48px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #1a1a1a;
+}
+
+.drop-zone:hover {
+  border-color: #ff6b6b;
+  background: #1f1f1f;
+}
+
+.drop-zone .icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.drop-zone p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.drop-zone span {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+/* Image content */
+.content {
+  position: relative;
+  max-width: 720px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+.content img {
+  display: block;
+  width: 100%;
+  max-height: 540px;
+  object-fit: contain;
+  background: #111;
+}
+
+.content canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Buttons */
+.btn-container {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button.primary {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  color: #fff;
+}
+
+button.primary:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+button.secondary {
+  background: #2a2a2a;
+  color: #aaa;
+  border: 1px solid #333;
+}
+
+button.secondary:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Classes legend */
+.legend {
+  display: flex;
+  gap: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* CLIP badge */
+.clip-badge {
+  font-size: 0.8rem;
+  color: #666;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #333;
+}
+
+.clip-badge.ready {
+  color: #48c774;
+  border-color: #48c774;
+}
+
+.clip-loader {
+  background: #1a1f1a;
+  border-color: #2a3a2a;
+  color: #48c774;
+}
+
+/* Divider */
+.section-divider {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #444;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #2a2a2a;
+}
+
+.match-count {
+  color: #48c774;
+  font-weight: 600;
+}

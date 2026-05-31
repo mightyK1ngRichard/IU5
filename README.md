@@ -16,5 +16,6 @@
 ## ⌚️ Магистратура
 
 - 2025 осень - [1 семестр](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-9)
+- 2026 весна - [2 семестр](https://github.com/mightyK1ngRichard/IU5/tree/master/Term-10)
 
 [![IU5memes](https://img.shields.io/badge/-CHILL_ZONE-090909?style=flat-square&logo=vk&logoColor=1E90FF)](https://vk.com/kak_delaut_dvoeshniki)

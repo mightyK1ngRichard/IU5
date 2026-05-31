@@ -1,0 +1,441 @@
+Output format is aligned.
+Border style is 0.
+Null display is "∅".
+------------------------------------------------------------------------
+-- ПЛАН 1.  Серия 3.1, sel2 = 3 %, N = 1000, sel1 = 10 %
+------------------------------------------------------------------------
+CALL gen_dataset(1000, 1000, 10, 3);
+psql:sql/07_collect_plans.sql:20: NOTICE:  students: вставлено 1000 строк, из них с "Футбол" — 100 (≈ 10.00 %)
+psql:sql/07_collect_plans.sql:20: NOTICE:  trainings: вставлено 1000 строк за период 2021-01-01 .. 2026-01-02 (длина окна = 54 дней ≈ 2.96 %)
+psql:sql/07_collect_plans.sql:20: NOTICE:  Готово. n_students=1000, n_trainings=1000, sel1=%10, sel2=%3
+CALL
+EXPLAIN (VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*3/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=26.20..55.70 rows=10 width=97)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=26.07..26.20 rows=13 width=17)
+          Output: t.discipline
+          Group Key: t.discipline
+          ->  Seq Scan on public.trainings t  (cost=0.00..26.00 rows=29 width=17)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2021-02-24 00:00:00'::timestamp without time zone))
+(10 rows)
+
+EXPLAIN (ANALYZE, BUFFERS, VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*3/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=26.20..55.70 rows=10 width=97) (actual time=0.085..0.320 rows=973 loops=1)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  Rows Removed by Filter: 27
+  Buffers: shared hit=28
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=26.07..26.20 rows=13 width=17) (actual time=0.077..0.078 rows=14 loops=1)
+          Output: t.discipline
+          Group Key: t.discipline
+          Batches: 1  Memory Usage: 24kB
+          Buffers: shared hit=11
+          ->  Seq Scan on public.trainings t  (cost=0.00..26.00 rows=29 width=17) (actual time=0.004..0.069 rows=30 loops=1)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2021-02-24 00:00:00'::timestamp without time zone))
+                Rows Removed by Filter: 970
+                Buffers: shared hit=11
+Planning Time: 0.044 ms
+Execution Time: 0.347 ms
+(18 rows)
+
+------------------------------------------------------------------------
+-- ПЛАН 2.  Серия 3.1, sel2 = 20 %, N = 1000
+------------------------------------------------------------------------
+CALL gen_dataset(1000, 1000, 10, 20);
+psql:sql/07_collect_plans.sql:43: NOTICE:  students: вставлено 1000 строк, из них с "Футбол" — 100 (≈ 10.00 %)
+psql:sql/07_collect_plans.sql:43: NOTICE:  trainings: вставлено 1000 строк за период 2021-01-01 .. 2026-01-02 (длина окна = 365 дней ≈ 19.98 %)
+psql:sql/07_collect_plans.sql:43: NOTICE:  Готово. n_students=1000, n_trainings=1000, sel1=%10, sel2=%20
+CALL
+EXPLAIN (VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*20/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=26.66..56.16 rows=10 width=97)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=26.50..26.66 rows=16 width=18)
+          Output: t.discipline
+          Group Key: t.discipline
+          ->  Seq Scan on public.trainings t  (cost=0.00..26.00 rows=199 width=18)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2022-01-01 00:00:00'::timestamp without time zone))
+(10 rows)
+
+EXPLAIN (ANALYZE, BUFFERS, VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*20/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=26.66..56.16 rows=10 width=97) (actual time=0.078..0.273 rows=1000 loops=1)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  Buffers: shared hit=28
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=26.50..26.66 rows=16 width=18) (actual time=0.073..0.074 rows=16 loops=1)
+          Output: t.discipline
+          Group Key: t.discipline
+          Batches: 1  Memory Usage: 24kB
+          Buffers: shared hit=11
+          ->  Seq Scan on public.trainings t  (cost=0.00..26.00 rows=199 width=18) (actual time=0.003..0.056 rows=200 loops=1)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2022-01-01 00:00:00'::timestamp without time zone))
+                Rows Removed by Filter: 800
+                Buffers: shared hit=11
+Planning Time: 0.034 ms
+Execution Time: 0.296 ms
+(17 rows)
+
+------------------------------------------------------------------------
+-- ПЛАН 3.  Серия 3.2, sel1 = 1 %, N = 1000
+------------------------------------------------------------------------
+CALL gen_dataset(1000, 1000, 1, 10);
+psql:sql/07_collect_plans.sql:66: NOTICE:  students: вставлено 1000 строк, из них с "Футбол" — 10 (≈ 1.00 %)
+psql:sql/07_collect_plans.sql:66: NOTICE:  trainings: вставлено 1000 строк за период 2021-01-01 .. 2026-01-02 (длина окна = 182 дней ≈ 9.96 %)
+psql:sql/07_collect_plans.sql:66: NOTICE:  Готово. n_students=1000, n_trainings=1000, sel1=%1, sel2=%10
+CALL
+EXPLAIN (VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*10/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=26.41..55.91 rows=10 width=96)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=26.25..26.41 rows=16 width=18)
+          Output: t.discipline
+          Group Key: t.discipline
+          ->  Seq Scan on public.trainings t  (cost=0.00..26.00 rows=99 width=18)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2021-07-02 00:00:00'::timestamp without time zone))
+(10 rows)
+
+EXPLAIN (ANALYZE, BUFFERS, VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*10/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=26.41..55.91 rows=10 width=96) (actual time=0.059..0.227 rows=1000 loops=1)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  Buffers: shared hit=28
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=26.25..26.41 rows=16 width=18) (actual time=0.055..0.055 rows=16 loops=1)
+          Output: t.discipline
+          Group Key: t.discipline
+          Batches: 1  Memory Usage: 24kB
+          Buffers: shared hit=11
+          ->  Seq Scan on public.trainings t  (cost=0.00..26.00 rows=99 width=18) (actual time=0.002..0.047 rows=99 loops=1)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2021-07-02 00:00:00'::timestamp without time zone))
+                Rows Removed by Filter: 901
+                Buffers: shared hit=11
+Planning Time: 0.026 ms
+Execution Time: 0.245 ms
+(17 rows)
+
+------------------------------------------------------------------------
+-- ПЛАН 4.  Серия 3.2, sel1 = 30 %, N = 1000
+------------------------------------------------------------------------
+CALL gen_dataset(1000, 1000, 30, 10);
+psql:sql/07_collect_plans.sql:89: NOTICE:  students: вставлено 1000 строк, из них с "Футбол" — 300 (≈ 30.00 %)
+psql:sql/07_collect_plans.sql:89: NOTICE:  trainings: вставлено 1000 строк за период 2021-01-01 .. 2026-01-02 (длина окна = 182 дней ≈ 9.96 %)
+psql:sql/07_collect_plans.sql:89: NOTICE:  Готово. n_students=1000, n_trainings=1000, sel1=%30, sel2=%10
+CALL
+EXPLAIN (VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*10/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=26.41..55.91 rows=10 width=101)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=26.25..26.41 rows=16 width=18)
+          Output: t.discipline
+          Group Key: t.discipline
+          ->  Seq Scan on public.trainings t  (cost=0.00..26.00 rows=99 width=18)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2021-07-02 00:00:00'::timestamp without time zone))
+(10 rows)
+
+EXPLAIN (ANALYZE, BUFFERS, VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*10/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=26.41..55.91 rows=10 width=101) (actual time=0.056..0.218 rows=1000 loops=1)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  Buffers: shared hit=28
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=26.25..26.41 rows=16 width=18) (actual time=0.053..0.053 rows=16 loops=1)
+          Output: t.discipline
+          Group Key: t.discipline
+          Batches: 1  Memory Usage: 24kB
+          Buffers: shared hit=11
+          ->  Seq Scan on public.trainings t  (cost=0.00..26.00 rows=99 width=18) (actual time=0.002..0.045 rows=100 loops=1)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2021-07-02 00:00:00'::timestamp without time zone))
+                Rows Removed by Filter: 900
+                Buffers: shared hit=11
+Planning Time: 0.024 ms
+Execution Time: 0.233 ms
+(17 rows)
+
+------------------------------------------------------------------------
+-- ПЛАН 5.  Серия 3.3, N = 1 000, sel = 10 %
+------------------------------------------------------------------------
+CALL gen_dataset(1000, 1000, 10, 10);
+psql:sql/07_collect_plans.sql:112: NOTICE:  students: вставлено 1000 строк, из них с "Футбол" — 100 (≈ 10.00 %)
+psql:sql/07_collect_plans.sql:112: NOTICE:  trainings: вставлено 1000 строк за период 2021-01-01 .. 2026-01-02 (длина окна = 182 дней ≈ 9.96 %)
+psql:sql/07_collect_plans.sql:112: NOTICE:  Готово. n_students=1000, n_trainings=1000, sel1=%10, sel2=%10
+CALL
+EXPLAIN (VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*10/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=26.41..55.91 rows=10 width=97)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=26.25..26.41 rows=16 width=18)
+          Output: t.discipline
+          Group Key: t.discipline
+          ->  Seq Scan on public.trainings t  (cost=0.00..26.00 rows=99 width=18)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2021-07-02 00:00:00'::timestamp without time zone))
+(10 rows)
+
+EXPLAIN (ANALYZE, BUFFERS, VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*10/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=26.41..55.91 rows=10 width=97) (actual time=0.056..0.214 rows=1000 loops=1)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  Buffers: shared hit=28
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=26.25..26.41 rows=16 width=18) (actual time=0.052..0.053 rows=16 loops=1)
+          Output: t.discipline
+          Group Key: t.discipline
+          Batches: 1  Memory Usage: 24kB
+          Buffers: shared hit=11
+          ->  Seq Scan on public.trainings t  (cost=0.00..26.00 rows=99 width=18) (actual time=0.002..0.045 rows=99 loops=1)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2021-07-02 00:00:00'::timestamp without time zone))
+                Rows Removed by Filter: 901
+                Buffers: shared hit=11
+Planning Time: 0.024 ms
+Execution Time: 0.232 ms
+(17 rows)
+
+------------------------------------------------------------------------
+-- ПЛАН 6.  Серия 3.3, N = 1 000 000, sel = 10 %    *** САМЫЙ ВАЖНЫЙ ***
+------------------------------------------------------------------------
+CALL gen_dataset(1000000, 1000000, 10, 10);
+psql:sql/07_collect_plans.sql:135: NOTICE:  students: вставлено 1000000 строк, из них с "Футбол" — 100000 (≈ 10.00 %)
+psql:sql/07_collect_plans.sql:135: NOTICE:  trainings: вставлено 1000000 строк за период 2021-01-01 .. 2026-01-02 (длина окна = 182 дней ≈ 9.96 %)
+psql:sql/07_collect_plans.sql:135: NOTICE:  Готово. n_students=1000000, n_trainings=1000000, sel1=%10, sel2=%10
+CALL
+EXPLAIN (VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*10/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=25459.29..54129.29 rows=10000 width=100)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=25459.13..25459.29 rows=16 width=18)
+          Output: t.discipline
+          Group Key: t.discipline
+          ->  Seq Scan on public.trainings t  (cost=0.00..25212.00 rows=98854 width=18)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2021-07-02 00:00:00'::timestamp without time zone))
+(10 rows)
+
+EXPLAIN (ANALYZE, BUFFERS, VERBOSE)
+SELECT * FROM students s
+WHERE s.disciplines && ARRAY(
+    SELECT DISTINCT t.discipline FROM trainings t
+    WHERE t.training_date >= cfg_start_date()::TIMESTAMP
+      AND t.training_date <  cfg_start_date()::TIMESTAMP
+                            + make_interval(days => FLOOR(cfg_total_days()*10/100.0)::INT)
+);
+                                                                                 QUERY PLAN                                                                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Seq Scan on public.students s  (cost=25459.29..54129.29 rows=10000 width=100) (actual time=53.677..249.690 rows=1000000 loops=1)
+  Output: s.student_id, s.full_name, s.birth_date, s.disciplines
+  Filter: (s.disciplines && $0)
+  Buffers: shared hit=13083 read=13299 dirtied=13383 written=13267
+  InitPlan 1 (returns $0)
+    ->  HashAggregate  (cost=25459.13..25459.29 rows=16 width=18) (actual time=53.667..53.668 rows=16 loops=1)
+          Output: t.discipline
+          Group Key: t.discipline
+          Batches: 1  Memory Usage: 24kB
+          Buffers: shared hit=10212
+          ->  Seq Scan on public.trainings t  (cost=0.00..25212.00 rows=98854 width=18) (actual time=0.003..47.529 rows=100158 loops=1)
+                Output: t.training_id, t.student_id, t.discipline, t.training_date, t.duration_min
+                Filter: ((t.training_date >= '2021-01-01 00:00:00'::timestamp without time zone) AND (t.training_date < '2021-07-02 00:00:00'::timestamp without time zone))
+                Rows Removed by Filter: 899842
+                Buffers: shared hit=10212
+Planning Time: 0.028 ms
+Execution Time: 265.807 ms
+(17 rows)
+
+------------------------------------------------------------------------
+-- ПАРАМЕТРЫ СРЕДЫ — пригодятся для Главы 6.1 отчёта
+------------------------------------------------------------------------
+SELECT version();
+                                                           version                                                            
+-----------------------------------------------------------------------------------------------------------------------------
+PostgreSQL 14.17 (Homebrew) on aarch64-apple-darwin24.2.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.6), 64-bit
+(1 row)
+
+SHOW shared_buffers;
+shared_buffers 
+--------------
+128MB
+(1 row)
+
+SHOW work_mem;
+work_mem 
+--------
+4MB
+(1 row)
+
+SHOW effective_cache_size;
+effective_cache_size 
+--------------------
+4GB
+(1 row)
+
+SHOW random_page_cost;
+random_page_cost 
+----------------
+4
+(1 row)
+
+SHOW seq_page_cost;
+seq_page_cost 
+-------------
+1
+(1 row)
+
+SHOW cpu_tuple_cost;
+cpu_tuple_cost 
+--------------
+0.01
+(1 row)
+
+SHOW cpu_index_tuple_cost;
+cpu_index_tuple_cost 
+--------------------
+0.005
+(1 row)
+
+SHOW max_parallel_workers_per_gather;
+max_parallel_workers_per_gather 
+-------------------------------
+2
+(1 row)
+
+------------------------------------------------------------------------
+-- РАЗМЕРЫ ТАБЛИЦ И ИНДЕКСОВ (после последнего CALL — 1 млн строк)
+------------------------------------------------------------------------
+SELECT relname,
+       pg_size_pretty(pg_relation_size(relid))      AS heap_size,
+       pg_size_pretty(pg_total_relation_size(relid))AS total_size
+FROM pg_catalog.pg_statio_user_tables
+WHERE relname IN ('students','trainings')
+ORDER BY relname;
+ relname  heap_size total_size 
+--------- --------- ----------
+students  126 MB    148 MB
+trainings 80 MB     101 MB
+(2 rows)
+
+SELECT indexrelname,
+       pg_size_pretty(pg_relation_size(indexrelid)) AS index_size
+FROM pg_catalog.pg_stat_user_indexes
+WHERE relname IN ('students','trainings')
+ORDER BY relname, indexrelname;
+ indexrelname  index_size 
+-------------- ----------
+students_pkey  21 MB
+trainings_pkey 21 MB
+(2 rows)
+
